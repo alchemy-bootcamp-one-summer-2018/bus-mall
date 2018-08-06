@@ -4,7 +4,8 @@
     "ecmaVersion": 8,
     "ecmaFeatures": {
       "impliedStrict": true
-    }
+    },
+    "sourceType": "module"
   },
   "env": {
     "browser": true,
@@ -18,9 +19,6 @@
       "ignoreComments": true
     }],
     "quotes": ["warn", "single"],
-    "parserOptions": {
-      "sourceType": "module"
-    },
     "no-multi-spaces": ["error",
       {
           "ignoreEOLComments": true

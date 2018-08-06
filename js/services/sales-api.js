@@ -1,13 +1,6 @@
-import data from './data.js';
+// import data from './data.js';
 
-let items = data.items;
-
-if(!items) {
-    data.items = createItems();
-    items = data.items;
-}
-
-function createItems() {
+export default function createItems() {
     let data = [{
         name: 'breakfast',
         image: 'images/breakfast.jpg'
@@ -16,13 +9,15 @@ function createItems() {
         image: 'images/bubblegum.jpg'
     }, {
         name: 'chair',
-        images: 'images/chair.jpg',
+        image: 'images/chair.jpg',
     }, {
         name: 'cthulhu',
-        images: 'images/cthulhu.jpg'
+        image: 'images/cthulhu.jpg'
     }, {
         name: 'dog-duck',
-        images: 'images/dog-duck.jpg'
+        image: 'images/dog-duck.jpg'
     }];
+
+    return data;
 }
 
