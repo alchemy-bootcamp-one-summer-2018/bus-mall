@@ -1,4 +1,6 @@
 import html from '../html.js';
+import VotingArea from './voting.js';
+
 
 let template = function() {
     return html`        
@@ -18,9 +20,16 @@ export default class App {
     render() {
         let dom = template();
         let main = dom.querySelector('main');
-        // main.appendChild('hello app!');
-        main.innerHTML = '<p>Hello App!</p>';
+        // let test = 'test string';
+        let votingArea = new VotingArea ({
+            // voteDisplay: test
+        });
+
+        main.appendChild(votingArea.render());
+        // main.innerHTML = "Hello App";
+
         return dom;
+
     }
 }
 
