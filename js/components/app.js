@@ -5,8 +5,12 @@ let template = function() {
         <header>
             <h1>Bus Mall Market Research App</h1>
         </header>
+        <body>
+            <p id='instructions'>The three images below are products we are considering selling in Bus Mall. Please click on the image of the product you are most likely to buy to vote for it. After 25 votes, you can see our poll results.</p>
         <main>
+
         </main>
+        </body>
     `;
 };
 
