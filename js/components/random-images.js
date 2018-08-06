@@ -7,6 +7,20 @@ let template = function() {
 
 };
 
+function importImages () {
+    var imageElements = [];
+    imageElements.push({
+        name: 'Banana',
+        src: `/img/${name}.jpg`
+    });  
+}
+
+
+
+function getRandomImage() {
+    
+}
+
 export default class RandomImage {
     constructor(props) {
         this.testImage = props.testImage;
