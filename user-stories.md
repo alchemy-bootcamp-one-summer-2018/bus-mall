@@ -8,7 +8,13 @@
 
 ## Developer
 * I want to display three images on screen that will be clickable, so that voting is quick and easy.
+    * Turn assets into an array.
+    * Access array of assets/images.
+    * Create randomizer for displaying three images.
+        * No repeats on sequential vote-screens.
+        * No repeated images on same vote-screen.
 * I want to cap the voting at 25, so that the researcher gets the data that was requested.
+    * Create a counter and have every vote increase vote by one (25 votes required.)
 * I want images to never appear twice in a row/on neighboring screens, so that the survey's integrity is preserved.
 
 ## User
