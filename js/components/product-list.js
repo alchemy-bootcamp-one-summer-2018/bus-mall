@@ -8,7 +8,7 @@
 // }
 
 function createItems() {
-    let data = [{
+    let items = [{
         id: 1,
         name: 'bag',
         image: '/images/bag.jpg',
@@ -122,4 +122,5 @@ function createItems() {
         image: 'images/wine-glass.jpg',
         viewed: 0,
         votes: 0
-    }];}
+    }];
+}
