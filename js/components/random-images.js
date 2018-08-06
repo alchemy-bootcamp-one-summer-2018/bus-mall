@@ -1,22 +1,21 @@
-// import html from '../html.js';
+import html from '../html.js';
 
-// let template = function() {
-//     return html`
-//         <img src='../../img/bag.jpg>
-//     `;
+let template = function() {
+    return html`
+        <img src='../../img/bag.jpg'>
+    `;
 
-// };
+};
 
-// export default class randomImage {
+export default class RandomImage {
+    constructor(props) {
+        this.testImage = props.testImage;
+    }
+    render() {
+        let dom = template(); 
+        // let votingArea = dom.getElementById('voting-area');
+        // votingArea.appendChild(this.testImage.render());
 
-//     render() {
-//         let dom = template(); 
-//         let image = new Image({
-//             image: image
-//         });
-//         let votingArea = dom.getElementById('voting-area');
-//         votingArea.appendChild(image.render());
-
-//         return dom;
-//     }
-// }
+        return dom;
+    }
+}
