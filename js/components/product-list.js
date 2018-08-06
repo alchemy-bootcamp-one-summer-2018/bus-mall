@@ -12,114 +12,114 @@ function createItems() {
         id: 1,
         name: 'bag',
         image: '/images/bag.jpg',
-        viewed:
-        votes:
+        viewed: 0,
+        votes: 0
     }, {
-        id: 2
+        id: 2,
         name: 'banana',
-        image: '/images/banana.jpg',
-        viewed:
-        votes:
+        image: 'images/banana.jpg',
+        viewed: 0,
+        votes: 0,
     }, {
-        id: 3
+        id: 3,
         name: 'bathroom',
-        image: '/images/bathroom.jpg',
-        viewed:
-        votes:
+        image: 'images/bathroom.jpg',
+        viewed: 0,
+        votes: 0,
     }, {
-        id: 4
+        id: 4,
         name: 'boots',
-        image: '/images/boots.jpg',
-        viewed:
-        votes:
-    }   {
-        id: 5
+        image: 'images/boots.jpg',
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 5,
         name: 'breakfast',
-        image: '/images/breakfast.jpg',
-        viewed:
-        votes:
-    }    {
-        id: 6
+        image: 'images/breakfast.jpg',
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 6,
         name: 'bubblegum',
         image: '/images/bubblegum.jpg',
-        viewed:
-        votes:
-    } {
-        id: 7
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 7,
         name: 'chair',
         image: '/images/cthulhu.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 8
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 8,
         name: 'dog-duck',
         image: '/images/dog-duck.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 9
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 9,
         name: 'dragon',
-        image: 'images/dragon.jpg'
-        viewed:
-        votes:  
-    }   {
-        id: 10
+        image: 'images/dragon.jpg',
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 10,
         name: 'pen',
         image: '/images/pen.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 11
+        viewed: 0,
+        votes: 0
+    }, { 
+        id: 11,
         name: 'pet-sweep',
         image:'/images/pet-sweep.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 12
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 12,
         name: 'scissors',
         image: '/images/scissors.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 13
+        viewed: 0,
+        votes:  0
+    }, {
+        id: 13,
         name: 'shark',
         image: '/images/shark.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 14
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 14,
         name: 'sweep',
         image: '/images/sweep.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 15
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 15,
         name: 'tauntaun',
         image: '/images/tauntaun.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 16
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 16,
         name: 'unicorn',
         image: '/images/unicorn.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 17
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 17,
         name: 'usb',
         image: '/images/usb.gif',
-        viewed:
-        votes:  
-    }   {
-        id: 18
+        viewed: 0,
+        votes: 0
+    }, {
+        id: 18,
         name: 'water-can',
         image: 'images/water-can.jpg',
-        viewed:
-        votes:  
-    }   {
-        id: 19
-        name: 'wine-glass'
+        viewed: 0,
+        votes:  0
+    }, {
+        id: 19,
+        name: 'wine-glass',
         image: 'images/wine-glass.jpg',
-        viewed:
-        votes:  
-    }];
+        viewed: 0,
+        votes: 0
+    }];}
