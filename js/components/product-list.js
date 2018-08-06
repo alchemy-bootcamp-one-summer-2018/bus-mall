@@ -122,4 +122,4 @@ function createItems() {
         image: 'images/wine-glass.jpg',
         viewed:
         votes:  
-    }]
+    }];
