@@ -8,6 +8,7 @@
 
 ## Developer
 * I want to display three images on screen that will be clickable, so that voting is quick and easy.
+    * Manage image size.
     * Turn assets into an array.
     * Access array of assets/images.
     * Create randomizer for displaying three images.
