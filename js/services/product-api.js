@@ -25,5 +25,34 @@ function getProductList() {
 let productList = getProductList();
 console.log('api product list', productList);
 
-export default productList;
+export default {
+    get: function() {
+        return productList;
+    },
+    getRandomImages: function() {
+
+        let threeImages = '';
+        let threeNames = [];
+        let productListCopy = productList.slice();
+        console.log('imageElements after slice', productListCopy);
+        
+        for(let i = 0; i < 3; i++) {
+            let random = getRandomInteger(productListCopy.length);
+            let randomImageElement = productListCopy[random].element;
+            let randomImageName = productListCopy[random].name;
+            threeImages += randomImageElement;
+            threeNames.push(randomImageName);
+            console.log('threeImages', threeImages);
+            console.log('threeNames', threeNames);
+            productListCopy.splice(random, 1);
+            console.log('image elements copy', productListCopy);
+        }
+        return threeImages;
+    }
+};
+
+function getRandomInteger(max) {
+    return Math.floor(Math.random() * (max));
+}
+
 

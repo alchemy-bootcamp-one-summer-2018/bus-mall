@@ -1,5 +1,6 @@
 import html from '../html.js';
 import VotingArea from './voting.js';
+import productList from '../services/product-api.js';
 
 
 let template = function() {
@@ -21,9 +22,11 @@ export default class App {
     render() {
         let dom = template();
         let main = dom.querySelector('main');
-        // let test = 'test string';
+        
+        let products = productList.get();
+
         let votingArea = new VotingArea ({
-            // voteDisplay: test
+            products: products
         });
 
         main.appendChild(votingArea.render());
@@ -33,4 +36,5 @@ export default class App {
 
     }
 }
+
 

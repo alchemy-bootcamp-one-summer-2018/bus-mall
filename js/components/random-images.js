@@ -42,27 +42,10 @@ let template = function() {
 // imageHtml(images);
 // console.log('imageElements', imageElements);
 
-function getRandomInteger(max) {
-    return Math.floor(Math.random() * (max));
-}
 
-let threeImages = '';
-function getRandomImages() {
-    let productListCopy = productList.slice();
-    console.log('imageElements after slice', productListCopy);
 
-    for(let i = 0; i < 3; i++) {
-        let random = getRandomInteger(productListCopy.length);
-        let randomImageElement = productListCopy[random].element;
-        threeImages += randomImageElement;
-        productListCopy.splice(random, 1);
-        console.log('image elements copy', productListCopy);
-    }
-    return threeImages;
-}
+// getRandomImages();
 
-getRandomImages();
-console.log('threeImages', threeImages);
 
 export default class RandomImage {
     constructor(props) {
@@ -73,13 +56,38 @@ export default class RandomImage {
         let imageArea = dom.querySelector('div.images');
         imageArea.innerHTML = threeImages;
 
-        
-        let bag = dom.querySelector('img.bag');
-        console.log('query test', bag);
-        bag.addEventListener('click', (event) => {
-            event.preventDefault();
-            console.log('event listener working for', productList[0].name);
+        let firstProduct = threeNames[0];
+        let secondProduct = threeNames[1];
+        let thirdProduct = threeNames[2];
+        console.log('products', firstProduct, secondProduct, thirdProduct);
+
+        let one = dom.querySelector(`img.${firstProduct}`);
+        console.log('one', one);
+        one.addEventListener('click', () => {
             threeImages = '';
+            threeNames = [];
+            getRandomImages();
+            console.log('three new images', threeImages);
+            imageArea.innerHTML = threeImages;
+            return imageArea.innerHTML;
+        });
+        
+        let two = dom.querySelector(`img.${secondProduct}`);
+        console.log('two', two);
+        two.addEventListener('click', () => {
+            threeImages = '';
+            threeNames = [];
+            getRandomImages();
+            console.log('three new images', threeImages);
+            imageArea.innerHTML = threeImages;
+            return imageArea.innerHTML;
+        });
+        
+        let three = dom.querySelector(`img.${thirdProduct}`);
+        console.log('three', three);
+        three.addEventListener('click', () => {
+            threeImages = '';
+            threeNames = [];
             getRandomImages();
             console.log('three new images', threeImages);
             imageArea.innerHTML = threeImages;
