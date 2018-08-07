@@ -1,6 +1,6 @@
 # Bus Mall
 
-## Tasks:
+## Tasks
 
 1. Write your user stories as described above and place them in a file called `user_stories.md` in your repo. Utilize good Markdown style to make this document look nice.
 1. The thing you want to build today will select three random photos from the image directory and display them side-by-side-by-side in the browser window.
