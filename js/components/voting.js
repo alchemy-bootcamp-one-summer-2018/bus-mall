@@ -25,6 +25,7 @@ let template = function() {
 export default class VotingArea {
     constructor(props) {
         this.products = props.products;
+        this.onClick = props.onClick;
     }
 
 
@@ -34,7 +35,9 @@ export default class VotingArea {
         
         for(let i = 0; i < 3; i++) {
             let randomImage = new RandomImage ({
-                product: this.products[i]
+                product: this.products[i],
+                onClick: this.onClick
+
             });
             
             votingArea.appendChild(randomImage.render());

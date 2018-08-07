@@ -50,6 +50,7 @@ let template = function() {
 export default class RandomImage {
     constructor(props) {
         this.product = props.product;
+        this.onClick = props.onClick;
     }
     render() {
         let dom = template(); 
@@ -63,8 +64,7 @@ export default class RandomImage {
         let one = dom.querySelector('img');
         one.addEventListener('click', () => {
             console.log(product, 'was clicked');
-        //     threeImages = '';
-        //     threeNames = [];
+            this.onClick(this.product);
         //     getRandomImages();
         //     console.log('three new images', threeImages);
         //     imageArea.innerHTML = threeImages;

@@ -26,11 +26,13 @@ export default class App {
         let products = productApi.getRandomProducts();
 
         let votingArea = new VotingArea ({
-            products: products
+            products: products,
+            onClick: (product) => {
+                console.log('app', product.name, 'was clicked');
+            }
         });
 
         main.appendChild(votingArea.render());
-        // main.innerHTML = "Hello App";
 
         return dom;
 

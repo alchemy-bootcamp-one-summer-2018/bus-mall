@@ -5,7 +5,7 @@ class Product {
         this.name = name;
         this.element = `<img src="/img/${name}.jpg" alt="${name}" class="${name}">`;
         this.shows = 0;
-        this.views = 0;
+        this.votes = 0;
     }
 
 }
