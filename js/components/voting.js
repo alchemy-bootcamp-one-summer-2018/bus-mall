@@ -1,5 +1,6 @@
 import html from '../html.js';
 import RandomImage from './random-images.js';
+import names from './names.js';
 
 let template = function() {
     return html`
@@ -11,7 +12,11 @@ let template = function() {
 
 };
 
+console.log('names', names);
 
+// document.getElementById(names[0]).addEventListener('click', function() {
+//     console.log('event listener working', names[0]);
+// });
 
 export default class VotingArea {
     constructor(props) {
