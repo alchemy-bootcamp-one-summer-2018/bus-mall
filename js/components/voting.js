@@ -1,6 +1,5 @@
 import html from '../html.js';
 import RandomImage from './random-images.js';
-import names from './names.js';
 
 let template = function() {
     return html`
@@ -11,8 +10,6 @@ let template = function() {
     `;
 
 };
-
-console.log('names', names);
 
 
 
