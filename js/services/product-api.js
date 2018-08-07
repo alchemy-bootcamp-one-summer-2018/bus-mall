@@ -3,7 +3,7 @@ class Product {
 
     constructor(name) {
         this.name = name;
-        this.shows = 0;
+        this.views = 0;
         this.votes = 0;
     }
 

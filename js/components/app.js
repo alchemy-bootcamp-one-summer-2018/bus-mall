@@ -27,6 +27,10 @@ export default class App {
 
         let votingArea = new VotingArea ({
             products: products,
+            onLoad: (product) => {
+                product.views++;
+                console.log(product.name, 'has been viewed', product.views, 'times');
+            },
             onClick: (product) => {
                 console.log('app', product.name, 'was clicked');
                 product.votes++;
