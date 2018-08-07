@@ -45,11 +45,14 @@ export default class ProductSurvey{
 
         return this.displayThreeImages;
     }
-    //initialization
-    render() {
-        let dom = template();
-        //where add image
-        let randomizedImagesSection = dom.getElementById('randomized-images');
+    clearImages() {
+        let section = this.randomizedImagesSection;
+        while(section.lastElementChild) {
+            section.lastElementChild.remove();
+        }
+    }
+
+    renderImages() {
         //get initial three to show
         let randomProducts = this.getThreeRandomProduct();
         //loop through products and create randomized image object for each
@@ -65,12 +68,20 @@ export default class ProductSurvey{
                         randomProducts[i].count++;
                         console.log(randomProducts[i]);
                         this.totalClicks++;
-                        this.render();
+                        this.clearImages();
+                        this.renderImages();
                     }
                 }
             });
-            randomizedImagesSection.appendChild(randomizedImage.render());
+            this.randomizedImagesSection.appendChild(randomizedImage.render());
         }
+    }
+    //initialization
+    render() {
+        let dom = template();
+        //where add image
+        this.randomizedImagesSection = dom.getElementById('randomized-images');
+        this.renderImages();
         return dom;
     }
 }
