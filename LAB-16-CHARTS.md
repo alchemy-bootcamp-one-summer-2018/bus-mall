@@ -1,4 +1,4 @@
-# Bus Mall Multi-Page, Local Storage and Charting
+# Bus Mall Charting
 
 ## Charting
 
