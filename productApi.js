@@ -1,130 +1,137 @@
 //import data from './data.js';
 
+let products = createProducts();
 
 function createProducts() {
     let data = [{
         name: 'bag',
-        image: 'bag.jpg',
+        image: './assets/bag.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'banana',
-        image: 'banana.jpg',
+        image: './assets/banana.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'bathroom',
-        image: 'bathroom.jpg',
+        image: './assets/bathroom.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'boots',
-        image: 'boots.jpg',
+        image: './assets/boots.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'breakfast',
-        image: 'breakfast.jpg',
+        image: './assets/breakfast.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'bubblegum',
-        image: 'bubblegum.jpg',
+        image: './assets/bubblegum.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'chair',
-        image: 'chair.jpg',
+        image: './assets/chair.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'cthulhu',
-        image: 'cthulhu.jpg',
+        image: './assets/cthulhu.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'dog-duck',
-        image: 'dog-duck.jpg',
+        image: './assets/dog-duck.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'dragon',
-        image: 'dragon.jpg',
+        image: './assets/dragon.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'pen',
-        image: 'pen.jpg',
+        image: './assets/pen.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'pet-sweep',
-        image: 'pet-sweep.jpg',
+        image: './assets/pet-sweep.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'scissors',
-        image: 'scissors.jpg',
+        image: './assets/scissors.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'shark',
-        image: 'shark.jpg',
+        image: './assets/shark.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'sweep',
-        image: 'sweep.jpg',
+        image: './assets/sweep.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'tauntaun',
-        image: 'tauntaun.jpg',
+        image: './assets/tauntaun.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'unicorn',
-        image: 'unicorn.jpg',
+        image: './assets/unicorn.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'usb',
-        image: 'usb.jpg',
+        image: './assets/usb.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'water-can',
-        image: 'water-can.jpg',
+        image: './assets/water-can.jpg',
         viewCount: 0,
         numberClicks: 0
     },
     {
         name: 'wine-glass',
-        image: 'wine-glass.jpg',
+        image: './assets/wine-glass.jpg',
         viewCount: 0,
         numberClicks: 0
     }];
 
-    for(let i = 0; i < data.length;i++) {
-        addKey(data[i]);
-    }
+    // for(let i = 0; i < data.length;i++) {
+    // addKey(data[i]);
+    // }
     return data;
 }
+export default {
+    get: function() {
+        return products;
+
+    }
+};
