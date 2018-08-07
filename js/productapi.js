@@ -2,115 +2,117 @@
 let items = [{
     id: 1,
     name: 'bag',
-    image: '/images/bag.jpg',
+    image: './img/bag.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 2,
     name: 'banana',
-    image: 'images/banana.jpg',
+    image: 'img/banana.jpg',
     viewed: 0,
     votes: 0,
 }, {
     id: 3,
     name: 'bathroom',
-    image: 'images/bathroom.jpg',
+    image: 'img/bathroom.jpg',
     viewed: 0,
     votes: 0,
 }, {
     id: 4,
     name: 'boots',
-    image: 'images/boots.jpg',
+    image: 'img/boots.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 5,
     name: 'breakfast',
-    image: 'images/breakfast.jpg',
+    image: 'img/breakfast.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 6,
     name: 'bubblegum',
-    image: '/images/bubblegum.jpg',
+    image: '/img/bubblegum.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 7,
     name: 'chair',
-    image: '/images/cthulhu.jpg',
+    image: '/img/cthulhu.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 8,
     name: 'dog-duck',
-    image: '/images/dog-duck.jpg',
+    image: '/img/dog-duck.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 9,
     name: 'dragon',
-    image: 'images/dragon.jpg',
+    image: 'img/dragon.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 10,
     name: 'pen',
-    image: '/images/pen.jpg',
+    image: '/img/pen.jpg',
     viewed: 0,
     votes: 0
 }, { 
     id: 11,
     name: 'pet-sweep',
-    image:'/images/pet-sweep.jpg',
+    image:'/img/pet-sweep.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 12,
     name: 'scissors',
-    image: '/images/scissors.jpg',
+    image: '/img/scissors.jpg',
     viewed: 0,
     votes:  0
 }, {
     id: 13,
     name: 'shark',
-    image: '/images/shark.jpg',
+    image: '/img/shark.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 14,
     name: 'sweep',
-    image: '/images/sweep.jpg',
+    image: '/img/sweep.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 15,
     name: 'tauntaun',
-    image: '/images/tauntaun.jpg',
+    image: '/img/tauntaun.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 16,
     name: 'unicorn',
-    image: '/images/unicorn.jpg',
+    image: '/img/unicorn.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 17,
     name: 'usb',
-    image: '/images/usb.gif',
+    image: '/img/usb.gif',
     viewed: 0,
     votes: 0
 }, {
     id: 18,
     name: 'water-can',
-    image: 'images/water-can.jpg',
+    image: 'img/water-can.jpg',
     viewed: 0,
     votes:  0
 }, {
     id: 19,
     name: 'wine-glass',
-    image: 'images/wine-glass.jpg',
+    image: 'img/wine-glass.jpg',
     viewed: 0,
     votes: 0
 }];
+
+export default items

@@ -3,32 +3,30 @@ import Product from './product.js';
 
 let template = function() {
     return html`
-        <section>
-            <h3> this is a form </h3>
-            
-            
-        </section>
+        <ul>
+            <h3> Select an Item! </h3>
+                        
+        </ul>
         
    `;
 };
 
 export default class ProductForm {
     constructor(props) {
+        this.items = props.items;
        
     }
 
     render() {
         let dom = template();
-        let section = dom.querySelector('section');
-        let product = new Product();
-        for(let i = 0; i < 3; i++){
-            section.appendChild(product.render());
+        let ul = dom.querySelector('ul');
+        for(let i = 0; i < this.items.length; i++){
+            let product = new Product({
+                item: this.items[i]
+            });
+            ul.appendChild(product.render());
         }
-
         
-
-
-
         return dom;
     }
 }
