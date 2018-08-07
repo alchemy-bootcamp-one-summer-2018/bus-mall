@@ -1,12 +1,11 @@
 // the template helper
 import html from '../html.js';
-import images from '../data-wrangling/data.js';
 import imageLoading from '../data-wrangling/data.js';
 
 // services component needs to use
 let foo = imageLoading();
 
-let template = function(images) {
+let template = function(imageLoading) {
     return html`        
         <header>
             <h1>Greg's List</h1>
@@ -28,7 +27,6 @@ let template = function(images) {
 export default class App {
 
     render() {
-        console.log(foo[0].src);
         let dom = template(); 
         this.authSection = dom.querySelector('section.auth');
         
