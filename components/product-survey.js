@@ -34,6 +34,8 @@ export default class ProductSurvey{
 
             //pushes random index into currently displayed image 
             this.displayThreeImages.push(selectedProduct);
+            console.log('are you here', selectedProduct.views);
+            //track views?
 
         }
 
@@ -57,9 +59,12 @@ export default class ProductSurvey{
         let randomProducts = this.getThreeRandomProduct();
         //loop through products and create randomized image object for each
         for(let i = 0; i < randomProducts.length; i++) {
+            
+            
             //passing product that was picked
             let randomizedImage = new RandomizedImage({
                 product: randomProducts[i],
+                view: randomProducts[i].views++,
                 //attach click handler that checks against total clicks
                 //and modifies count property for individual product onClick.
                 //todo refresh dom on image click to show new list of three products
@@ -68,6 +73,7 @@ export default class ProductSurvey{
                         randomProducts[i].count++;
                         console.log(randomProducts[i]);
                         this.totalClicks++;
+                        console.log('total clicks', this.totalClicks);
                         this.clearImages();
                         this.renderImages();
                     }
