@@ -146,8 +146,6 @@ export default function imageLoading() {
     let randomImageSet = [];
     let chosenRemoved = images.slice();
 
-    
-
     function randomizeImages(images, min, max) {
         return Math.floor(
             (
