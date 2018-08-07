@@ -1,6 +1,6 @@
 import html from '../html.js';
 import RandomizedImage from './randomized-image.js';
-import Results from './results.js';
+// import Results from './results.js';
 
 let template = function() {
     return html`
@@ -73,7 +73,7 @@ export default class ProductSurvey{
                 //and modifies count property for individual product onClick.
                 //todo refresh dom on image click to show new list of three products
                 clickHandler: () => {
-                    if(this.totalClicks < 3) {
+                    if(this.totalClicks < 25) {
                         this.randomProducts[i].count++;
                         console.log(this.randomProducts[i]);
                         this.totalClicks++;
