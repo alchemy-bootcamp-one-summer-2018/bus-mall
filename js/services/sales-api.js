@@ -21,3 +21,8 @@ export default function createItems() {
     return data;
 }
 
+
+let data = createItems();
+let randNum = Math.floor(Math.random() * data.length); 
+console.log('random number', randNum);  
+

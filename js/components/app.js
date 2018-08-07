@@ -1,6 +1,7 @@
 import html from '../html.js';
 import ShowImage from './image-display-app.js';
 import Results from './results.js';
+// import salesApi from '../services/sales-api.js';
 
 let template = function() {
     return html `
@@ -30,12 +31,28 @@ export default class App {
         section.appendChild(results.render());
         console.log('results', results);
 
+        // let randNum = salesApi.getRandomNumber();
+        // console.log('random number', randNum);
+
         return dom;
     }
+
+
     
 }
 
-// let root = document.getElementById('root');
-// let app = new App();
-// root.appendChild(app.render());
-// import data into app.js, save it to a variable, make sure its in there with console log, 
+// for(let j = 0; j < stores.length; j++) {
+
+//     stores[j].cookieSalesPerStore = [];
+
+//     for(let i = 0; i < 14; i++) {
+//         let custPerHours = Math.floor(Math.random() * (stores[j].maxCust - stores[j].minCust)) + stores[j].minCust;
+//         let cookieSales = custPerHours * stores[j].avgCookies;
+//         //console.log('cookie sales:', cookieSales); 
+        
+//         randomHoursArray.push(custPerHours);
+//         cookieSalesArray.push(cookieSales);
+//         stores[j].cookieSalesPerStore.push(cookieSales);
+//     }
+
+// }
