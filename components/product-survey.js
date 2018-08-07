@@ -17,7 +17,8 @@ export default class ProductSurvey{
     render() {
         let dom = template();
         let randomizedImagesSection = dom.getElementById('randomized-images');
-        for(let i = 0; i < 3; i++) {
+        for(let i = 0; i < this.products.length; i++) { 
+            console.log('are you showing up', this.products[i]);
             let randomizedImage = new RandomizedImage({
                 product: this.products[i]
             });

@@ -1,13 +1,16 @@
 
-class Product {
 
+class Product {
+    
     constructor(name, image){
         this.name = name;
         this.image = './assets/' + image;
+        this.views = 0;
+        this.count = 0;
     }
-
+    
 }
-
+    
 const bag = new Product('bag', 'bag.jpg');
 const banana = new Product('banana', 'banana.jpg');
 const bathroom = new Product('bathroom', 'bathroom.jpg');
@@ -28,7 +31,7 @@ const unicorn = new Product('unicorn', 'unicorn.jpg');
 const usb = new Product('usb', 'usb.gif');
 const waterCan = new Product('water-can', 'water-can.jpg');
 const wineGlass = new Product('wine-glass', 'wine-glass.jpg');
-
+    
 let productList = [
     bag, 
     banana,
@@ -52,13 +55,20 @@ let productList = [
     wineGlass
 ];
 
+
 export default {
     get: function() {
         return productList;
     },
 
     getThreeRandomProduct: function() {
-        //to do
+        let displayThreeImages = [];
+        for(let i = 0; i < 3; i++) {
+            displayThreeImages[i] = productList[Math.floor(Math.random() * productList.length)];
+        }
+        console.log('display-images', displayThreeImages);
+        return displayThreeImages;
     }
+
 };
 

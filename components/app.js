@@ -16,7 +16,8 @@ export default class App {
     render() {
         let dom = template();
         let main = dom.querySelector('main');
-        let products = productApi.get();
+        let products = productApi.getThreeRandomProduct();
+        console.log(products);
         let productSurvey = new ProductSurvey({
             products: products
         });
@@ -26,3 +27,4 @@ export default class App {
         return dom;
     }
 }
+

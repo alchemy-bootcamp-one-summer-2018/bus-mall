@@ -13,6 +13,8 @@ export default class RandomizedImage{
     render() {
         let dom = template();
         let image = dom.querySelector('img');
+        // for(let i = 0; i < displayImages.length; i++) {}
+        console.log(this.product);
         image.src = this.product.image;
         return dom;
     }
