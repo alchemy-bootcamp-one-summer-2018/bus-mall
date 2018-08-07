@@ -1,7 +1,7 @@
 
 import html from '../html.js';
-import createImages from '../services/image-api.js';
-import ImageSelection from './imageSelection.js';
+import productImages from '../services/productImage-api.js';
+import ImageSelection from './productImage.js';
 
 let template = function() {
 
@@ -23,7 +23,7 @@ export default class App {
         let dom = template();
         let main = dom.querySelector('main');
         
-        let images = createImages();
+        let images = productImages();
         console.log(images);
 
         let imageSelection = new ImageSelection();

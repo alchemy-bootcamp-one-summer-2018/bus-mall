@@ -1,13 +1,9 @@
-// import data from './.js';
+let imageData;
 
-// let images = data.images;
+// let usedImages = {};
+// let usedImagesCount = 0;
 
-// if(!images) {
-//     data.images = createImages();
-//     images = data.images;
-// }
-
-export default function createImages() {
+export default function productImages() {
 
     let imageData = [{
         name: 'bag',
@@ -73,20 +69,12 @@ export default function createImages() {
     
     }];
 
-    used
-    export default {
-        get: () => imageData,
-        getRandomImage: () => {
-            while ()
-            Math.floor(Math.random() * 25);
-        }
-    }
-
-
+    let randomImages = Math.floor(Math.random() * (imageData.length));
+    console.log('random image number', randomImages);
 
     return imageData;
+  
+    
 }
-
-
 
 
