@@ -2,19 +2,24 @@
 function createItems() {
     let data = [{
         name: 'breakfast',
-        image: 'images/breakfast.jpg'
+        image: 'images/breakfast.jpg',
+        clicks: 0
     }, {
         name: 'bubblegum',
-        image: 'images/bubblegum.jpg'
+        image: 'images/bubblegum.jpg',
+        clicks: 0
     }, {
         name: 'chair',
         image: 'images/chair.jpg',
+        clicks: 0
     }, {
         name: 'cthulhu',
-        image: 'images/cthulhu.jpg'
+        image: 'images/cthulhu.jpg',
+        clicks: 0
     }, {
         name: 'dog-duck',
-        image: 'images/dog-duck.jpg'
+        image: 'images/dog-duck.jpg',
+        clicks: 0
     }];
 
     return data;
@@ -42,16 +47,6 @@ export default {
     }
 
 
-//     let data = createItems();
-//      
-//     console.log('random number', randNum); 
-
-//     function getRandomImage() {
-//         let randomImage = data[randNum].image;
-//         console.log('randImage', randomImage);
-//     }
-
-//     getRandomImage();
 
 
 };

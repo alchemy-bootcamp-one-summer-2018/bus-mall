@@ -13,16 +13,21 @@ export default class ShowImage {
 
     constructor(props) {
         this.product = props.product;
+        this.onSelect = props.onSelect;
     }
-    
+
     render() {
-        // console.log('ShowImage:', createItems()); //this used to be data
-        // let products = createItems();
-        let dom = template(this.product); //(products)
+
+        let dom = template(this.product);
+
+        let img = dom.querySelector('img');
+        img.addEventListener('click', () => {
+            this.onSelect(this.product);
+        });
+
         return dom;
     }
 }   
-
 
 
 

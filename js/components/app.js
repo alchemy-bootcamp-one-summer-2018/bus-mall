@@ -28,14 +28,11 @@ export default class App {
         console.log('items', items);
 
         let productSurvey = new ProductSurvey({
-            products: items
+            products: items,
+            // additional things that get passed down -- handleClick - everytime we get a click...
         });
 
         div.appendChild(productSurvey.render());
-
-        // let p = dom.querySelector('p');
-        // let randomImage = getRandomImage();
-        // p.appendChild(randomImage.render());
 
         let section = dom.querySelector('section');
         let results = new Results();

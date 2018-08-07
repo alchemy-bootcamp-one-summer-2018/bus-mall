@@ -10,8 +10,9 @@ let template = function() {
 
 export default class ProductSurvey {
 
-    constructor(props) {
+    constructor(props) { // catches things from the parent
         this.products = props.products;
+        this.handleClick = props.handleClick;
     }
     
     render() {
@@ -21,8 +22,12 @@ export default class ProductSurvey {
         let section = dom.querySelector('section');
         
         for(let i = 0; i < 3; i++) {
-            let showImage = new ShowImage({
-                product: this.products[i]
+            let showImage = new ShowImage({ // anything you put inside this class constructor is passed down to the child
+                product: this.products[i],
+                onSelect: (product) => {
+                    product.click++,
+                    console.log('clicks', product.click);
+                }
             });
             section.appendChild(showImage.render());
         }
