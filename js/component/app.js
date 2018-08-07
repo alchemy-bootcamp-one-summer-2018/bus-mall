@@ -1,6 +1,6 @@
 
 import html from '../html.js';
-import productImages from '../services/productImage-api.js';
+//import imagesApi from '../services/productImage-api.js';
 import ShowProductImages from './productImage.js';
 
 let template = function() {
@@ -29,10 +29,6 @@ export default class App {
         
         main.appendChild(showProductImages.render());
 
-        // let imageData = new ImageData ({
-        //     images: images
-
-        // });
 
         return dom;
     }

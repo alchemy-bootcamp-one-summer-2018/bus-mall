@@ -48,8 +48,8 @@ let imageData = [{
 }, { name:'sweep',
     image:'../images/sweep.png',
 
-}, { name:'tauntuan',
-    image:'../images/tauntuan.jpg',
+}, { name:'tauntaun',
+    image:'../images/tauntaun.jpg',
 
 }, { name:'unicorn',
     image:'../images/unicorn.jpg',
@@ -86,6 +86,7 @@ export default {
             //console.log('randomImage: ', randomImage);
             randomArray.push(randomImage);
 
+            copyData.splice(randomNum, 1);
 
         }
 
