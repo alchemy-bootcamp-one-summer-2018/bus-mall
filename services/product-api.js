@@ -61,24 +61,5 @@ export default {
         return productList;
     },
 
-    //exporting random function that gets three random images from productList that are not the same
-    getThreeRandomProduct: function() {
-        let displayThreeImages = [];
-
-        while(displayThreeImages.length < 3) {
-
-            let randomProduct = productList[Math.floor(Math.random() * productList.length)];
-
-            if(!displayThreeImages.includes(randomProduct)){
-                displayThreeImages.push(randomProduct);
-            }
-
-        }
-
-        console.log('display-images', displayThreeImages);
-
-        return displayThreeImages;
-    }
-
 };
 

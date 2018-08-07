@@ -18,7 +18,7 @@ export default class App {
         let main = dom.querySelector('main');
 
         //set products to random three images 
-        let products = productApi.getThreeRandomProduct();
+        let products = productApi.get();
         let productSurvey = new ProductSurvey({
             products: products
         });

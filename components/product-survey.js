@@ -13,13 +13,61 @@ let template = function() {
 export default class ProductSurvey{
     constructor(props){
         this.products = props.products;
+        this.lastThreeProducts = [];
+        this.displayThreeImages = [];
+        this.totalClicks = 0;
     }
+    
+    getThreeRandomProduct() {
+
+        // Get last three products displayed
+        this.lastThreeProducts.push(...this.displayThreeImages);
+        this.displayThreeImages = [];
+        
+        while(this.displayThreeImages.length < 3) {
+            console.log('length', this.displayThreeImages.length);
+            //get random index
+            let randomIndex = Math.floor(Math.random() * this.products.length);
+
+            //goes into products, takes out object at random index
+            let selectedProduct = this.products.splice(randomIndex, 1)[0];
+
+            //pushes random index into currently displayed image 
+            this.displayThreeImages.push(selectedProduct);
+
+        }
+
+        // Add previously displayed products back into random pool
+        this.products.push(...this.lastThreeProducts);
+        this.lastThreeProducts = [];
+
+        console.log('display-images', this.displayThreeImages);
+
+        return this.displayThreeImages;
+    }
+    //initialization
     render() {
         let dom = template();
+        //where add image
         let randomizedImagesSection = dom.getElementById('randomized-images');
-        for(let i = 0; i < this.products.length; i++) { 
+        //get initial three to show
+        let randomProducts = this.getThreeRandomProduct();
+        //loop through products and create randomized image object for each
+        for(let i = 0; i < randomProducts.length; i++) {
+            //passing product that was picked
             let randomizedImage = new RandomizedImage({
-                product: this.products[i]
+                product: randomProducts[i],
+                //attach click handler that checks against total clicks
+                //and modifies count property for individual product onClick.
+                //todo refresh dom on image click to show new list of three products
+                clickHandler: () => {
+                    if(this.totalClicks < 25) {
+                        randomProducts[i].count++;
+                        console.log(randomProducts[i]);
+                        this.totalClicks++;
+                        this.render();
+                    }
+                }
             });
             randomizedImagesSection.appendChild(randomizedImage.render());
         }
