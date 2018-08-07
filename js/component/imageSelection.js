@@ -1,22 +1,23 @@
-// let template = function() {
+import html from '../html.js';
+import imageData from '../services/image-api.js';
 
-//     return html`
-//     <p>helloworld</p>
+let template = function(neededProducts) {
 
-//     <main>
+    return html`
 
-//     </main>
+    <img src=${neededProducts[1].image}>
+
+    `;
+
+};
+
+export default class imageSelection {
     
-//     `;
 
-// };
-
-// export default class imageSelection {
-
-//     render() {
-//         let dom = template();
-
-//         return dom;
-//     }
-    
-// }
+    render() {
+        let products = imageData();
+        let dom = template(products);
+        
+        return dom;
+    }
+}

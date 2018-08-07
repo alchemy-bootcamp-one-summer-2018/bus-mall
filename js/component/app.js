@@ -1,11 +1,13 @@
 
 import html from '../html.js';
-import imageApi from '../services/image-api.js';
+import createImages from '../services/image-api.js';
+import ImageSelection from './imageSelection.js';
 
 let template = function() {
 
     return html`
     <p>helloworld</p>
+    <div> </div>
     <img src="">
 
     <main>
@@ -13,7 +15,6 @@ let template = function() {
     </main>
     
     `;
-
 };
 
 export default class App {
@@ -22,12 +23,16 @@ export default class App {
         let dom = template();
         let main = dom.querySelector('main');
         
-        // let images = imageApi.get();
+        let images = createImages();
+        console.log(images);
 
-        // let imageList = new ImageList ({
+        let imageSelection = new ImageSelection();
+        main.appendChild(imageSelection.render());
+
+        // let imageData = new ImageData ({
         //     images: images
 
-        // })
+        // });
 
         return dom;
     }
