@@ -1,5 +1,6 @@
 import html from '../html.js';
 import RandomizedImage from './randomized-image.js';
+import Results from './results.js';
 
 let template = function() {
     return html`
@@ -7,12 +8,15 @@ let template = function() {
         <h2>Product Survey</h2>
         <section id="randomized-images"></section>
       </section>
+      <section id="results">
+      </section>
     `;
 };
 
 export default class ProductSurvey{
     constructor(props){
         this.products = props.products;
+        this.onComplete = props.onComplete;
         this.lastThreeProducts = [];
         this.displayThreeImages = [];
         this.totalClicks = 0;
@@ -56,26 +60,30 @@ export default class ProductSurvey{
 
     renderImages() {
         //get initial three to show
-        let randomProducts = this.getThreeRandomProduct();
+        this.randomProducts = this.getThreeRandomProduct();
         //loop through products and create randomized image object for each
-        for(let i = 0; i < randomProducts.length; i++) {
+        for(let i = 0; i < this.randomProducts.length; i++) {
             
             
             //passing product that was picked
             let randomizedImage = new RandomizedImage({
-                product: randomProducts[i],
-                view: randomProducts[i].views++,
+                product: this.randomProducts[i],
+                view: this.randomProducts[i].views++,
                 //attach click handler that checks against total clicks
                 //and modifies count property for individual product onClick.
                 //todo refresh dom on image click to show new list of three products
                 clickHandler: () => {
-                    if(this.totalClicks < 25) {
-                        randomProducts[i].count++;
-                        console.log(randomProducts[i]);
+                    if(this.totalClicks < 3) {
+                        this.randomProducts[i].count++;
+                        console.log(this.randomProducts[i]);
                         this.totalClicks++;
                         console.log('total clicks', this.totalClicks);
                         this.clearImages();
                         this.renderImages();
+                    }
+                    else {
+                        this.onComplete();
+                        
                     }
                 }
             });
@@ -83,10 +91,15 @@ export default class ProductSurvey{
         }
     }
     //initialization
+    
+   
+
     render() {
         let dom = template();
         //where add image
         this.randomizedImagesSection = dom.getElementById('randomized-images');
+        //add results
+        this.resultSection = dom.getElementById('results');
         this.renderImages();
         return dom;
     }
