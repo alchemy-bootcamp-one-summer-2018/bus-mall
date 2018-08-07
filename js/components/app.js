@@ -14,13 +14,51 @@ let template = function() {
 
         <main>
             <section class="voting">
-                <div class="voting-grid">
-                    <div class="module">1</div>
-                    <div class="module">2</div>
-                    <div class="module">3</div>                
+                <h2>Let's vote!</h2>
+                <div>
+                    <form>
+                        <legend>Select an image</legend>
+                        <fieldset class="voting-grid">
+                            <div class="module">
+                                <img src="/img/banana.jpg"> 
+                                <input class="radio" type="radio" id="image1" name="image" checked />
+                            </div>
+                            <div class="module">
+                                <img src="/img/bag.jpg">
+                                <input class="radio" type="radio" id="image2" name="image" />
+                            </div>
+                            <div class="module">
+                                <img src="/img/boots.jpg">
+                                <input class="radio" type="radio" id="image3" name="image" />
+                            </div>
+                        </fieldset>
+                        <div>
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </section>
-            <section class="results"></section>
+            <section class="results">
+                <table>
+                    <thead>
+                        <th>Image name</th>
+                        <th>Total votes</th>
+                        <th>Times displayed</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Banana</td>
+                            <td>3</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Beef Jerky</td>
+                            <td>5</td>
+                            <td>10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
     `;
 };
