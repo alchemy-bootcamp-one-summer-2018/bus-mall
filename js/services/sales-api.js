@@ -1,6 +1,5 @@
-// import data from './data.js';
 
-export default function createItems() {
+function createItems() {
     let data = [{
         name: 'breakfast',
         image: 'images/breakfast.jpg'
@@ -21,8 +20,38 @@ export default function createItems() {
     return data;
 }
 
+let items = createItems();
 
-let data = createItems();
-let randNum = Math.floor(Math.random() * data.length); 
-console.log('random number', randNum);  
+export default {
 
+    get: function() {
+        return items;
+    },
+
+    getRandomProducts: function() {
+        let products = [];
+        
+        while(products.length < 3) {
+            let randNum = Math.floor(Math.random() * items.length);
+            let randomProduct = items[randNum];
+            if(!products.includes(randomProduct)) {
+                products.push(randomProduct);
+            }
+        }
+        return products;
+    }
+
+
+//     let data = createItems();
+//      
+//     console.log('random number', randNum); 
+
+//     function getRandomImage() {
+//         let randomImage = data[randNum].image;
+//         console.log('randImage', randomImage);
+//     }
+
+//     getRandomImage();
+
+
+};

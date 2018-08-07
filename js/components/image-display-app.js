@@ -1,22 +1,24 @@
 import html from '../html.js';
-import data from '../services/sales-api.js'; 
+// import createItems from '../services/sales-api.js'; 
 
 
-let template = function(neededProducts) {
+let template = function(neededProduct) {
 
     return html `
-    <img src="${neededProducts[1].image}">
-    <img src="${neededProducts[2].image}">
-    <img src="${neededProducts[3].image}">
+    <img src="${neededProduct.image}">
     `;
 };
 
 export default class ShowImage {
 
+    constructor(props) {
+        this.product = props.product;
+    }
+    
     render() {
-        console.log('data:', data());
-        let products = data();
-        let dom = template(products);
+        // console.log('ShowImage:', createItems()); //this used to be data
+        // let products = createItems();
+        let dom = template(this.product); //(products)
         return dom;
     }
 }   

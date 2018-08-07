@@ -1,7 +1,8 @@
 import html from '../html.js';
-import ShowImage from './image-display-app.js';
+import ProductSurvey from './product-survey.js';
 import Results from './results.js';
-// import salesApi from '../services/sales-api.js';
+// import getRandomImage from '../services/sales-api.js';
+import salesApi from '../services/sales-api.js';
 
 let template = function() {
     return html `
@@ -22,37 +23,26 @@ export default class App {
     render() {
         let dom = template();
         let div = dom.querySelector('div');
-        let showImage = new ShowImage();
-        div.appendChild(showImage.render());
-        console.log('show image:', showImage);
+
+        let items = salesApi.getRandomProducts();
+        console.log('items', items);
+
+        let productSurvey = new ProductSurvey({
+            products: items
+        });
+
+        div.appendChild(productSurvey.render());
+
+        // let p = dom.querySelector('p');
+        // let randomImage = getRandomImage();
+        // p.appendChild(randomImage.render());
 
         let section = dom.querySelector('section');
         let results = new Results();
         section.appendChild(results.render());
         console.log('results', results);
 
-        // let randNum = salesApi.getRandomNumber();
-        // console.log('random number', randNum);
-
         return dom;
-    }
+    }  
 
-
-    
 }
-
-// for(let j = 0; j < stores.length; j++) {
-
-//     stores[j].cookieSalesPerStore = [];
-
-//     for(let i = 0; i < 14; i++) {
-//         let custPerHours = Math.floor(Math.random() * (stores[j].maxCust - stores[j].minCust)) + stores[j].minCust;
-//         let cookieSales = custPerHours * stores[j].avgCookies;
-//         //console.log('cookie sales:', cookieSales); 
-        
-//         randomHoursArray.push(custPerHours);
-//         cookieSalesArray.push(cookieSales);
-//         stores[j].cookieSalesPerStore.push(cookieSales);
-//     }
-
-// }
