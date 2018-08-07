@@ -19,13 +19,19 @@ function importImages(name) {
 importImages('banana');
 console.log('images', images);
 
-// function imageElements() {
-//     for(let i = 0; i < images.length; i++){
-//         let imageElements = [];
-//         imageElements.push(`<img src='${images[i].src.value}' alt='${name}'>`);
-//     }
-    
-// }
+let imageElements = [];
+function imageHtml(images) {
+    for(let i = 0; i < images.length; i++){
+        let image = images[i];
+        console.log('image test', image);
+        console.log('img src', image.src);
+        imageElements.push(`<img src='${image.src}' alt='${image.name}'>`);
+    }
+    return imageElements;
+}
+
+imageHtml(images);
+console.log('imageElements', imageElements);
 
 // function getRandomImage() {
     
