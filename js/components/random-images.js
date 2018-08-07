@@ -7,16 +7,23 @@ let template = function() {
 
 };
 
+let names = ['bag', 'banana', 'bathroom', 'boots', 'breakfast', 'bubblegum'];
+
+
 let images = [];
 
 function importImages(name) {
-    images.push({
-        name: name,
-        src: `/img/${name}.jpg`
-    });  
+    console.log('name length', names.length);
+    for(let i = 0; i < names.length; i++) {
+        let product = {
+            name: name[i],
+            src: `/img/${name[i]}.jpg`
+        };
+        images.push(product); 
+    }
     return images;
 }
-importImages('banana');
+importImages(names);
 console.log('images', images);
 
 let imageElements = [];
@@ -33,9 +40,27 @@ function imageHtml(images) {
 imageHtml(images);
 console.log('imageElements', imageElements);
 
-// function getRandomImage() {
-    
-// }
+function getRandomInteger(max) {
+    return Math.floor(Math.random() * (max));
+}
+
+let threeImages = '';
+function getRandomImages() {
+    let imageElementsCopy = imageElements.slice();
+    console.log('imageElements after slice', imageElementsCopy);
+
+    for(let i = 0; i < 3; i++) {
+        let random = getRandomInteger(imageElementsCopy.length);
+        let randomImage = imageElementsCopy[random];
+        threeImages += randomImage;
+        imageElementsCopy.splice(random, 1);
+        console.log('image elements copy', imageElementsCopy)
+    }
+    return threeImages;
+}
+
+getRandomImages();
+console.log('threeImages', threeImages);
 
 export default class RandomImage {
     constructor(props) {
