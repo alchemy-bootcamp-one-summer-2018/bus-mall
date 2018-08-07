@@ -32,7 +32,7 @@ function imageHtml(images) {
         let image = images[i];
         console.log('image test', image);
         console.log('img src', image.src);
-        imageElements.push(`<img src='${image.src}' alt='${image.name}'>`);
+        imageElements.push(`<img src="${image.src}" alt="${image.name}" id="${image.name}">`);
     }
     return imageElements;
 }

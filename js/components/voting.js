@@ -11,6 +11,8 @@ let template = function() {
 
 };
 
+
+
 export default class VotingArea {
     constructor(props) {
         this.voteDisplay = props.voteDisplay;
