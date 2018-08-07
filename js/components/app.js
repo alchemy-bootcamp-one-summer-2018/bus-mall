@@ -10,7 +10,9 @@ let template = function() {
 
         <main>
             <section id="survey">
-                <div
+                <div>
+                    <img src='../../assets/banana.jpg'>
+                </div>
             </section>
             <section>
             </section>
@@ -24,8 +26,9 @@ export default class App {
     render() {
         let dom = template();
         this.productApi = dom.querySelector('section.survey');
-        let callCreateProducts = createProducts();
-        console.log('created products', callCreateProducts);
+        let productList = createProducts();
+        console.log('Product List:', productList);
+        console.log('Image:', productList[3].image);
 
         let section = dom.querySelector('div');
         let results = new Results();
