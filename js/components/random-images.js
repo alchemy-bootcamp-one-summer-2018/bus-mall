@@ -2,7 +2,7 @@ import html from '../html.js';
 
 let template = function() {
     return html`
-        <img src='../../img/bag.jpg'>
+        <div class="images"></div>
     `;
 
 };
@@ -54,7 +54,7 @@ function getRandomImages() {
         let randomImage = imageElementsCopy[random];
         threeImages += randomImage;
         imageElementsCopy.splice(random, 1);
-        console.log('image elements copy', imageElementsCopy)
+        console.log('image elements copy', imageElementsCopy);
     }
     return threeImages;
 }
@@ -62,12 +62,17 @@ function getRandomImages() {
 getRandomImages();
 console.log('threeImages', threeImages);
 
+
+
 export default class RandomImage {
     constructor(props) {
         this.testImage = props.testImage;
     }
     render() {
         let dom = template(); 
+        let imageArea = dom.querySelector('div.images');
+        imageArea.innerHTML = threeImages;
+        
         // let votingArea = dom.getElementById('voting-area');
         // votingArea.appendChild(this.testImage.render());
 
