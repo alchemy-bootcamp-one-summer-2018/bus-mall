@@ -142,9 +142,10 @@ export default function imageLoading() {
         },
     ];
 
-    let a, b, c;
+    // Need to keep track of previous images used; can use randomImageSet?
     let randomImageSet = [];
-    let chosenRemoved = images.slice();
+    let duplicateRemoved = images.slice();
+    let imagesDisplayed = []; // Need to figure out how to update this rather than use separate variable
 
     function randomizeImages(images, min, max) {
         return Math.floor(
@@ -155,12 +156,16 @@ export default function imageLoading() {
     }
 
     for(let i = 0; i < 3; i++) {
-        let index = randomizeImages(chosenRemoved, 0, (chosenRemoved.length - 1));
-        randomImageSet.push(chosenRemoved[index]);
-        let result = images.find(image => image.id === chosenRemoved[index].id);
+        let index = randomizeImages(duplicateRemoved, 0, (duplicateRemoved.length - 1));
+        randomImageSet.push(duplicateRemoved[index]);
+        imagesDisplayed.push(duplicateRemoved[index]);
+        // Lets me match the image chosen vs. the parent set, and refer to the parent
+        // So, I have a way to grab and update the persisting image data count. Cleaner way to do this?
+        let result = images.find(image => image.id === duplicateRemoved[index].id);
         result.count += 1;
         console.log(result.count);
-        chosenRemoved.splice(index, 1);
+        // Remove the exact image from the working image set, so no duplicates are displayed
+        duplicateRemoved.splice(index, 1);
     }
 
     return randomImageSet;
