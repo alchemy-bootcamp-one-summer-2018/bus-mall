@@ -1,9 +1,8 @@
 // the template helper
 import html from '../html.js';
-import imageLoading from '../data-wrangling/data.js';
+import ImageForm from '../components/image-form.js';
 
 // services component needs to use
-let foo = imageLoading();
 
 let template = function(imageLoading) {
     return html`        
@@ -12,21 +11,9 @@ let template = function(imageLoading) {
         </header>
         <main>
             <section class="auth"></section>
+            <p><a href="for-sale.html">View For Sale Items</a></p>
             <form class="submit-form">
                 <section class="images">
-                    <p><a href="for-sale.html">View For Sale Items</a></p>
-                    <div class="row">
-                        <div class="column">${foo[0].src}</div>
-                        <div class="column">${foo[1].src}</div>
-                        <div class="column">${foo[2].src}</div>
-                    </div>
-                </section>
-                <section class="buttons">
-                    <div class="row">
-                        <div class="column"><input type="radio"></div>
-                        <div class="column"><input type="radio"></div>
-                        <div class="column"><input type="radio"></div>
-                    </div>
                 </section>
                 <button>submit</button>
             </form>
@@ -38,8 +25,11 @@ export default class App {
 
     render() {
         let dom = template();
-        let form = dom.querySelector('form'); 
+        let form = dom.querySelector('form');
+        let images = dom.querySelector('.images');
         this.authSection = dom.querySelector('section.auth');
+        let imageForm = new ImageForm();
+        images.appendChild(imageForm.render());
         
         form.addEventListener('submit', (event) => {
             event.preventDefault();

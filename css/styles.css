@@ -8,3 +8,7 @@
     padding: 5px;
     border-style: inset;
   }
+
+  img {
+    max-height: 400px;
+  }
