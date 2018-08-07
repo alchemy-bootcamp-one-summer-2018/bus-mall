@@ -25,8 +25,9 @@ export default class ProductSurvey {
             let showImage = new ShowImage({ // anything you put inside this class constructor is passed down to the child
                 product: this.products[i],
                 onSelect: (product) => {
-                    product.click++,
-                    console.log('clicks', product.click);
+                    this.product = product;
+                    this.product.clicks++,
+                    console.log('clicks', this.product.clicks);
                 }
             });
             section.appendChild(showImage.render());
