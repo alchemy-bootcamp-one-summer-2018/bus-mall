@@ -1,26 +1,25 @@
 import html from '../html.js';
-import imageData from '../services/productImage-api.js';
+import imagesApi from '../services/productImage-api.js';
 
 let template = function(neededProducts) {
 
     return html`
-    <img src=${neededProducts[1].image}>
-    <img src=${neededProducts[2].image}>
-    <img src=${neededProducts[3].image}>
+    <img class="image" src=${neededProducts[1].image}>
+    <img class="image" src=${neededProducts[2].image}>
+    <img class="image" src=${neededProducts[3].image}>
 
-    <img src="images/" id="image">
+    <img>
 
     `;
 
 };
 
-export default class imageSelection {
-    
+export default class showProductImages {
 
     render() {
-        let products = imageData();
+        let products = imagesApi.getRandomImages();
         let dom = template(products);
-        //let randomImages = randomImages();
+        
         
         return dom;
     }

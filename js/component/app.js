@@ -1,14 +1,14 @@
 
 import html from '../html.js';
 import productImages from '../services/productImage-api.js';
-import ImageSelection from './productImage.js';
+import ShowProductImages from './productImage.js';
 
 let template = function() {
 
     return html`
     <p>helloworld</p>
     <div> </div>
-    <img src="">
+  
 
     <main>
 
@@ -23,11 +23,11 @@ export default class App {
         let dom = template();
         let main = dom.querySelector('main');
         
-        let images = productImages();
-        console.log(images);
 
-        let imageSelection = new ImageSelection();
-        main.appendChild(imageSelection.render());
+        let showProductImages = new ShowProductImages();
+    
+        
+        main.appendChild(showProductImages.render());
 
         // let imageData = new ImageData ({
         //     images: images
