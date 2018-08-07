@@ -4,9 +4,9 @@ import imagesApi from '../services/productImage-api.js';
 let template = function(neededProducts) {
 
     return html`
+    <img class="image" src=${neededProducts[0].image}>
     <img class="image" src=${neededProducts[1].image}>
     <img class="image" src=${neededProducts[2].image}>
-    <img class="image" src=${neededProducts[3].image}>
 
     <img>
 

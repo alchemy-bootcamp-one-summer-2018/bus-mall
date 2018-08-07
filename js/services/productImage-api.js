@@ -73,14 +73,21 @@ let imageData = [{
 export default {
 
     getRandomImages: function() {
+        // empty array to fill with random images
+
+        let randomArray = [];
 
         for(let i = 0; i < 3; i++) {
             let randomNum = Math.floor(Math.random() * (imageData.length));
         
             let randomImage = imageData[randomNum];
             console.log('randomImage: ', randomImage);
+            randomArray.push(randomImage);
         }
-        
+
+        return randomArray;
+
+
         //randomImages.slice;
     },
 
