@@ -29,6 +29,10 @@ export default class App {
             products: products,
             onClick: (product) => {
                 console.log('app', product.name, 'was clicked');
+                product.votes++;
+                votingArea.update({
+                    products: productApi.getRandomProducts()
+                });
             }
         });
 

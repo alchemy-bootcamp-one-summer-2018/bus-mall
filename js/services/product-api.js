@@ -3,7 +3,6 @@ class Product {
 
     constructor(name) {
         this.name = name;
-        this.element = `<img src="/img/${name}.jpg" alt="${name}" class="${name}">`;
         this.shows = 0;
         this.votes = 0;
     }
@@ -33,7 +32,6 @@ export default {
 
         let threeProducts = [];
         let productListCopy = productList.slice();
-        console.log('imageElements after slice', productListCopy);
         
         for(let i = 0; i < 3; i++) {
             let random = getRandomInteger(productListCopy.length);

@@ -28,20 +28,33 @@ export default class VotingArea {
         this.onClick = props.onClick;
     }
 
+    update(props) {
+        this.products = props.products;
+        this.clearImages();
+        this.renderImages();
+    }
+    
+    clearImages() {
+        while(this.votingArea.lastElementChild) {
+            this.votingArea.lastElementChild.remove();
+        }
+    }
 
-    render() {
-        let dom = template();
-        let votingArea = dom.querySelector('section.voting-area');
-        
-        for(let i = 0; i < 3; i++) {
+    renderImages() {
+        for(let i = 0; i < this.products.length; i++) {
             let randomImage = new RandomImage ({
                 product: this.products[i],
                 onClick: this.onClick
-
             });
             
-            votingArea.appendChild(randomImage.render());
+            this.votingArea.appendChild(randomImage.render());
         }
+    }
+
+    render() {
+        let dom = template();
+        this.votingArea = dom.querySelector('section.voting-area');
+        this.renderImages();
 
 
         return dom;
