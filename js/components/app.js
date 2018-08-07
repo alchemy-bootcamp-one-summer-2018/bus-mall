@@ -1,6 +1,6 @@
 import html from '../html.js';
 import VotingArea from './voting.js';
-import productList from '../services/product-api.js';
+import productApi from '../services/product-api.js';
 
 
 let template = function() {
@@ -23,7 +23,7 @@ export default class App {
         let dom = template();
         let main = dom.querySelector('main');
         
-        let products = productList.get();
+        let products = productApi.getRandomProducts();
 
         let votingArea = new VotingArea ({
             products: products

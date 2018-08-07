@@ -24,18 +24,22 @@ let template = function() {
 
 export default class VotingArea {
     constructor(props) {
-        this.voteDisplay = props.voteDisplay;
+        this.products = props.products;
     }
 
 
     render() {
         let dom = template();
         let votingArea = dom.querySelector('section.voting-area');
-        let randomImage = new RandomImage ({
         
-        });
-        
-        votingArea.appendChild(randomImage.render());
+        for(let i = 0; i < 3; i++) {
+            let randomImage = new RandomImage ({
+                product: this.products[i]
+            });
+            
+            votingArea.appendChild(randomImage.render());
+        }
+
 
         return dom;
     }

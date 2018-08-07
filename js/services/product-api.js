@@ -29,25 +29,20 @@ export default {
     get: function() {
         return productList;
     },
-    getRandomImages: function() {
+    getRandomProducts: function() {
 
-        let threeImages = '';
-        let threeNames = [];
+        let threeProducts = [];
         let productListCopy = productList.slice();
         console.log('imageElements after slice', productListCopy);
         
         for(let i = 0; i < 3; i++) {
             let random = getRandomInteger(productListCopy.length);
-            let randomImageElement = productListCopy[random].element;
-            let randomImageName = productListCopy[random].name;
-            threeImages += randomImageElement;
-            threeNames.push(randomImageName);
-            console.log('threeImages', threeImages);
-            console.log('threeNames', threeNames);
+            let randomProduct = productListCopy[random];
+            threeProducts.push(randomProduct);
             productListCopy.splice(random, 1);
-            console.log('image elements copy', productListCopy);
         }
-        return threeImages;
+        console.log('three prodcuts', threeProducts);
+        return threeProducts;
     }
 };
 
