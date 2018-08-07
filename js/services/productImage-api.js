@@ -24,8 +24,8 @@ let imageData = [{
 }, { name:'bubblegum',
     image:'../images/bubblegum.jpg',
 
-}, { name:'cthulhur',
-    image:'../images/cthulhur.jpg',
+}, { name:'cthulhu',
+    image:'../images/cthulhu.jpg',
 
 }, { name:'dog-duck',
     image:'../images/dog-duck.jpg',
@@ -43,28 +43,28 @@ let imageData = [{
     image:'../images/scissors.jpg',
 
 }, { name:'shark',
-    image:'shark.jpg',
+    image:'../images/shark.jpg',
 
 }, { name:'sweep',
-    image:'sweep.jpg',
+    image:'../images/sweep.png',
 
 }, { name:'tauntuan',
-    image:'tauntuan.jpg',
+    image:'../images/tauntuan.jpg',
 
 }, { name:'unicorn',
-    image:'unicorn.jpg',
+    image:'../images/unicorn.jpg',
 
 }, { name:'usb',
-    image:'usb.jpg',
+    image:'../images/usb.gif',
 
 }, { name:'water-can',
-    image:'water-can.jpg',
+    image:'../images/water-can.jpg',
 
-}, { name:'wine-glass',
-    image:'win-glass.jpg',
+}, { name:'wine glass',
+    image:'../images/wine-glass.jpg',
     
 }, { name:'wireframe',
-    image:'wireframe.jpg',
+    image:'../images/wireframe.png',
     
 }];
     
@@ -72,22 +72,26 @@ let imageData = [{
 
 export default {
 
+
     getRandomImages: function() {
         // empty array to fill with random images
 
         let randomArray = [];
+        let copyData = imageData.slice();
 
         for(let i = 0; i < 3; i++) {
-            let randomNum = Math.floor(Math.random() * (imageData.length));
+            let randomNum = Math.floor(Math.random() * (copyData.length));
         
-            let randomImage = imageData[randomNum];
-            console.log('randomImage: ', randomImage);
+            let randomImage = copyData[randomNum];
+            //console.log('randomImage: ', randomImage);
             randomArray.push(randomImage);
+
+
         }
 
         return randomArray;
 
-
+       
         //randomImages.slice;
     },
 
