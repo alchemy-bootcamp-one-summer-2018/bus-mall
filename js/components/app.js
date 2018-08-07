@@ -16,6 +16,7 @@ let template = function() {
     `;
 };
 
+
 export default class App {
     render() {
         let dom = template();

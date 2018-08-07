@@ -30,7 +30,7 @@ function imageHtml(images) {
         let image = images[i];
         console.log('image test', image);
         console.log('img src', image.src);
-        imageElements.push(`<img src="${image.src}" alt="${image.name}" id="${image.name}">`);
+        imageElements.push(`<img src="${image.src}" alt="${image.name}" class="${image.name}">`);
     }
     return imageElements;
 }
@@ -62,6 +62,8 @@ console.log('threeImages', threeImages);
 
 
 
+
+
 export default class RandomImage {
     constructor(props) {
         this.testImage = props.testImage;
@@ -70,9 +72,14 @@ export default class RandomImage {
         let dom = template(); 
         let imageArea = dom.querySelector('div.images');
         imageArea.innerHTML = threeImages;
-        
-        // let votingArea = dom.getElementById('voting-area');
-        // votingArea.appendChild(this.testImage.render());
+
+        let test = dom.querySelectorAll('img.bag');
+        console.log('query test', test);
+
+        imageArea.addEventListener('click', (event) => {
+            event.preventDefault;
+            console.log('event listener working');
+        });
 
         return dom;
     }

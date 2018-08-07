@@ -14,7 +14,14 @@ let template = function() {
 
 console.log('names', names);
 
-// document.getElementById(names[0]).addEventListener('click', function() {
+
+
+// for(var i = 0; i < names.length; i++) {
+//     names[i].addEventListener('click', function() {
+//         console.log('clicked');
+//     }, false);
+// }
+// document.getElementById(`'${names[0]}'`).addEventListener('click', function() {
 //     console.log('event listener working', names[0]);
 // });
 
