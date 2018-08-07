@@ -83,7 +83,7 @@ export default class RandomImage {
             getRandomImages();
             console.log('three new images', threeImages);
             imageArea.innerHTML = threeImages;
-            return threeImages;
+            return imageArea.innerHTML;
         });
 
         return dom;
