@@ -21,6 +21,7 @@ function importImages(name) {
     }
     return images;
 }
+
 importImages(names);
 console.log('images', images);
 
@@ -73,21 +74,16 @@ export default class RandomImage {
         let imageArea = dom.querySelector('div.images');
         imageArea.innerHTML = threeImages;
 
-        // for(let i = 0; i < names.length; i++) {
-        //     let test = dom.querySelectorAll(`.${names[i]}`);
-        //     console.log('query test', test);
-
-        //     imageArea.addEventListener('click', (test) => {
-        //         event.preventDefault;
-        //         console.log('event listener working for ', names[i]);
-        //     });
-        // }
-
         let bag = dom.querySelector('img.bag');
         console.log('query test', bag);
         bag.addEventListener('click', (event) => {
             event.preventDefault();
             console.log('event listener working for', names[0]);
+            threeImages = '';
+            getRandomImages();
+            console.log('three new images', threeImages);
+            imageArea.innerHTML = threeImages;
+            return threeImages;
         });
 
         return dom;
