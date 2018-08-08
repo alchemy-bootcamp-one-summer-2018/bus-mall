@@ -1,4 +1,4 @@
-let stored = window.localStorage.getItem('data');
+let stored = window.localStorage.getItem('products');
 let data;
 
 if(stored && stored !== 'undefined') {

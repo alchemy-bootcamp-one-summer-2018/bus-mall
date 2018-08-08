@@ -27,6 +27,7 @@ export default class App {
 
         });
         this.main.appendChild(results.render());
+        console.log('this products', this.products);
     }
 
     render() {

@@ -30,6 +30,15 @@ export default class ResultsApp {
     }
     
     render() {
+
+        let data;
+        let json = window.localStorage.getItem('data');
+        if(json && json !== 'undefined') {
+            data = JSON.parse(json);
+        }
+        this.products = data.products;
+        console.log('are you here', data.products);
+
         let dom = template();
         this.main = dom.querySelector('main');
         this.header = dom.querySelector('header');
