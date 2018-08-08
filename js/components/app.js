@@ -37,7 +37,13 @@ export default class App {
                 votingArea.update({
                     products: productApi.getRandomProducts()
                 });
-            }
+            },
+            showResults: (product) => {
+                votingArea.update({
+                    '<p>The results are in<p>'
+                });
+            },
+
         });
 
         main.appendChild(votingArea.render());

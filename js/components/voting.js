@@ -1,5 +1,6 @@
 import html from '../html.js';
 import RandomImage from './random-images.js';
+import ResultsArea from './results.js';
 
 let template = function() {
     return html`
@@ -30,6 +31,14 @@ export default class VotingArea {
         }
     }
 
+    renderResults() {
+        let resultsArea = new ResultsArea ({
+            products: this.products,
+            showResults: this.showResults
+        });
+        this.votingArea.appendChild(resultsArea.render());
+    }
+
     renderImages() {
         for(let i = 0; i < this.products.length; i++) {
             let randomImage = new RandomImage ({
@@ -46,6 +55,7 @@ export default class VotingArea {
         let dom = template();
         this.votingArea = dom.querySelector('section.voting-area');
         this.renderImages();
+        this.renderResults();
 
 
         return dom;
