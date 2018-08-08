@@ -15,10 +15,17 @@ export default class VotingCard {
 
     constructor(props) {
         this.product = props.product;
+        this.onSelect = props.onSelect;
     }
 
     render() {
         let dom = template(this.product);
+
+        let div = dom.querySelector('div');
+        div.addEventListener('click', () => {
+            this.onSelect(this.product);
+        });
+
 
         return dom;
     }

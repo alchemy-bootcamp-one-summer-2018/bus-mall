@@ -48,11 +48,16 @@ export default class App {
 
 
         let votingBox = new VotingBox(
-            { products: products}
+            { 
+                products: products,
+                onSelect: (product) => {
+                    console.log(product.name, 'was clicked!');
+                }
+            }
         );
 
 
-        this.votingBox = dom.querySelector(".voting-box");
+        this.votingBox = dom.querySelector('.voting-box');
         this.votingBox.appendChild(votingBox.render());
 
 

@@ -19,6 +19,7 @@ export default class VotingBox {
 
     constructor(props) {
         this.products = props.products;
+        this.onSelect = props.onSelect;
     }
 
     render() {
@@ -29,7 +30,10 @@ export default class VotingBox {
         
         for(let i = 0; i < 3; i++){
             let votingCard = new VotingCard(
-                {product: this.products[i]}
+                {
+                    product: this.products[i],
+                    onSelect: this.onSelect
+                }
             );
             this.votingCard.appendChild(votingCard.render());
 
