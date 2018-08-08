@@ -1,16 +1,16 @@
 import html from '/js/html.js';
-
-import VotingCard from '/js/components/parts/voting-card.js'
-// services component needs to use
+import VotingCard from '/js/components/parts/voting-card.js';
+import productApi from '/js/services/product-api.js';
 
 
 // import imageApi from '../../services/image-api.js';
 // import resultsApi from '../services/results-api.js';
 
 
-let template = function() {
+let template = (rounds) => {
     return html`        
         <h2>Let's vote!</h2>
+        <h3>Total Rounds: <span class="count">${rounds}</span></h3>
         <div class="voting-card"></div>
     `;
 };
@@ -19,26 +19,40 @@ export default class VotingBox {
 
     constructor(props) {
         this.products = props.products;
+        this.rounds = props.rounds;
         this.onSelect = props.onSelect;
     }
-
-    render() {
-        let dom = template();
-
-        
-        this.votingCard = dom.querySelector(".voting-card");
-        
-        for(let i = 0; i < 3; i++){
+    
+    renderProducts(products) {
+        for(let i = 0; i < products.length; i++){
             let votingCard = new VotingCard(
                 {
-                    product: this.products[i],
+                    product: products[i],
                     onSelect: this.onSelect
                 }
             );
             this.votingCard.appendChild(votingCard.render());
+        }
+    }
+    
+    newRound() {
 
+        this.count.innerText = this.rounds;
+
+        while(this.votingCard.children.length) {
+            this.votingCard.lastChild.remove();
         }
 
+        this.products = productApi.getRandomProducts();
+        this.renderProducts(this.products);
+    }
+
+    render() {
+        let dom = template(this.rounds);
+        this.count = dom.querySelector('.count');
+        this.votingCard = dom.querySelector('.voting-card');
+
+        this.renderProducts(this.products);
 
         return dom;
     }

@@ -39,23 +39,34 @@ let template = function() {
 
 export default class App {
 
+    constructor() {
+        this.products = productApi.getRandomProducts();
+        this.rounds = 25;
+    }
 
+    renderResults(products) {
+        console.log(products, 'I will add results!');
+    }
 
     render() {
-        let dom = template();
+        let dom = template(this.rounds);
 
-        let products = productApi.getRandomProducts();
+        let votingBox = new VotingBox({ 
+            products: this.products,
+            rounds: this.rounds,
+            onSelect: (product) => {
 
-
-        let votingBox = new VotingBox(
-            { 
-                products: products,
-                onSelect: (product) => {
-                    productApi.handleClick(product.name);
-                    
-                }
+                votingBox.rounds--;
+                this.rounds--;
+                
+                productApi.handleClick(product.name);
+                
+                this.rounds
+                    ? votingBox.newRound()
+                    : this.renderResults(productApi.get());
+            
             }
-        );
+        });
 
 
         this.votingBox = dom.querySelector('.voting-box');
