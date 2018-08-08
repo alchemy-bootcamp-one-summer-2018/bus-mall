@@ -1,7 +1,6 @@
 //import data from './data.js';
 
 let products = createProducts();
-
 function createProducts() {
     let data = [{
         name: 'bag',
@@ -70,12 +69,6 @@ function createProducts() {
         numberClicks: 0
     },
     {
-        name: 'pet-sweep',
-        image: './assets/pet-sweep.jpg',
-        viewCount: 0,
-        numberClicks: 0
-    },
-    {
         name: 'scissors',
         image: './assets/scissors.jpg',
         viewCount: 0,
@@ -84,12 +77,6 @@ function createProducts() {
     {
         name: 'shark',
         image: './assets/shark.jpg',
-        viewCount: 0,
-        numberClicks: 0
-    },
-    {
-        name: 'sweep',
-        image: './assets/sweep.jpg',
         viewCount: 0,
         numberClicks: 0
     },
@@ -106,12 +93,6 @@ function createProducts() {
         numberClicks: 0
     },
     {
-        name: 'usb',
-        image: './assets/usb.jpg',
-        viewCount: 0,
-        numberClicks: 0
-    },
-    {
         name: 'water-can',
         image: './assets/water-can.jpg',
         viewCount: 0,
@@ -122,16 +103,35 @@ function createProducts() {
         image: './assets/wine-glass.jpg',
         viewCount: 0,
         numberClicks: 0
+    
     }];
-
-    // for(let i = 0; i < data.length;i++) {
-    // addKey(data[i]);
-    // }
     return data;
 }
+
+//show only 3 random images
+
+//delete repeat images
+    
+//poll
+
+//results
+   
+
 export default {
     get: function() {
         return products;
+    },
+    getRandomProducts: function(){
+        let imageDisplayed = [];
+
+        for(let i = 0; i < 3; i++) {
+            let randomIndex = Math.floor(Math.random() * products.length);
+            console.log(products[randomIndex]);
+            imageDisplayed.push(products[randomIndex]);
+    
+        }
+        return imageDisplayed;
 
     }
+
 };
