@@ -49,7 +49,7 @@ export default class App {
         let voting = new Voting(
             {}
         );
-        console.log(voting);
+        
         this.voting = dom.querySelector(".voting");
         this.voting.appendChild(voting.render());
 
