@@ -7,22 +7,19 @@ let template = function(name) {
 
 };
 
-
 export default class RandomImage {
     constructor(props) {
         this.product = props.product;
         this.onClick = props.onClick;
         this.onLoad = props.onLoad;
     }
+
     render() {
         let dom = template(this.product.name); 
-        let product = this.product.name;
         this.onLoad(this.product);
 
-
-        let one = dom.querySelector('img');
-        one.addEventListener('click', () => {
-            console.log(product, 'was clicked');
+        let img = dom.querySelector('img');
+        img.addEventListener('click', () => {
             this.onClick(this.product);            
         });
         

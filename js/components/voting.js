@@ -9,7 +9,6 @@ let template = function() {
         <section class="results-area"></section>
         </main>
     `;
-
 };
 
 export default class VotingArea {
@@ -21,7 +20,6 @@ export default class VotingArea {
         this.totalCount = props.totalCount;
     }
 
-    
     update(props) {
         this.products = props.products;
         this.clearImages();
@@ -50,7 +48,6 @@ export default class VotingArea {
         let dom = template();
         this.votingArea = dom.querySelector('section.voting-area');
         this.renderImages();
-        // this.renderResults();
 
         return dom;
     }

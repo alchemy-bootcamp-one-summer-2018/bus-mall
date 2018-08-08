@@ -24,7 +24,6 @@ export default class Report {
             ul.appendChild(result.render());
         }
         
-
         return dom;
     }
 }

@@ -3,7 +3,6 @@ import VotingArea from './voting.js';
 import productApi from '../services/product-api.js';
 import Report from './results-report.js';
 
-
 let template = function() {
     return html`        
         <header>
@@ -17,8 +16,6 @@ let template = function() {
     `;
 };
 
-
-
 export default class App {
     constructor() {
         this.products = productApi.get();
@@ -30,33 +27,30 @@ export default class App {
         let voting = dom.querySelector('.voting');
         let results = dom.querySelector('.results');
         let products = productApi.getRandomProducts();
-        // let resultsSection = dom.querySelector('.results-section');
 
         let votingArea = new VotingArea ({
+            
             products: products,
+            
             onLoad: (product) => {
                 product.views++;
-                console.log(product.name, 'has been viewed', product.views, 'times');
             },
+            
             onClick: (product) => {
-                console.log('app', product.name, 'was clicked');
                 product.votes++;
                 this.totalCount++;
+                
                 if(this.totalCount >= 25) {
-                    console.log('done!');
                     let report = new Report ({
                         products: this.products
                     });
                     results.appendChild(report.render());
                     voting.style.display = 'none';
-                    
                 }
-                console.log(product.name, 'has been clicked', product.votes, 'times');
+                
                 votingArea.update({
                     products: productApi.getRandomProducts()
                 });
-                
-                
             },
             
         });

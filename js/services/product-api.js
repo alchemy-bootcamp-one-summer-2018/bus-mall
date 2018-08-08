@@ -1,12 +1,9 @@
-
 class Product {
-
     constructor(name) {
         this.name = name;
         this.views = 0;
         this.votes = 0;
     }
-
 }
 
 let names = ['bag', 'banana', 'bathroom', 'boots', 'breakfast', 'bubblegum', 'chair', 'cthulhu', 'dog-duck', 'dragon', 'pen', 'pet-sweep', 'scissors', 'shark', 'sweep', 'tauntaun', 'unicorn', 'usb', 'water-can', 'wine-glass'];
@@ -21,14 +18,13 @@ function getProductList() {
 }
 
 let productList = getProductList();
-console.log('api product list', productList);
 
 export default {
     get: function() {
         return productList;
     },
-    getRandomProducts: function() {
 
+    getRandomProducts: function() {
         let threeProducts = [];
         let productListCopy = productList.slice();
         
@@ -38,7 +34,6 @@ export default {
             threeProducts.push(randomProduct);
             productListCopy.splice(random, 1);
         }
-        console.log('three prodcuts', threeProducts);
         return threeProducts;
     }
 };
