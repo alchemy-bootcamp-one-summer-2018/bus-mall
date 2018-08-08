@@ -22,32 +22,35 @@ export default class ReportChart {
 
         let labels = [];
         let data = [];
+        let data2 = [];
 
         for(let i = 0; i < this.results.length; i++) {
-            const channel = this.results[i];
-            labels.push(channel.name);
-            data.push(channel.count);
+            const product = this.results[i];
+            labels.push(product.name);
+            data.push(product.votes);
+            data2.push(product.views);
         }
 
         this.chart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
-                datasets: [{
-                    label: '# of Views',
-                    data: data,
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)'
-                    ],
-                    borderWidth: 1
-                }]
+                datasets: [
+                    {
+                        label: '# of Votes',
+                        data: data,
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255,99,132,1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: '# of Views',
+                        data: data2,
+                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        borderWidth: 1
+                    }
+                ]
             },
             options: {
                 responsive: true,
