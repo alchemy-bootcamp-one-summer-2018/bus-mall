@@ -1,8 +1,8 @@
 import html from '../html.js';
 
-let template = function() {
+let template = function(product) {
     return html`
-        <li>test</li>
+    <li><span class="product-name">${product.name}</span><br>  views: ${product.views} votes: ${product.votes}</li>
     `;
 
 };
@@ -19,5 +19,3 @@ export default class Result {
         return dom;
     }
 }
-
-{/* <li>${product.name} was viewed ${product.views} times and voted for ${product.votes} times</li> */}

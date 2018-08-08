@@ -6,6 +6,7 @@ let template = function() {
         <main>
         <p>Hello Voting Area!</p>
         <section class="voting-area"></section>
+        <section class="results-area"></section>
         </main>
     `;
 
