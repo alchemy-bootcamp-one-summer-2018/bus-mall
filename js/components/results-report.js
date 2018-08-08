@@ -1,6 +1,6 @@
 import html from '/js/html.js';
 import Result from './result.js';
-// import ReportChart from './report-chart.js';
+import ReportChart from './report-chart.js';
 
 let template = function() {
     return html`
@@ -19,7 +19,7 @@ export default class Report {
     render() {
         let dom = template();
         let ul = dom.querySelector('ul');
-        // let chart = dom.querySelector('.chart');
+        let chart = dom.querySelector('.chart');
         
         for(let i = 0; i < this.results.length; i++) {
             let result = new Result ({
@@ -28,10 +28,10 @@ export default class Report {
             ul.appendChild(result.render());
         }
         
-        // let reportChart = new ReportChart({
-        //     results: this.results
-        // });
-        // chart.appendChild(reportChart.render());
+        let reportChart = new ReportChart({
+            results: this.results
+        });
+        chart.appendChild(reportChart.render());
 
         return dom;
     }

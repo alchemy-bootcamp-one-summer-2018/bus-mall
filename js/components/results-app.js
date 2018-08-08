@@ -1,5 +1,4 @@
 import html from '../html.js';
-import VotingArea from './voting.js';
 import productApi from '../services/product-api.js';
 import Report from './results-report.js';
 import Header from './header.js';
@@ -8,60 +7,41 @@ let template = function() {
     return html`        
         <body>
             <section class="header"></section>  
-            <section class="instructions">
-                <p id='instructions'>The three images below are products we are considering selling in Bus Mall. Please click on the image of the product you are most likely to buy to vote for it. After 25 votes, you can see our poll results.</p>
+            <section class="chart"></section>
+            <section class="results-list"></section>
+            <section class="methodology">
+
+                <h2>Methodology</h2>
+
+                <p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+
+                <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+            
+                <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+                
             </section>
-            <section class="voting"></section>
-            <section class="results"></section>
         <body>
     `;
 };
 
-export default class App {
+export default class ResultsApp {
     constructor() {
         this.products = productApi.get();
-        this.totalCount = 0;
     }
 
     render() {
         let dom = template();
-        let voting = dom.querySelector('.voting');
-        let results = dom.querySelector('.results');
-        let products = productApi.getRandomProducts();
+        let results = dom.querySelector('.results-list');
 
         let headerDisplay = dom.querySelector('.header');
         let header = new Header ({});
         headerDisplay.appendChild(header.render());
 
-        let votingArea = new VotingArea ({
-            
-            products: products,
-            
-            onLoad: (product) => {
-                product.views++;
-            },
-            
-            onClick: (product) => {
-                product.votes++;
-                this.totalCount++;
-                
-                if(this.totalCount >= 3) {
-                    let report = new Report ({
-                        results: this.products
-                    });
-                    results.appendChild(report.render());
-                    voting.style.display = 'none';
-                }
-                
-                votingArea.update({
-                    products: productApi.getRandomProducts()
-                });
-            },
-            
+        let report = new Report ({
+            results: this.products
         });
-        
-        voting.appendChild(votingArea.render());
-
+        results.appendChild(report.render());
+     
         return dom;
 
     }
