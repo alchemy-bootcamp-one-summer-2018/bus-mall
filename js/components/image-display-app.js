@@ -14,6 +14,7 @@ export default class ShowImage {
     constructor(props) {
         this.product = props.product;
         this.onSelect = props.onSelect;
+        
     }
 
     render() {
@@ -21,12 +22,10 @@ export default class ShowImage {
 
         let dom = template(this.product);
 
-        
-
-        // let img = dom.querySelector('img');
-        // img.addEventListener('click', () => {
-        //     this.onSelect(this.product);
-        // });
+        let img = dom.querySelector('img');
+        img.addEventListener('click', () => {
+            this.onSelect(this.product);
+        });
 
         return dom;
     }
