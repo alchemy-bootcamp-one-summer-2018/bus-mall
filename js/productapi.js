@@ -1,61 +1,61 @@
 
 let items = [{
     id: 1,
-    name: 'bag',
+    name: 'Luggage Droid',
     image: './img/bag.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 2,
-    name: 'banana',
+    name: 'Fruit Dismemberer',
     image: 'img/banana.jpg',
     viewed: 0,
     votes: 0,
 }, {
     id: 3,
-    name: 'bathroom',
+    name: 'Hands-Free Toilet Buddy',
     image: 'img/bathroom.jpg',
     viewed: 0,
     votes: 0,
 }, {
     id: 4,
-    name: 'boots',
+    name: 'Peep-Toe Wellies',
     image: 'img/boots.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 5,
-    name: 'breakfast',
+    name: 'The Wallace',
     image: 'img/breakfast.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 6,
-    name: 'bubblegum',
+    name: 'Meat Gums',
     image: '/img/bubblegum.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 7,
-    name: 'chair',
+    name: 'Lil\' Deep One',
     image: '/img/cthulhu.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 8,
-    name: 'dog-duck',
+    name: 'Duck Muzz',
     image: '/img/dog-duck.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 9,
-    name: 'dragon',
+    name: 'Dragon Meat',
     image: 'img/dragon.jpg',
     viewed: 0,
     votes: 0
 }, {
     id: 10,
-    name: 'pen',
+    name: 'U-<em>pen</em>-sils',
     image: '/img/pen.jpg',
     viewed: 0,
     votes: 0
@@ -79,8 +79,8 @@ let items = [{
     votes: 0
 }, {
     id: 14,
-    name: 'sweep',
-    image: '/img/sweep.jpg',
+    name: 'Broom-Baby',
+    image: '/img/sweep.png',
     viewed: 0,
     votes: 0
 }, {
@@ -115,4 +115,4 @@ let items = [{
     votes: 0
 }];
 
-export default items
+export default items;
