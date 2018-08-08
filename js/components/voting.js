@@ -61,7 +61,6 @@ export default class VotingArea {
         this.renderImages();
         this.renderResults();
 
-
         return dom;
     }
 }

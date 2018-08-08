@@ -10,11 +10,11 @@ let template = function(product) {
 export default class ResultsArea {
     constructor(props) {
         this.product = props.product;
-        this.displayResults = props.displayResults;
+        this.showResults = props.showResults;
     }
     render() {
         let dom = template(this.product); 
-        let product = this.product.name;
+        // let product = this.product.name;
         
         return dom;
     }
