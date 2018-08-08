@@ -42,7 +42,7 @@ export default class App {
                 
                 if(this.totalCount >= 25) {
                     let report = new Report ({
-                        products: this.products
+                        results: this.products
                     });
                     results.appendChild(report.render());
                     voting.style.display = 'none';
