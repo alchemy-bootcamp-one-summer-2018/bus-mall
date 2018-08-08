@@ -51,7 +51,8 @@ export default class App {
             { 
                 products: products,
                 onSelect: (product) => {
-                    console.log(product.name, 'was clicked!');
+                    productApi.handleClick(product.name);
+                    
                 }
             }
         );
