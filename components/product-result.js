@@ -6,7 +6,7 @@ let template = function(product) {
     let count = product.count;
 
     return html`
-        <li>${name} was shown ${views} and chosen ${count} times</li>
+        <li>${name} was shown ${views} and voted for ${count} times</li>
     `;
 };
 
