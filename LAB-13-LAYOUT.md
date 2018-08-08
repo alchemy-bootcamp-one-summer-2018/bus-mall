@@ -10,6 +10,7 @@ This is going to entail:
     * Header with Navigation
     * index.html page (Product Voting)
     * results.html (Results Page)
+    * products.html (Products Page)
 * Storing the product data in localStorage so the two pages can share data.
 
 ## Adding Additional Pages
@@ -67,8 +68,10 @@ Shows a image list of all products. Show reuse ProductImage component from `inde
 
 * ProductList
 
-* Product Images should tile
+* ProductImages should tile
 * BONUS STRETCH: Make them get smaller as the device gets narrower
+
+BONUS STRETCH: Show the count on the ProductImage component, but only if a `showCount` property is passed with `true`. This means in marketing page no count, but on product page there is a count.
 
 ## Data
 
