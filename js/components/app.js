@@ -1,6 +1,8 @@
 import html from '../html.js';
-import createProducts from '../services/product-api.js';
-import Results from '../components/results.js';
+//import createProducts from '../services/product-api.js';
+//import Results from '../components/results.js';
+import productApi from '../services/product-api.js';
+import ProductList from './product-list.js';
 
 let template = function() {
     return html`
@@ -9,13 +11,6 @@ let template = function() {
         </header>
 
         <main>
-            <section id="survey">
-                <div>
-                    <img src='../../assets/banana.jpg'>
-                </div>
-            </section>
-            <section>
-            </section>
         </main>
     
     `;
@@ -25,15 +20,14 @@ export default class App {
 
     render() {
         let dom = template();
-        this.productApi = dom.querySelector('section.survey');
-        let productList = createProducts();
-        console.log('Product List:', productList);
-        console.log('Image:', productList[3].image);
+        let resultsDiv = dom.querySelector('main');
+        let displayProducts = productApi.randomize();
+        console.log('display products', displayProducts);
 
-        let section = dom.querySelector('div');
-        let results = new Results();
-        section.appendChild(results.render());
-        console.log('results', results);
+        let productList = new ProductList(displayProducts);
+
+        resultsDiv.appendChild(productList.render());
+        
 
         return dom;
     }
