@@ -9,7 +9,7 @@ let template = function() {
     `;
 };
 
-export default class ChannelChart {
+export default class ReportChart {
     constructor(props) {
         this.results = props.results;
     }
