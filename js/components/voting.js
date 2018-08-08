@@ -17,6 +17,7 @@ export default class VotingArea {
         this.products = props.products;
         this.onClick = props.onClick;
         this.onLoad = props.onLoad;
+        this.showResults = props.showResults;
     }
 
     update(props) {
@@ -32,11 +33,14 @@ export default class VotingArea {
     }
 
     renderResults() {
-        let resultsArea = new ResultsArea ({
-            products: this.products,
-            showResults: this.showResults
-        });
-        this.votingArea.appendChild(resultsArea.render());
+        for(let i = 0; i < this.products.length; i++) {
+            let resultsArea = new ResultsArea ({
+                product: this.products[i],
+                showResults: this.showResults
+            });
+            this.votingArea.appendChild(resultsArea.render());
+        }
+
     }
 
     renderImages() {

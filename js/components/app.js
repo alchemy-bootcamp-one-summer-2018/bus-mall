@@ -38,9 +38,9 @@ export default class App {
                     products: productApi.getRandomProducts()
                 });
             },
-            showResults: (product) => {
+            showResults: () => {
                 votingArea.update({
-                    '<p>The results are in<p>'
+    
                 });
             },
 
