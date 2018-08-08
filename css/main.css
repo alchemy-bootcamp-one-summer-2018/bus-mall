@@ -29,10 +29,10 @@ input.radio {
     cursor: pointer;
 }
 
-.module img {
+.product {
+    background: cover no-repeat;
     width: 250px;
     height: 250px;
-    object-fit: cover;
     cursor: pointer;
 }
 

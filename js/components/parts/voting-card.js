@@ -4,10 +4,8 @@ import html from '/js/html.js';
 
 
 let template = function(product) {
-    return html`        
-            <div class="module">
-                <img src="${product.image}">
-            </div>
+    return html`
+            <div class="product" style="background: center / cover no-repeat url(${product.image})">
     `;
 };
 
