@@ -3,14 +3,16 @@ import html from '../html.js';
 //import Results from '../components/results.js';
 import productApi from '../services/product-api.js';
 import ProductList from './product-list.js';
+//import voteSelector from './vote-selector.js';
 
 let template = function() {
     return html`
         <header>
-            <div class="image" ></div>​
+            <div class="image" >
         </header>
 
         <main>
+        <section class="report"></section>
         </main>
     
     `;
