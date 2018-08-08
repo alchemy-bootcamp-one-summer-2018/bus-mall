@@ -7,7 +7,6 @@ let template = function() {
             <ul>
                 <h3> Select an Item! </h3>                        
             </ul>
-            <button>Vote!</button>
         </form>
         
    `;
