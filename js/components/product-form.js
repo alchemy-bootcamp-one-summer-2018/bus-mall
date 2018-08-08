@@ -25,7 +25,7 @@ export default class ProductForm {
         }
         let dom = template();
         
-        for(let i = 0; i < 3; i++){
+        for(let i = 0; i < 3; i++){//gotta splice out the randomly generated thing
             let copy = this.items.slice();
             let index = randomProductIndex(copy.length);
             let randomProduct = copy[index];
@@ -36,17 +36,10 @@ export default class ProductForm {
                 item: copy[index]
             });
             ul.appendChild(product.render());
+            copy.splice(1, index);
+            console.log(copy);
         }
 
-        // threeRandoms = function(){
-
-        // };
-        
-
-            
-            
-        
-        
         return dom;
     }
 }
