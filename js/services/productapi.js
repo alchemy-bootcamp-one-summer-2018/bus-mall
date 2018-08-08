@@ -127,5 +127,10 @@ function createProducts() {
 
 
 export default {
-    get: 
-}
+    get: function() {
+        return products;
+    }
+    
+    
+    
+};

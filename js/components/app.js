@@ -1,6 +1,6 @@
 import html from '../html.js';
 import ProductForm from './product-form.js'; 
-import items from '../productapi.js';
+import productapi from '../services/productapi.js';
 
 let template = function() {
     return html `
@@ -13,14 +13,14 @@ let template = function() {
 export default class App {
     
     constructor(){
-        this.items = items;
+        this.products = productapi.get();
     }
 
     render() {
         let dom = template();
         let main = dom.querySelector('main');
         let productForm = new ProductForm({
-            items: this.items
+            products: this.products
         });
         main.appendChild(productForm.render());
 

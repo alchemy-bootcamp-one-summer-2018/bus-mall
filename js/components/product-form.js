@@ -12,7 +12,7 @@ let template = function() {
 
 export default class ProductForm {
     constructor(props) {
-        this.items = props.items; 
+        this.products = props.products; 
         this.onSelect = props.onSelect;
         //update method to       
     }
@@ -22,8 +22,8 @@ export default class ProductForm {
             return Math.floor(Math.random() * max);
         }
         let dom = template();
-        let copy = this.items;
-        
+        let copy = this.products;
+    
         for(let i = 0; i < 3; i++){
             let index = randomProductIndex(copy.length);
             console.log(index);
