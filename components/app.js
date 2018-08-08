@@ -2,12 +2,11 @@ import html from '../html.js';
 import ProductSurvey from './product-survey.js';
 import Results from './results.js';
 import productApi from '../services/product-api.js';
+import Header from './header.js';
 
 let template = function() {
     return html `
-        <header>
-            <h1>BusMall<h1>
-        </header>
+        <header></header>
         <main></main>
     `;
 };
@@ -33,6 +32,7 @@ export default class App {
     render() {
         let dom = template();
         this.main = dom.querySelector('main');
+        this.header = dom.querySelector('header');
 
         //set products to random three images 
         
@@ -43,7 +43,12 @@ export default class App {
                 this.renderResults();
             }
         });
+
+        let header = new Header ({
+
+        });
         // let results = new Results();
+        this.header.appendChild(header.render());
         this.main.appendChild(productSurvey.render());
         // main.appendChild(results.render());
         return dom;

@@ -1,13 +1,11 @@
 import html from '../html.js';
 import Results from './results.js';
-// import ProductChart from './product-chart';
+import ProductChart from './product-chart.js';
 import productApi from '../services/product-api.js';
-
+import Header from './header.js';
 let template = function() {
     return html `
-        <header>
-            <h1>BusMall<h1>
-        </header>
+        <header></header>
         <main></main>
     `;
 };
@@ -34,7 +32,18 @@ export default class ResultsApp {
     render() {
         let dom = template();
         this.main = dom.querySelector('main');
+        this.header = dom.querySelector('header');
+        let productChart = new ProductChart({
+            products: this.products
+        });
+
+        let header = new Header ({
+
+        });
+
         this.renderResults();
+        this.main.appendChild(productChart.render());
+        this.header.appendChild(header.render());
         return dom;
     }
 }
