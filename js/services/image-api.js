@@ -22,4 +22,17 @@ export default {
     get: function() {
         return images;
     },
+    getRandomImages: () => {
+        let randomImages = [];
+
+        while(randomImages.length < 3) {
+            let index = Math.floor(Math.random() * images.length);
+            let image = images[index];
+            if(randomImages.includes(image)) continue;
+            randomImages.push(image);
+        }
+
+
+        return randomImages;
+    },
 };

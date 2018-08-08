@@ -2,7 +2,6 @@ import html from '../html.js';
 
 // import usersApi from '../services/users-api.js';
 
-import voting from './voting.js';
 import Voting from './voting.js';
 // import User from './user.js';
 
@@ -50,6 +49,7 @@ export default class App {
         let voting = new Voting(
             {}
         );
+        console.log(voting);
         this.voting = dom.querySelector(".voting");
         this.voting.appendChild(voting.render());
 

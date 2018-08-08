@@ -50,7 +50,7 @@ input.radio {
 
 .module {
   /* Demo-Specific Styles */
-  background:maroon;
+  background:white;
   display: flex;
   align-items: center;
   justify-content: center;
