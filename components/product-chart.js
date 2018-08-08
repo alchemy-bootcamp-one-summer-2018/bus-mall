@@ -30,5 +30,7 @@ export default class ProductChart {
             count.push(product.count);
             views.push(product.views);
         }
+
+        return dom;
     }
 }
