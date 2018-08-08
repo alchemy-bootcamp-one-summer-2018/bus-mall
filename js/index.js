@@ -1,5 +1,5 @@
 
-import App from './component/app.js';
+import App from './app.js';
 
 let root = document.getElementById ('root');
 let app = new App();

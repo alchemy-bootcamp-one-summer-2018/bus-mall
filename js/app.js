@@ -1,25 +1,21 @@
 
-import html from '../html.js';
-import imagesApi from '../services/productImage-api.js';
-import ProductImages from './productImage.js';
+import html from './html.js';
+import imagesApi from './products-api.js';
+import ProductImages from './products.js';
 
 let template = function() {
 
     return html`
-    <p>helloworld</p>
-    <div> </div>
+    <h1>Bus Mall</h1>
   
 
     <main>
-<div id="images-appended-here-from-productimage"> </div> // 
     </main>
     
     `;
 };
 
 export default class App {
-
-  
 
     render() {
         let dom = template();
