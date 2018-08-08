@@ -4,7 +4,7 @@ import Product from './product.js';
 let template = function() {
     return html`
         <section>
-            <h2>Product List</h2>
+            <h2></h2>
             <ul></ul>
         </section>
     `;
@@ -23,13 +23,14 @@ export default class ProductList {
 
     render() {
         let products = this.products;
+        console.log('products:', products);
         let dom = template();
         this.ul = dom.querySelector('ul');
         
         for(let i = 0; i < products.length; i++) {
             this.renderProducts(products[i]);
 
-            return dom;
         }
+        return dom;
     }
 }

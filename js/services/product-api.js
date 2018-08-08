@@ -42,7 +42,7 @@ let data = [{
     image: '../../assets/shark.jpg'
 }, {
     name: 'sweep',
-    image: '../../assets/sweep.jpg'
+    image: '../../assets/sweep.png'
 }, {
     name: 'tauntaun',
     image: '../../assets/tauntaun.jpg'

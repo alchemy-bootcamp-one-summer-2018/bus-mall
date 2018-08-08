@@ -7,7 +7,7 @@ import ProductList from './product-list.js';
 let template = function() {
     return html`
         <header>
-            <h1>Bus Mall</h1>
+            <div class="image" ></div>​
         </header>
 
         <main>
@@ -23,6 +23,7 @@ export default class App {
         let resultsDiv = dom.querySelector('main');
         let displayProducts = productApi.randomize();
         console.log('display products', displayProducts);
+    
 
         let productList = new ProductList(displayProducts);
 
