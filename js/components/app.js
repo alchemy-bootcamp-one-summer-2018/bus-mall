@@ -12,7 +12,7 @@ let template = function() {
         <body>
             <div>
             </div>
-            <section>
+            <section class="results">
             </section>
         </body>
       `;
@@ -34,7 +34,7 @@ export default class App {
 
         div.appendChild(productSurvey.render());
 
-        let section = dom.querySelector('section');
+        let section = dom.querySelector('section.results');
         let results = new Results();
         section.appendChild(results.render());
         console.log('results', results);

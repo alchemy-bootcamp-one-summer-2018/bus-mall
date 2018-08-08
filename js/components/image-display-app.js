@@ -17,13 +17,16 @@ export default class ShowImage {
     }
 
     render() {
+        console.log('product:', this.product);
 
         let dom = template(this.product);
 
-        let img = dom.querySelector('img');
-        img.addEventListener('click', () => {
-            this.onSelect(this.product);
-        });
+        
+
+        // let img = dom.querySelector('img');
+        // img.addEventListener('click', () => {
+        //     this.onSelect(this.product);
+        // });
 
         return dom;
     }
