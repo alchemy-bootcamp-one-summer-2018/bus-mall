@@ -16,7 +16,7 @@ export default class App {
     render() {
         let dom = template();
         this.div = dom.querySelector('div'); 
-        this.div.appendChild(render(tally));
+        //this.div.appendChild(render(tally));
         return dom;
 
 
