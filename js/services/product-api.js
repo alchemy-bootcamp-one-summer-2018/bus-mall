@@ -44,6 +44,9 @@ export default {
             randomProducts.push(product);
         }
 
+        randomProducts.forEach(product => product.views++);
+        
+        randomProducts.forEach(product => console.log(product.name, 'views:', product.views));
 
         return randomProducts;
     },
@@ -53,6 +56,6 @@ export default {
         let index = products.indexOf(selectedProduct[0]);
         products[index].votes++;
 
-        console.log(products[index].votes);
+        console.log(products[index].name, 'votes:', products[index].votes);
     }
 };
