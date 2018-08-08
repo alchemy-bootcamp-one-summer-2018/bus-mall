@@ -27,6 +27,71 @@ let products = [{
     image: '/img/breakfast.jpg',
     views: 0,
     votes: 0,
+}, {
+    name: 'bubblegum',
+    image: '/img/bubblegum.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'chair',
+    image: '/img/chair.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'cthulhu',
+    image: '/img/cthulhu.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'dog-duck',
+    image: '/img/dog-duck.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'dragon',
+    image: '/img/dragon.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'pen',
+    image: '/img/pen.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'pet-sweep',
+    image: '/img/pet-sweep.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'scissors',
+    image: '/img/scissors.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'shark',
+    image: '/img/shark.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'tauntaun',
+    image: '/img/tauntaun.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'unicorn',
+    image: '/img/unicorn.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'water-can',
+    image: '/img/water-can.jpg',
+    views: 0,
+    votes: 0,
+}, {
+    name: 'wine-glass',
+    image: '/img/wine-glass.jpg',
+    views: 0,
+    votes: 0,
 }];
 
 
