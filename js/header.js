@@ -2,11 +2,13 @@ import html from '/js/html.js';
 
 let template = function() {
     return html`
+
+    <p>This is the nav</p>
         
    `;
 };
 
-export default class Results {
+export default class Header {
     constructor() {
        
     }

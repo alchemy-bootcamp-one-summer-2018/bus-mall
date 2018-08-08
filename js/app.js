@@ -2,11 +2,13 @@
 import html from './html.js';
 import imagesApi from './products-api.js';
 import ProductImages from './products.js';
+import Header from './header.js';
+import Footer from './footer.js';
+import Results from './results.js';
 
 let template = function() {
 
     return html`
-    <h1>Bus Mall</h1>
   
 
     <main>
@@ -30,9 +32,18 @@ export default class App {
         };
         //making the new instance and passing in the props(properties)
         let productImages = new ProductImages(productImagesProps);
-    
+        
+        let header = new Header;
+        let footer = new Footer;
+        let results = new Results;
+
         //telling it to render
+        main.appendChild(header.render());
         main.appendChild(productImages.render());
+        
+        main.appendChild(footer.render());
+        main.appendChild(results.render());
+
 
         return dom;
     }

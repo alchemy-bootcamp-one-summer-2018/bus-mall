@@ -3,17 +3,16 @@ import html from './html.js';
 let template = function(images) {
 
     return html`
+    <h1>Bus Mall</h1>
+    <p> this is the product images </p>
 
     <img class="image-1" src=${images[0].image}>
     <img class="image-2" src=${images[1].image}>
     <img class="image-3" src=${images[2].image}>
 
-    <button onclick="getRandomImages()">submit your selection</button>
-
     `;
 
 };
-
 
 export default class ProductImages {
 
@@ -21,10 +20,6 @@ export default class ProductImages {
         this.images = props.images;
 
     }
-
-    
-    
-
 
     render() {
         

@@ -88,16 +88,16 @@ export default {
         // empty array to fill with random images
             
         let randomArray = [];
-        let copyOfCreateProducts = createProducts.slice();
+        let copyCreateProducts = products.slice();
     
         for(let i = 0; i < 3; i++) {
-            let randomNum = Math.floor(Math.random() * (copyOfCreateProducts.length));
+            let randomNum = Math.floor(Math.random() * (copyCreateProducts.length));
             
-            let randomImage = copyOfCreateProducts[randomNum];
+            let randomImage = copyCreateProducts[randomNum];
             //console.log('randomImage: ', randomImage);
             randomArray.push(randomImage);
     
-            copyOfCreateProducts.splice(randomNum, 1);
+            copyCreateProducts.splice(randomNum, 1);
         }
     
         return randomArray;
