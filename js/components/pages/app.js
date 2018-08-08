@@ -1,8 +1,8 @@
 import html from '/js/html.js';
 
-import VotingBox from '../boxes/voting-box.js';
 import productApi from '/js/services/product-api.js';
-
+import VotingBox from '/js/components/boxes/voting-box.js';
+import ResultCard from '/js/components/parts/result-card.js';
 
 let template = function() {
     return html`        
@@ -11,27 +11,9 @@ let template = function() {
         </header>
         
         <main>
-            <section class="voting-box"></section>
-            <section class="results">
-                <table>
-                    <thead>
-                        <th>Image name</th>
-                        <th>Total votes</th>
-                        <th>Times displayed</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Banana</td>
-                            <td>3</td>
-                            <td>6</td>
-                        </tr>
-                        <tr>
-                            <td>Beef Jerky</td>
-                            <td>5</td>
-                            <td>10</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <section>
+                <div class="voting-box"></div>
+                <ul class="results-box"></ul>
             </section>
         </main>
     `;
@@ -44,18 +26,30 @@ export default class App {
         this.rounds = 25;
     }
 
-    renderResults(products) {
-        console.log(products, 'I will add results!');
+    renderResultsBox(products) {
+
+        products.forEach(product => {
+            let resultCard = new ResultCard({
+                image: product.image,
+                views: product.views,
+                votes: product.votes,
+            });
+            this.resultBox.appendChild(resultCard.render());
+
+        }
+        );
     }
 
     render() {
         let dom = template(this.rounds);
+        this.resultBox = dom.querySelector('.results-box');
 
+        
         let votingBox = new VotingBox({ 
             products: this.products,
             rounds: this.rounds,
             onSelect: (product) => {
-
+                
                 votingBox.rounds--;
                 this.rounds--;
                 
@@ -63,11 +57,11 @@ export default class App {
                 
                 this.rounds
                     ? votingBox.newRound()
-                    : this.renderResults(productApi.get());
-            
+                    : this.renderResultsBox(productApi.get());
+                
             }
         });
-
+        
 
         this.votingBox = dom.querySelector('.voting-box');
         this.votingBox.appendChild(votingBox.render());
