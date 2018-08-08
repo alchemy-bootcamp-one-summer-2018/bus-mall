@@ -8,23 +8,25 @@ let template = function() {
         <header>
             <h1>Bus Mall Market Research App</h1>
         </header>
-        <body>
+        
             <p id='instructions'>The three images below are products we are considering selling in Bus Mall. Please click on the image of the product you are most likely to buy to vote for it. After 25 votes, you can see our poll results.</p>
-        <main>
+        <section class="voting-section"></section>
 
         </main>
-        </body>
     `;
 };
 
 
 export default class App {
+    constructor() {
+        this.products = productApi.get();
+        this.totalCount = 0;
+    }
+
     render() {
         let dom = template();
-        let main = dom.querySelector('main');
-        
+        let votingSection = dom.querySelector('.voting-section');
         let products = productApi.getRandomProducts();
-
         let votingArea = new VotingArea ({
             products: products,
             onLoad: (product) => {
@@ -34,19 +36,23 @@ export default class App {
             onClick: (product) => {
                 console.log('app', product.name, 'was clicked');
                 product.votes++;
+                this.totalCount++;
+                console.log(product.name, 'has been clicked', product.votes, 'times');
+                console.log('totalCount is', this.totalCount);
                 votingArea.update({
                     products: productApi.getRandomProducts()
                 });
+                
             },
             showResults: () => {
                 votingArea.update({
-    
+                    
                 });
             },
-
+            
         });
 
-        main.appendChild(votingArea.render());
+        votingSection.appendChild(votingArea.render());
 
         return dom;
 

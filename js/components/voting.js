@@ -20,6 +20,7 @@ export default class VotingArea {
         this.showResults = props.showResults;
     }
 
+    
     update(props) {
         this.products = props.products;
         this.clearImages();
@@ -31,7 +32,7 @@ export default class VotingArea {
             this.votingArea.lastElementChild.remove();
         }
     }
-
+    
     renderResults() {
         for(let i = 0; i < this.products.length; i++) {
             let resultsArea = new ResultsArea ({
@@ -40,9 +41,9 @@ export default class VotingArea {
             });
             this.votingArea.appendChild(resultsArea.render());
         }
-
+        
     }
-
+    
     renderImages() {
         for(let i = 0; i < this.products.length; i++) {
             let randomImage = new RandomImage ({
@@ -54,7 +55,7 @@ export default class VotingArea {
             this.votingArea.appendChild(randomImage.render());
         }
     }
-
+    
     render() {
         let dom = template();
         this.votingArea = dom.querySelector('section.voting-area');

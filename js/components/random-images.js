@@ -18,15 +18,12 @@ export default class RandomImage {
         let dom = template(this.product.name); 
         let product = this.product.name;
         this.onLoad(this.product);
-        let clicks = 0;
 
 
         let one = dom.querySelector('img');
         one.addEventListener('click', () => {
             console.log(product, 'was clicked');
-            this.onClick(this.product);
-            clicks++;
-            
+            this.onClick(this.product);            
         });
         
         return dom;

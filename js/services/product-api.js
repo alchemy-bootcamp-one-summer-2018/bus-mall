@@ -16,7 +16,6 @@ function getProductList() {
     for(let i = 0; i < names.length; i++) {
         let product = new Product (`${names[i]}`);
         list.push(product);
-        console.log('get list', list);
     } 
     return list;
 }
