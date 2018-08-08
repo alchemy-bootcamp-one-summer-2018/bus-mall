@@ -10,10 +10,13 @@ const template = groups =>
             <ul><ul>
         </div>
     `;
-};
 
 export default class Form {
     constructor(props) {
-        this. = props.images
+        this. = props.products,
+        this.handleGroups = props.handleGroups,
+        this.groups = 3;
     }
+
+
 }

@@ -134,6 +134,7 @@ function createProducts() {
 
 export default class Images {
 
+
 }
 console.log(createProducts);
 
