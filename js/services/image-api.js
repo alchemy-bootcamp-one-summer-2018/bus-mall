@@ -1,0 +1,25 @@
+
+
+let images = [{
+    name: 'bag',
+    image: '/img/bag.png'
+}, {
+    name: 'banana',
+    image: '/img/banana.png'
+}, {
+    name: 'bathroom',
+    image: '/img/bathroom.png'
+}, {
+    name: 'boots',
+    image: '/img/boots.png'
+}, {
+    name: 'breakfast',
+    image: '/img/breakfast.png'
+}];
+
+
+export default {
+    get: function() {
+        return images;
+    },
+};
