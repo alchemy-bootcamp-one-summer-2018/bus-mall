@@ -48,12 +48,10 @@ export default class App {
                     section.lastChild.remove();
                 }
 
-                // .update(getRandomProducts)
-
                 let randomProducts = salesApi.getRandomProducts();
                 productSurvey.products = randomProducts;
-                console.log('second round of random products', randomProducts);
                 productSurvey.renderImages();
+                console.log('second round of random products', randomProducts);
                 
                 if(this.totalClicks > 4) {
                     console.log('RESULTS!');

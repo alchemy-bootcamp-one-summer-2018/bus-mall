@@ -20,7 +20,33 @@ function createItems() {
         name: 'dog-duck',
         image: 'images/dog-duck.jpg',
         clicks: 0
-    }];
+    }, {
+        name: 'bag',
+        image: 'images/bag.jpg',
+        clicks: 0
+    }, {
+        name: 'banana',
+        image: 'images/banana.jpg',
+        clicks: 0
+    }, {
+        name: 'bathroom',
+        image: 'images/bathroom.jpg',
+        clicks: 0
+    }, {
+        name: 'boots',
+        image: 'images/boots.jpg',
+        clicks: 0
+    }, {
+        name: 'dragon',
+        image: 'images/dragon.jpg',
+        clicks: 0
+    }, {
+        name: 'pen.jpg',
+        image: 'images/pen.jpg',
+        clicks: 0
+    }
+    
+    ];
 
     return data;
 }

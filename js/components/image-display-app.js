@@ -14,7 +14,6 @@ export default class ShowImage {
     constructor(props) {
         this.product = props.product;
         this.onSelect = props.onSelect;
-        
     }
 
     render() {
