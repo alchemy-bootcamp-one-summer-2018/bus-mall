@@ -1,8 +1,8 @@
-import html from '../../html.js';
+import html from '/js/html.js';
 
 // import usersApi from '../services/users-api.js';
 
-import Voting from '../boxes/voting-box.js';
+import VotingBox from '../boxes/voting-box.js';
 // import User from './user.js';
 
 let template = function() {
@@ -12,7 +12,7 @@ let template = function() {
         </header>
         
         <main>
-            <section class="voting"></section>
+            <section class="voting-box"></section>
             <section class="results">
                 <table>
                     <thead>
@@ -46,13 +46,13 @@ export default class App {
         let dom = template();
 
 
-        let voting = new Voting(
+        let votingBox = new VotingBox(
             {}
         );
 
 
-        this.voting = dom.querySelector(".voting");
-        this.voting.appendChild(voting.render());
+        this.votingBox = dom.querySelector(".voting-box");
+        this.votingBox.appendChild(votingBox.render());
 
 
         return dom;

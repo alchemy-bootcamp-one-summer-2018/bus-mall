@@ -1,4 +1,4 @@
-import data from './data.js';
+import data from '/js/services/data.js';
 
 // wants to track information about a "user"
 // let's assume user will be an object
