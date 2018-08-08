@@ -6,7 +6,7 @@ let template = function() {
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="results.html">Results</a></li>
-                <li>Products</li>
+                <li><a href="products.html">Products</a></li>
             </ul>
                 
    `;

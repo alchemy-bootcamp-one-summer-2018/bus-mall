@@ -21,8 +21,8 @@ window.addEventListener('beforeunload', () => {
 
 });
 
-window.resetData = function() {
-    window.localStorage.removeItem('data');
-    data = undefined;
-    window.location.reload();
-};
+// window.resetData = function() {
+//     window.localStorage.removeItem('data');
+//     data = undefined;
+//     window.location.reload();
+// };
