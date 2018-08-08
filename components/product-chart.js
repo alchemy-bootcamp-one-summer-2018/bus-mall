@@ -21,12 +21,16 @@ export default class ProductChart {
         const ctx = canvas.getContext('2d');
 
         let labels = [];
-        let data = [];
+        let counts = [];
+        let views = [];
+        let percents = [];
 
         for(let i = 0; i < this.products.length; i++) {
             const product = this.products[i];
             labels.push(product.name);
-            data.push(product.count);
+            counts.push(product.count);
+            views.push(product.views);
+            percents.push(product.count / product.views);
         }
 
         this.chart = new Chart(ctx, {
@@ -35,19 +39,35 @@ export default class ProductChart {
                 labels: labels,
                 datasets: [{
                     label: '# of Votes',
-                    data: data,
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255,99,132,1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)'
-                    ],
+                    data: counts,
+
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    
+                    borderColor: 'rgba(255,99,132,1)',
+
                     borderWidth: 1
-                }]
+                },
+                {
+                    label: '# of Views',
+                    data: views,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                
+                    borderColor: 'rgba(54, 162, 235, 1)',
+
+                    borderWidth: 1
+                },
+                {
+                    label: '%',
+                    data: percents,
+                    backgroundColor: 'rgba(0, 255, 0, 0.2)',
+                
+                    borderColor: 'rgba(0, 255, 0, 1)',
+
+                    borderWidth: 1
+                },
+                ]
+                
+
             },
             options: {
                 responsive: true,
