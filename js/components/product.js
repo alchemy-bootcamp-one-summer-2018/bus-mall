@@ -11,17 +11,26 @@ let template = function(item) {
    //can add a mouse-down listener to depress the image to let user 
    //know they've selected it
 
+
+   //refer to alchemy tv for event listeners
    //
 };
 
 export default class Product {
     constructor(props) {
         this.item = props.item;
+        this.onSelect = props.onSelect;
        
     }
 
     render() {
         let dom = template(this.item);
+        
+        let li = dom.querySelector('li');
+        li.addEventListener('click', () => {
+            this.onSelect(this.item.id);
+            console.log('item selected', this.item.name);
+        });
         return dom;
     }
 }
