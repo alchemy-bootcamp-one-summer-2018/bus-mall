@@ -5,14 +5,21 @@ import Report from './results-report.js';
 
 let template = function() {
     return html`        
-        <header>
-            <h1>Bus Mall Market Research App</h1>
-        </header>
-        <section class="instructions">
-            <p id='instructions'>The three images below are products we are considering selling in Bus Mall. Please click on the image of the product you are most likely to buy to vote for it. After 25 votes, you can see our poll results.</p>
-        </section>
-        <section class="voting"></section>
-        <section class="results"></section>
+        <body>
+            <header>
+                <h1>Bus Mall Market Research App</h1>
+            </header>
+            <nav>
+                <a id="index" href="../../index.html">Market Research</a>
+                <a id="results" href="../../results.html">Results</a>
+                <a id="products" href="../../products.html">Products</a>
+            </nav>
+            <section class="instructions">
+                <p id='instructions'>The three images below are products we are considering selling in Bus Mall. Please click on the image of the product you are most likely to buy to vote for it. After 25 votes, you can see our poll results.</p>
+            </section>
+            <section class="voting"></section>
+            <section class="results"></section>
+        <body>
     `;
 };
 
@@ -40,7 +47,7 @@ export default class App {
                 product.votes++;
                 this.totalCount++;
                 
-                if(this.totalCount >= 25) {
+                if(this.totalCount >= 3) {
                     let report = new Report ({
                         results: this.products
                     });

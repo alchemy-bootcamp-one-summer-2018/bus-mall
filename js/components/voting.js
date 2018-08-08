@@ -4,9 +4,8 @@ import RandomImage from './random-images.js';
 let template = function() {
     return html`
         <main>
-        <p>Hello Voting Area!</p>
-        <section class="voting-area"></section>
-        <section class="results-area"></section>
+        <section class="voting"></section>
+        <section class="results"></section>
         </main>
     `;
 };
@@ -46,7 +45,7 @@ export default class VotingArea {
     
     render() {
         let dom = template();
-        this.votingArea = dom.querySelector('section.voting-area');
+        this.votingArea = dom.querySelector('section.voting');
         this.renderImages();
 
         return dom;

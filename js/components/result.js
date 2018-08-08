@@ -2,7 +2,7 @@ import html from '../html.js';
 
 let template = function(product) {
     return html`
-    <li><span class="product-name">${product.name}</span><br>  views: ${product.views} votes: ${product.votes}</li>
+    <li class="list"><span class="product-name">${product.name}</span>  views: ${product.views} votes: ${product.votes}</li>
     `;
 
 };

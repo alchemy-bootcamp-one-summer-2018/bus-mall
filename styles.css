@@ -1,9 +1,71 @@
+body {
+    font-size: 12px;
+    text-align: center;
+}
+
+#root {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: repeat(4, 25vh); */
+    grid-template-areas:    "a a a a a a"
+                            "b b b b b b"
+                            "e e e g g g"
+                            "h h h g g g";
+}
+
+.image-container {
+    height: 15vh;
+    width: 15vw;
+    display: inline-block;
+}
+
 img {
-    width: 120px;
-    padding: 10px 20px;
+    width: 100%;
 }
 
 .product-name {
     font-weight: bold;
     text-transform: capitalize;
 }
+
+header {
+    grid-area: a;
+}
+
+.instructions {
+    grid-area: e;
+}
+
+.voting {
+    grid-area: h;
+}
+
+.results {
+    grid-area: g;
+    max-height: 50vh;
+}
+
+.ul {
+    display: flex;
+    list-style-type: none;
+    max-width: 45vw;
+    flex-wrap: wrap;
+}
+
+li {
+    padding: 10px;
+}
+
+.voting-h2 {
+    text-align: center;
+}
+
+nav {
+    grid-area: b;
+    display: flex;
+}
+
+nav a {
+    flex-grow: 1;
+}
+
