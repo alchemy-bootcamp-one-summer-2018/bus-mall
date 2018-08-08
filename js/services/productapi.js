@@ -1,5 +1,4 @@
 import data from './data.js';
-
 let products = data.products;
 
 if(!products) {
@@ -10,7 +9,7 @@ function createProducts() {
     return [{
         id: 1,
         name: 'Luggage Droid',
-        image: './img/bag.jpg',
+        image: 'img/bag.jpg',
         viewed: 0,
         votes: 0
     }, {
@@ -75,7 +74,7 @@ function createProducts() {
         votes: 0
     }, {
         id: 12,
-        name: 'scissors',
+        name: 'Slice-a-slice',
         image: '/img/scissors.jpg',
         viewed: 0,
         votes:  0
@@ -93,25 +92,25 @@ function createProducts() {
         votes: 0
     }, {
         id: 15,
-        name: 'tauntaun',
+        name: 'Luke-Warmer',
         image: '/img/tauntaun.jpg',
         viewed: 0,
         votes: 0
     }, {
         id: 16,
-        name: 'unicorn',
+        name: 'Can of \'Corn',
         image: '/img/unicorn.jpg',
         viewed: 0,
         votes: 0
     }, {
         id: 17,
-        name: 'usb',
+        name: 'Tentacle Friend',
         image: '/img/usb.gif',
         viewed: 0,
         votes: 0
     }, {
         id: 18,
-        name: 'water-can',
+        name: 'Infinity Mug',
         image: 'img/water-can.jpg',
         viewed: 0,
         votes:  0
@@ -124,13 +123,13 @@ function createProducts() {
     }];
 }
 
-
-
 export default {
     get: function() {
         return products;
     }
-    
+    // getRandomThree: function() {
+
+    // }
     
     
 };

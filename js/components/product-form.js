@@ -18,15 +18,16 @@ export default class ProductForm {
     }
 
     render() {
+        let dom = template();
+        
         function randomProductIndex(max){
             return Math.floor(Math.random() * max);
         }
-        let dom = template();
-        let copy = this.products;
+        let copy = this.products.slice();
+        
     
         for(let i = 0; i < 3; i++){
             let index = randomProductIndex(copy.length);
-            console.log(index);
             let randomProduct = copy[index];
             console.log(randomProduct);
             

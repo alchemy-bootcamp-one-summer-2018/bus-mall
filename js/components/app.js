@@ -1,6 +1,6 @@
 import html from '../html.js';
 import ProductForm from './product-form.js'; 
-import productapi from '../services/productapi.js';
+import productApi from '../services/productapi.js';
 
 let template = function() {
     return html `
@@ -13,7 +13,8 @@ let template = function() {
 export default class App {
     
     constructor(){
-        this.products = productapi.get();
+        this.products = productApi.get();
+        this.rounds = 0;
     }
 
     render() {
