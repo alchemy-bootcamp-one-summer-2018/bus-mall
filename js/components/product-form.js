@@ -23,20 +23,22 @@ export default class ProductForm {
             return Math.floor(Math.random() * max);
         }
         let dom = template();
+        let copy = this.items;
         
         for(let i = 0; i < 3; i++){//gotta splice out the randomly generated thing
-            let copy = this.items.slice();
+            console.log(copy);
             let index = randomProductIndex(copy.length);
+            console.log(index);
             let randomProduct = copy[index];
-            console.log(randomProduct);
+            // console.log(randomProduct);
             
             let ul = dom.querySelector('ul');
             let product = new Product({
-                item: copy[index]
+                item: randomProduct
             });
             ul.appendChild(product.render());
-            copy.splice(1, index);
-            console.log(copy);
+            copy.splice(index, 1);
+            console.log('end of loop', copy);
         }
 
         return dom;

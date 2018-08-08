@@ -10,6 +10,8 @@ let template = function(item) {
    //use a hover listener for the event name
    //can add a mouse-down listener to depress the image to let user 
    //know they've selected it
+
+   //
 };
 
 export default class Product {
