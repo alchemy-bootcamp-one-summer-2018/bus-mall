@@ -17,6 +17,7 @@ let template = function() {
 };
 
 
+
 export default class App {
     constructor() {
         this.products = productApi.get();
@@ -37,16 +38,20 @@ export default class App {
                 console.log('app', product.name, 'was clicked');
                 product.votes++;
                 this.totalCount++;
+                // if(this.totalCount >= 25) {
+    
+                // }
                 console.log(product.name, 'has been clicked', product.votes, 'times');
                 console.log('totalCount is', this.totalCount);
                 votingArea.update({
                     products: productApi.getRandomProducts()
                 });
+              
                 
             },
             showResults: () => {
                 votingArea.update({
-                    
+
                 });
             },
             
