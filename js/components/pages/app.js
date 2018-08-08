@@ -1,9 +1,8 @@
 import html from '/js/html.js';
 
-// import usersApi from '../services/users-api.js';
-
 import VotingBox from '../boxes/voting-box.js';
-// import User from './user.js';
+import productApi from '/js/services/product-api.js';
+
 
 let template = function() {
     return html`        
@@ -45,9 +44,11 @@ export default class App {
     render() {
         let dom = template();
 
+        let products = productApi.getRandomProducts();
+
 
         let votingBox = new VotingBox(
-            {}
+            { products: products}
         );
 
 

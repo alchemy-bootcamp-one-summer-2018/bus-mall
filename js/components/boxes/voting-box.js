@@ -17,6 +17,9 @@ let template = function() {
 
 export default class VotingBox {
 
+    constructor(props) {
+        this.products = props.products;
+    }
 
     render() {
         let dom = template();
@@ -26,7 +29,7 @@ export default class VotingBox {
         
         for(let i = 0; i < 3; i++){
             let votingCard = new VotingCard(
-                {}
+                {product: this.products[i]}
             );
             this.votingCard.appendChild(votingCard.render());
 

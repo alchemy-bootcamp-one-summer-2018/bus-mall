@@ -3,19 +3,22 @@ import html from '/js/html.js';
 
 
 
-let template = function() {
+let template = function(product) {
     return html`        
             <div class="module">
-                <img src="/img/banana.jpg">
+                <img src="${product.image}">
             </div>
     `;
 };
 
 export default class VotingCard {
 
+    constructor(props) {
+        this.product = props.product;
+    }
 
     render() {
-        let dom = template();
+        let dom = template(this.product);
 
         return dom;
     }
