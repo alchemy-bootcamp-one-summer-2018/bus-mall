@@ -15,27 +15,37 @@ let template = function() {
 
 export default class ProductForm {
     constructor(props) {
-        this.items = props.items;       
+        this.items = props.items; 
+        //update method to       
     }
 
     render() {
         function randomProductIndex(max){
             return Math.floor(Math.random() * max);
         }
-        
-        let copy = this.items.slice();
-        let index = randomProductIndex(copy.length);
-        let randomProduct = copy[index];
-        console.log(randomProduct);
-
         let dom = template();
-        let ul = dom.querySelector('ul');
-        for(let i = 0; i < this.items.length; i++){
+        
+        for(let i = 0; i < 3; i++){
+            let copy = this.items.slice();
+            let index = randomProductIndex(copy.length);
+            let randomProduct = copy[index];
+            console.log(randomProduct);
+            
+            let ul = dom.querySelector('ul');
             let product = new Product({
-                item: this.items[i]
+                item: copy[index]
             });
             ul.appendChild(product.render());
         }
+
+        // threeRandoms = function(){
+
+        // };
+        
+
+            
+            
+        
         
         return dom;
     }
