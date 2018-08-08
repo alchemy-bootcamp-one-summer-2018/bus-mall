@@ -72,7 +72,7 @@ let imageData = [{
 
 export default {
 
-
+// new compening poll area that hold the images 
     getRandomImages: function() {
         // empty array to fill with random images
 
@@ -91,26 +91,11 @@ export default {
         }
 
         return randomArray;
+     
 
-       
-        //randomImages.slice;
     },
 
- 
-
 }; 
-
-
-
-   
-
-   
-
-
-
-
-
-    
 
 
 //need to loop through images

@@ -1,26 +1,38 @@
 import html from '../html.js';
-import imagesApi from '../services/productImage-api.js';
 
-let template = function(neededProducts) {
+let template = function(images) {
 
     return html`
-    <img class="image" src=${neededProducts[0].image}>
-    <img class="image" src=${neededProducts[1].image}>
-    <img class="image" src=${neededProducts[2].image}>
 
-    <img>
+    <img class="image-1" src=${images[0].image}>
+    <img class="image-2" src=${images[1].image}>
+    <img class="image-3" src=${images[2].image}>
+
+<button id="thebutton" onclick="getRandomImages()">submit your selection</button>
 
     `;
 
 };
 
-export default class showProductImages {
+//button(EventListener) needs to generate next round of images and record data
+// of selected images.
+
+// document.getElementById('thebutton').addEventListener('click', function(e) {
+//     if(e.target && e.target.img- === 'image') 
+
+// });
+
+export default class ProductImages {
+
+    constructor(props){ //whatever is passed from app(parent)
+        this.images = props.images;
+    }
+
 
     render() {
-        let products = imagesApi.getRandomImages();
-        let dom = template(products);
         
-        
+        let dom = template(this.images);
+        console.log('this.images: ', this.images);
         return dom;
     }
 }

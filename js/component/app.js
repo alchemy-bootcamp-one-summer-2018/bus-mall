@@ -1,7 +1,7 @@
 
 import html from '../html.js';
-//import imagesApi from '../services/productImage-api.js';
-import ShowProductImages from './productImage.js';
+import imagesApi from '../services/productImage-api.js';
+import ProductImages from './productImage.js';
 
 let template = function() {
 
@@ -11,7 +11,7 @@ let template = function() {
   
 
     <main>
-
+<div id="images-appended-here-from-productimage"> </div> // 
     </main>
     
     `;
@@ -19,16 +19,24 @@ let template = function() {
 
 export default class App {
 
+  
+
     render() {
         let dom = template();
         let main = dom.querySelector('main');
         
-
-        let showProductImages = new ShowProductImages();
+        //this is getting data
+        let threeProducts = imagesApi.getRandomImages();
+        //this is creating an object and adding the properties 
+        //that will be passed to the child
+        let productImagesProps = {
+            images: threeProducts
+        };
+        //making the new instance and passing in the props(properties)
+        let productImages = new ProductImages(productImagesProps);
     
-        
-        main.appendChild(showProductImages.render());
-
+        //telling it to render
+        main.appendChild(productImages.render());
 
         return dom;
     }
