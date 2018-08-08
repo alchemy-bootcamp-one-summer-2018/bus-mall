@@ -1,9 +1,12 @@
 import html from '../html.js';
 
-let template = function(name) {
+let template = function(product) {
     return html`
     <div class="image-container">    
-        <img src="/img/${name}.jpg" alt="${name}" class="${name}">
+        <img src="/img/${product.name}.jpg" alt="${product.name}" class="${product.name}">
+        <p>Name: ${product.name}</p>
+        <p>Views: ${product.views}</p>
+        <p>Votes: ${product.votes}</p>
     </div>
     `;
 
@@ -16,7 +19,7 @@ export default class ProductImage {
     }
 
     render() {
-        let dom = template(this.product.name);
+        let dom = template(this.product);
         
         return dom;
     }

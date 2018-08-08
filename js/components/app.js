@@ -2,24 +2,19 @@ import html from '../html.js';
 import VotingArea from './voting.js';
 import productApi from '../services/product-api.js';
 import Report from './results-report.js';
+import Header from './header.js';
 
 let template = function() {
     return html`        
+            
         <body>
-            <header>
-                <h1>Bus Mall Market Research App</h1>
-            </header>
-            <nav>
-                <a id="index" href="../../index.html">Market Research</a>
-                <a id="results" href="../../results.html">Results</a>
-                <a id="products" href="../../products.html">Products</a>
-            </nav>
+            <section class="header"></section>    
             <section class="instructions">
                 <p id='instructions'>The three images below are products we are considering selling in Bus Mall. Please click on the image of the product you are most likely to buy to vote for it. After 25 votes, you can see our poll results.</p>
             </section>
             <section class="voting"></section>
             <section class="results"></section>
-        <body>
+        </body>
     `;
 };
 
@@ -34,6 +29,10 @@ export default class App {
         let voting = dom.querySelector('.voting');
         let results = dom.querySelector('.results');
         let products = productApi.getRandomProducts();
+
+        let headerDisplay = dom.querySelector('.header');
+        let header = new Header ({});
+        headerDisplay.appendChild(header.render());
 
         let votingArea = new VotingArea ({
             

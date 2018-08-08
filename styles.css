@@ -1,6 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-size: 12px;
     text-align: center;
+    margin: 0;
 }
 
 #root {
@@ -11,6 +16,11 @@ body {
                             "b b b b b b"
                             "e e e g g g"
                             "h h h g g g";
+}
+
+#product-root {
+    display: grid;
+    grid-template-columns: repeat(auto-fit minmax(200px, 1fr));
 }
 
 .image-container {

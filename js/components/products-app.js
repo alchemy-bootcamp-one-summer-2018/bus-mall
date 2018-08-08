@@ -1,20 +1,13 @@
 import html from '../html.js';
 import productApi from '../services/product-api.js';
 import ProductImage from './product-images.js';
+import Header from './header.js';
 
 let template = function() {
     return html`        
         <body>
-            <header>
-                <h1>Bus Mall Market Research App</h1>
-            </header>
-            <nav>
-                <a id="index" href="../../index.html">Market Research</a>
-                <a id="results" href="../../results.html">Results</a>
-                <a id="products" href="../../products.html">Products</a>
-            </nav>
-            <section class="product-display">
-            </section>
+            <section class="header"></section>
+            <section class="product-display"></section>
         <body>
     `;
 };
@@ -28,6 +21,10 @@ export default class ProductsApp {
         let dom = template();
         let productDisplay = dom.querySelector('.product-display');
         console.log('hello!');
+
+        let headerDisplay = dom.querySelector('.header');
+        let header = new Header ({});
+        headerDisplay.appendChild(header.render());
 
 
         for(let i = 0; i < this.products.length; i++) {
