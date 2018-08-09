@@ -8,7 +8,7 @@ let template = function(images) {
 
     <p> this is the product images </p>
 
-    <img class="image-1" src=${images.image}>
+    <img src=${images[0].image}>
   
 
     </div>
@@ -28,15 +28,10 @@ export default class ProductImages {
     render() {
         
         let dom = template(this.images);
-        this.div = dom//('div')
+    
         console.log('this.images: ', this.images);
 
-        // let img = dom.querySelector('img');
-        // img.addEventListener('click', () =>{
-        //     this.onSelect(this.products);
-        // });
-
-        // event listener attached to all 3
+        
         return dom;
     }
 }

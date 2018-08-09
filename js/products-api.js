@@ -82,7 +82,7 @@ export default {
     
     },
 
-    // new compening poll area that hold the images 
+
     
     getRandomImages: function() {
         // empty array to fill with random images
@@ -92,16 +92,17 @@ export default {
     
         for(let i = 0; i < 3; i++) {
             let randomNum = Math.floor(Math.random() * (copyCreateProducts.length));
-            
             let randomImage = copyCreateProducts[randomNum];
-            //console.log('randomImage: ', randomImage);
+            if(randomArray.includes(randomImage)) continue;
             randomArray.push(randomImage);
     
             copyCreateProducts.splice(randomNum, 1);
         }
-    
+           
         return randomArray;
-    }
+    },
+
+
 };
 
 
