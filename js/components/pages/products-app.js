@@ -12,7 +12,6 @@ let template = function() {
         
         <main>
             <section>
-                <div class="chart-box"></div>
             </section>
         </main>
     `;

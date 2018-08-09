@@ -1,7 +1,7 @@
 import html from '/js/html.js';
 
 // import productApi from '/js/services/product-api.js';
-// import VotingBox from '/js/components/boxes/voting-box.js';
+import ChartBox from '/js/components/boxes/chart-box.js';
 // import ResultCard from '/js/components/parts/result-card.js';
 
 let template = function() {
@@ -13,6 +13,7 @@ let template = function() {
         <main>
             <section>
                 <div class="chart-box"></div>
+                <ul class="results-box"></ul>
             </section>
         </main>
     `;
@@ -27,6 +28,11 @@ export default class App {
 
     render() {
         let dom = template();
+
+        this.chartBox = dom.querySelector('.chart-box');
+
+        let chartBox = new ChartBox({});
+        this.chartBox.appendChild(chartBox.render());
 
         return dom;
     }
