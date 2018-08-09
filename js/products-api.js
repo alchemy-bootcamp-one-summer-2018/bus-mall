@@ -93,7 +93,6 @@ export default {
         for(let i = 0; i < 3; i++) {
             let randomNum = Math.floor(Math.random() * (copyCreateProducts.length));
             let randomImage = copyCreateProducts[randomNum];
-            if(randomArray.includes(randomImage)) continue;
             randomArray.push(randomImage);
     
             copyCreateProducts.splice(randomNum, 1);

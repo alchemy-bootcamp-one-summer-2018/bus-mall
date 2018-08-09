@@ -1,6 +1,7 @@
 import html from './html.js';
+import Product from './product.js';
 
-let template = function(images) {
+let template = function() {
 
     return html`
 
@@ -8,7 +9,8 @@ let template = function(images) {
 
     <p> this is the product images </p>
 
-    <img src=${images[0].image}>
+
+
   
 
     </div>
@@ -26,10 +28,21 @@ export default class ProductImages {
     }
 
     render() {
-        
+        //
+
         let dom = template(this.images);
+        let div = dom.querySelector('div');
+       
+        
+        for(let i = 0; i < 3; i++) {
+            let product = new Product();
+            div.appendChild(product.render());
+  
+        }
+
     
-        console.log('this.images: ', this.images);
+        
+        // console.log('this.images: ', this.images);
 
         
         return dom;

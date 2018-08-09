@@ -2,6 +2,9 @@ import html from '/js/html.js';
 
 let template = function() {
     return html`
+<div class="above-nav">
+    <h1> hello bus </h1>
+</div>
 <nav>  
   <span class="menu-toggle">Menu</span>
   <div class="menu-content">
