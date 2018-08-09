@@ -1,3 +1,6 @@
+import data from './data.js';
+
+
 class Product {
     constructor(name) {
         this.name = name;
@@ -6,18 +9,22 @@ class Product {
     }
 }
 
-let names = ['bag', 'banana', 'bathroom', 'boots', 'breakfast', 'bubblegum', 'chair', 'cthulhu', 'dog-duck', 'dragon', 'pen', 'pet-sweep', 'scissors', 'shark', 'sweep', 'tauntaun', 'unicorn', 'usb', 'water-can', 'wine-glass'];
-
 function getProductList() {
-    let list = [];
+    let names = ['bag', 'banana', 'bathroom', 'boots', 'breakfast', 'bubblegum', 'chair', 'cthulhu', 'dog-duck', 'dragon', 'pen', 'pet-sweep', 'scissors', 'shark', 'sweep', 'tauntaun', 'unicorn', 'usb', 'water-can', 'wine-glass'];
+    let data = [];
     for(let i = 0; i < names.length; i++) {
         let product = new Product (`${names[i]}`);
-        list.push(product);
+        data.push(product);
     } 
-    return list;
+    return data;
 }
 
-let productList = getProductList();
+let productList = data.productList;
+
+if(!productList) {
+    data.productList = getProductList();
+    productList = data.productList;
+}
 
 export default {
     get: function() {

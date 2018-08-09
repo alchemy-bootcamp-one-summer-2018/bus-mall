@@ -1,11 +1,16 @@
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body {
     font-size: 12px;
     text-align: center;
-    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    padding: 40px 0;
 }
 
 #root {
@@ -38,8 +43,9 @@ img {
     text-transform: capitalize;
 }
 
-header {
+.header {
     grid-area: a;
+    background-color: rgb(255, 246, 223);
 }
 
 .instructions {
@@ -73,9 +79,30 @@ li {
 nav {
     grid-area: b;
     display: flex;
+    padding: 25px 0;
+    background-color: rgb(255, 226, 231, .5);
+    justify-content: space-around;
+    
 }
 
 nav a {
-    flex-grow: 1;
+    text-decoration: none;
+    font-size: 1.3em;
 }
+
+nav a:link {
+    color: black;
+}
+
+
+nav a:visited {
+    color: ;
+}
+
+nav a:hover {
+    background-color: rgb(255, 226, 231);
+}
+
+nav a:active {
+    color: blue;
 

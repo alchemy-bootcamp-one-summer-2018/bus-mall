@@ -46,7 +46,7 @@ export default class App {
                 product.votes++;
                 this.totalCount++;
                 
-                if(this.totalCount >= 3) {
+                if(this.totalCount >= 25) {
                     let report = new Report ({
                         results: this.products
                     });
