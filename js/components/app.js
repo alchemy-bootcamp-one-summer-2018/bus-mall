@@ -27,13 +27,16 @@ export default class App {
         let dom = template();
         let div = dom.querySelector('div');
         this.totalClicks = 0;
+        // this.totalViews = 0;
         
         let threeItems = salesApi.getRandomProducts();
-        console.log('three items', threeItems);
 
         let productSurvey = new ProductSurvey({
             products: threeItems,
             // additional things that get passed down
+
+            // onLoad:
+
             onSelect: (product) => {
                 
                 this.product = product;
@@ -42,6 +45,7 @@ export default class App {
 
                 this.totalClicks++;
                 console.log('total clicks:', this.totalClicks);
+                console.log('this.product:', this.product);
 
                 let section = document.getElementById('products');
                 while(section.children.length) {
@@ -59,15 +63,13 @@ export default class App {
                         section.lastChild.remove();
                     }
                     
-
                     for(let i = 0; i < this.items.length; i++) {
 
                         let el = document.getElementById('results');
-                        var results = '<p>' + this.items[i].name + ' received ' + this.items[i].clicks + ' clicks.</p>';
-
+                        console.log('this.items', this.items);
+                        var results = '<p>' + this.items[i].name + ' received ' + this.items[i].clicks + ' clicks and was viewed ' + this.items[i].views + ' times.</p>';
                         el.innerHTML = el.innerHTML + results;
                         
-                        console.log('RESULTS!');
                     }
 
                 }

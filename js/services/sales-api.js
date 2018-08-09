@@ -9,7 +9,7 @@ if(!items) {
 }
 
 function createItems() {
-    let data = [{
+    let moose = [{
         name: 'breakfast',
         image: 'images/breakfast.jpg',
         clicks: 0,
@@ -60,7 +60,7 @@ function createItems() {
         clicks: 0,
         views: 0
     }, {
-        name: 'pen.jpg',
+        name: 'pen',
         image: 'images/pen.jpg',
         clicks: 0,
         views: 0
@@ -90,7 +90,7 @@ function createItems() {
         clicks: 0,
         views: 0
     }, {
-        name: 'unicorn.jpg',
+        name: 'unicorn',
         image: 'images/unicorn.jpg',
         clicks: 0,
         views: 0
@@ -113,7 +113,7 @@ function createItems() {
     
     ];
 
-    return data;
+    return moose;
 }
 
 // let items = createItems();
