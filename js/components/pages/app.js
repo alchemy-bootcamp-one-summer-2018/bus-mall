@@ -35,14 +35,12 @@ export default class App {
                 votes: product.votes,
             });
             this.resultBox.appendChild(resultCard.render());
-
         });
     }
 
     render() {
         let dom = template(this.rounds);
         this.resultBox = dom.querySelector('.results-box');
-
         
         let votingBox = new VotingBox({ 
             products: this.products,
@@ -58,17 +56,16 @@ export default class App {
                     votingBox.newRound();
                 }
                 else {
-
-                    votingBox.removeRow();
                     this.renderResultsBox(productApi.get());
-                }   
+                    while(this.votingBox.lastElementChild){
+                        this.votingBox.lastElementChild.remove();
+                    }
+                }
             }
         });
         
-
         this.votingBox = dom.querySelector('.voting-box');
         this.votingBox.appendChild(votingBox.render());
-
 
         return dom;
     }
