@@ -31,7 +31,23 @@ export default class App {
         let productProps = {
             products: this.products,
             onSelect: (product) => {
-                console.log('onSelect in App:', product);
+                if(product.count) {
+                    product.count++;
+                }
+                else {
+                    product.count = 1;
+                }
+                this.totalCount++;
+
+                productList.update({
+                    products: productApi.randomize()
+                });
+
+                if(this.totalCount === 3) {
+                    console.log('totalCount', this.totalCount);
+                    productList.removeProducts();
+
+                }
             }
         };
 

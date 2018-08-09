@@ -69,13 +69,14 @@ export default {
         return data;
     },
     randomize: () => {
+        let copy = data.slice ();
         let threeImages = [];
         for(let i = 0; i < 3; i++) {
-            let randomNum = Math.floor(Math.random() * data.length);
+            let randomNum = Math.floor(Math.random() * copy.length);
         
-            let randomImage = data[randomNum];
+            let randomImage = copy[randomNum];
             threeImages.push(randomImage);
-            data.splice(randomNum, 1);
+            copy.splice(randomNum, 1);
         }
         
         return threeImages;

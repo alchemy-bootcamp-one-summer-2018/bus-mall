@@ -19,11 +19,15 @@ export default class ProductList {
     update(props) {
         this.products = props.products;
 
+        this.removeProducts();
+
+        this.renderProducts();
+    }
+
+    removeProducts() {
         while(this.ul.lastElementChild) {
             this.ul.lastElementChild.remove();
         }
-
-        this.renderList();
     }
 
     renderProducts() {
