@@ -13,5 +13,6 @@
 
 * work on displaying chart
 * work on displaying products
+* share data via local storage
 * work on grid model
 * work on header and footer
