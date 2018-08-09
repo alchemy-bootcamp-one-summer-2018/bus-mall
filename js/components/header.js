@@ -11,14 +11,4 @@ let template = function() {
 
    `;
 };
-
-export default class Header{
-    constructor(props) {
-       
-    }
-
-    render() {
-        let dom = template();
-        return dom;
-    }
-}
+template();
