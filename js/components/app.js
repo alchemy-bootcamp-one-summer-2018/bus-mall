@@ -16,16 +16,18 @@ export default class App {
         this.products = productApi.getRandomThree();
         this.rounds = 0;
     }
-
+    //add a click event listener to main 
+    //that will render a new set of images
     render() {
         let dom = template();
         let main = dom.querySelector('main');
         let productForm = new ProductForm({
             products: this.products
         });
-        console.log(this.products);
+        // console.log(this.products);
         main.appendChild(productForm.render());
         //productApi.getRandomThree();
         return dom;  
     }
+
 }

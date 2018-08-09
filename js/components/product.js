@@ -2,10 +2,10 @@ import html from '/js/html.js';
 
 let template = function(product) {
     return html`
-        <li>
+        <div>
             <img src="${product.image}" width=300 height= 300 
             id=${product.id}>                
-        </li>
+        </div>
    `;
    //use a hover listener for the event name
    //can add a mouse-down listener to depress the image to let user 
@@ -26,10 +26,13 @@ export default class Product {
     render() {
         let dom = template(this.product);
         
-        let li = dom.querySelector('li');
-        li.addEventListener('click', () => {
+        let div = dom.querySelector('div');
+        div.addEventListener('click', () => {
             this.onSelect(this.product.id);
             console.log('product selected', this.product.name);
+            this.product.votes++;
+            console.log(this.product.votes);
+
         });
         return dom;
     }

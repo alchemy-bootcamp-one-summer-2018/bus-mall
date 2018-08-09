@@ -3,9 +3,9 @@ import Product from './product.js';
 
 let template = function() {
     return html`
-        <ul>
+        <div>
             <h3> Select an Item! </h3>                        
-        </ul>
+        </div>
     
    `;
 };
@@ -20,18 +20,18 @@ export default class ProductForm {
     render() {
         let dom = template();
         
-        
-        // let copy = this.products.slice();        
-    
-        for(let i = 0; i < 3; i++){
+           
+        for(let i = 0; i < 3; i++){          
             
+            let div = dom.querySelector('div');
             
-            let ul = dom.querySelector('ul');
             let product = new Product({
-                product: this.products[i]
+                product: this.products[i],
             });
-            ul.appendChild(product.render());
-            
+            this.products[i].viewed++;
+            console.log(this.products[i].name, this.products[i].viewed);
+
+            div.appendChild(product.render());
             
         }
 
