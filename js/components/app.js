@@ -19,16 +19,20 @@ let template = function() {
 
 export default class App {
 
+    constructor() {
+        this.items = salesApi.get();
+    }
+
     render() {
         let dom = template();
         let div = dom.querySelector('div');
         this.totalClicks = 0;
         
-        let items = salesApi.getRandomProducts();
-        console.log('items', items);
+        let threeItems = salesApi.getRandomProducts();
+        console.log('three items', threeItems);
 
         let productSurvey = new ProductSurvey({
-            products: items,
+            products: threeItems,
             // additional things that get passed down
             onSelect: (product) => {
                 
@@ -48,18 +52,20 @@ export default class App {
                 productSurvey.products = randomProducts;
                 productSurvey.renderImages();
                 
+                console.log('three items', threeItems);
+                
                 if(this.totalClicks > 4) {
                     while(section.children.length) {
                         section.lastChild.remove();
                     }
                     
-                    for(let i = 0; i < items.length; i++) {
-                        
-                        console.log('items', items);
-                        
+
+                    for(let i = 0; i < this.items.length; i++) {
+
                         let el = document.getElementById('results');
-                        var results = 'Tally:' + items[i].name + 'received ' + items[i].clicks + ' clicks.';
-                        el.textContent = results;
+                        var results = '<p>' + this.items[i].name + ' received ' + this.items[i].clicks + ' clicks.</p>';
+
+                        el.innerHTML = el.innerHTML + results;
                         
                         console.log('RESULTS!');
                     }
