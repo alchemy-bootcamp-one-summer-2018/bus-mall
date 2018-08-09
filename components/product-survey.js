@@ -8,8 +8,7 @@ let template = function() {
         <h2>Product Survey</h2>
         <section id="randomized-images"></section>
       </section>
-      <section id="results">
-      </section>
+      <section id="results"></section>
     `;
 };
 

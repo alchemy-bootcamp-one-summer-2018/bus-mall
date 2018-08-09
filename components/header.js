@@ -2,8 +2,12 @@ import html from '../html.js';
 
 let template = function() {
     return html`
+    <header class="header">
+        <div class="header-div">
+            <h1>BusMall<h1>
+        </div>
+    </header>
     <nav>
-        <h1 id="title">BusMall<h1>
         <div class="menu-content">
             <a href="index.html">Home</a>
             <a href="results.html">Results</a>

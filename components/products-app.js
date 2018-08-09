@@ -6,7 +6,7 @@ import IndividualImage from './individual-image.js';
 let template = function() {
     return html`
         <header></header>
-        <main><main>
+        <main class="image-area"></main>
    `;
 };
 

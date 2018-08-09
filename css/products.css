@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    width: 100%;
+    grid-template: "head" "head" "head" 1fr
+                    "main" "main" "main" 1fr 
+                    "foot" "foot" "foot" 1fr;
+  }
+  
+#product-survey {
+    padding: 40px;
+    border: 0;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+.header-div{
+text-align: left;
+border: 0;
+margin: 0;
+}
+
+.header {
+    padding: 40px;
+    border: 0;
+    margin: 0;
+    display: block;
+    text-align: center;
+    background-image: url("/assets/Magic-School-Bus-Ms-Frizzle.jpg");
+    grid-area: "head";
+}
+
+.menu-content {
+    margin: 0;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: "head";
+}
+
+a {
+    padding: 0;
+    background: #345FA0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav:hover .menu-content {
+    display: flex;
+}
+
+a:hover {
+    background: #247BA0;
+}
+  
+main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+}
+
+.img {
+    display: block;
+    width: 320px;
+    height: 320px;
+    -webkit-box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.06);
+          box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.06); 
+}
+
+@media screen and (min-width: 800px) {
+    .header {
+        display: block;
+    }
+    .menu-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    a {
+        padding: 10px 0;
+    }
+}
