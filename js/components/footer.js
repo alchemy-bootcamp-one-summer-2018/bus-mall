@@ -16,3 +16,4 @@ export default class Footer{
         return dom;
     }
 }
+

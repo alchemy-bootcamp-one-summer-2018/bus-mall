@@ -8,14 +8,14 @@ import Footer from '/js/components/footer.js';
 let template = function() {
     return html`
     <div>
-    <header>Results</header>
+    <header></header>
     <footer></footer>
     </div>
 
 `;    
 };
 //console.log('hello world');
-export default class ResultsApp {
+export default class App {
     render() {
         let dom = template();
         this.div = dom.querySelector('div'); 
