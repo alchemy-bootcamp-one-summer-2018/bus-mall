@@ -20,7 +20,7 @@ export default class ProductImages {
 
     constructor(props){ //whatever is passed from app(parent)
         this.products = props.products;
-        
+        this.onSelect = props.onSelect;
     }
 
     render() {
@@ -31,8 +31,10 @@ export default class ProductImages {
 
             let div = dom.querySelector('div');
             let product = new Product({
-                product: this.products[i] 
+                product: this.products[i],
+                onSelect: this.onSelect,
             });
+        
 
             div.appendChild(product.render());
 

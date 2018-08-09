@@ -35,12 +35,13 @@ export default class App {
         let threeProducts = imagesApi.getRandomImages();
         //this is creating an object and adding the properties 
         //that will be passed to the child
-        let productImagesProps = {
-            images: threeProducts
-        };
+        
         //making the new instance and passing in the props(properties)
         let productImages = new ProductImages({
-            products: this.products
+            products: this.products,
+            onSelect: function(product) {
+                console.log(product.name);
+            }
         });
 
         //remove images on click

@@ -12,6 +12,8 @@ let template = function(product) {
 export default class Product {
     constructor(props) {
         this.product = props.product;
+        this.onSelect = props.onSelect;
+        
 
     }
 
@@ -20,7 +22,7 @@ export default class Product {
         let dom = template(this.product);
         this.img = dom.querySelector('img');
     
-        this.img.addEventListener('click', () => console.log(this.product.name));
+        this.img.addEventListener('click', () => this.onSelect(this.product));
 
         return dom;
     }
