@@ -13,6 +13,7 @@ export default class ProductsList {
     constructor(props) {
         this.onSelect = props.onSelect;
         this.products = props.products;
+        console.log('are you here', this.products);
     }
 
     renderProduct(product) {
@@ -24,12 +25,12 @@ export default class ProductsList {
         //this.productCard.push(productCard);
     }
     render() {  
-        let products = this.products;
+//let products = this.products;
         let dom = template();
         this.ul = dom.querySelector('ul');
 
-        for(let i = 0; i < products.length; i++) {
-            this.renderProduct(products[i]);
+        for(let i = 0; i < this.products.length; i++) {
+            this.renderProduct(this.products[i]);
         }
          
         return dom;

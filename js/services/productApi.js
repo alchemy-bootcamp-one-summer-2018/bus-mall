@@ -1,8 +1,9 @@
 //import data from './data.js';
 
 let products = createProducts();
+console.log('products', products);
 function createProducts() {
-    let data = [{
+    return [{
         name: 'bag',
         image: './assets/bag.jpg',
         viewCount: 0,
@@ -105,7 +106,6 @@ function createProducts() {
         numberClicks: 0
     
     }];
-    return data;
 }  
 
 export default {
@@ -113,24 +113,26 @@ export default {
         return products;
     },
     getRandomProducts: function(){
-        let imageDisplayed = [];
+        let imagesDisplayed = [];
 
-        while(imageDisplayed.length < 3) {
+        while(imagesDisplayed.length < 3) {
             let randomIndex = Math.floor(Math.random() * products.length);
             let product = products[randomIndex];
-            if(imageDisplayed.includes(product)) continue;
-            imageDisplayed.push(product);
+            if(imagesDisplayed.includes(product)) continue;
+            imagesDisplayed.push(product);
     
         }
 
-        // imageDisplayed.forEach(product => product.views ++);
-        // return imageDisplayed;
+        // imagesDisplayed.forEach(product => product.views ++);
+        // return imagesDisplayed;
 
     
         // handleSelect: function(productName) => {
         // let selectedImage = products.filter(product => product.name === productName);
         //let index = products.indexOf(selectedImage[0]);
         // products[index].votes++;
+        return imagesDisplayed;
     }
+
 };
 

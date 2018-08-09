@@ -1,3 +1,4 @@
+
 import html from '../html.js';
 
 let template = function(product) {

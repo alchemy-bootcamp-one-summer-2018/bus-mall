@@ -8,9 +8,7 @@ let template = function() {
             <h1 class="firstHeader"> Bus Mall</h1>
         </header>
         <div class="flex-container"></div>
-        <div>1</div>
-        <div>2</div>
-            <main class="mainstuff"> This is where stuff goes
+            <main> 
             </main>
     `;
 };
@@ -22,6 +20,7 @@ export default class App {
         let main = dom.querySelector('main');
 
         let products = productApi.getRandomProducts();
+        console.log('is this working', products);
         let productsList = new ProductsList({
             products: products,
             onSelect:(product) => {
