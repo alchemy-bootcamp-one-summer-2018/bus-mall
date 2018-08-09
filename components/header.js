@@ -2,12 +2,14 @@ import html from '../html.js';
 
 let template = function() {
     return html`
-        <h1>BusMall<h1>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="results.html">Results</a></li>
-                <li><a href="products.html">Products</a></li>
-            </ul>
+    <nav>
+        <h1 id="title">BusMall<h1>
+        <div class="menu-content">
+            <a href="index.html">Home</a>
+            <a href="results.html">Results</a>
+            <a href="products.html">Products</a>
+        </div>
+    </nav>
                 
    `;
 };

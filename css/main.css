@@ -1,4 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+#title {
+    padding: 40px;
+    border: 0;
+    margin: 0;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    background: lime;
+}
+
+.menu-content {
+    margin: 0;
+    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    padding: 0;
+    background: blue;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav:hover .menu-content {
+    display: flex;
+}
+
+a:hover {
+    background: teal;
+}
+  
 img {
     width: 200px;
     height: 200px;
+}
+
+@media screen and (min-width: 800px) {
+    #title {
+        display: block;
+    }
+    .menu-content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    a {
+        padding: 10px 0;
+    }
 }
