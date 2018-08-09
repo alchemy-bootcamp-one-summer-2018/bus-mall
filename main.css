@@ -1,8 +1,25 @@
-*{ 
+/* * { 
     border:dotted 1px red;
-    border-color:red;
+border-color:red; 
+} */
 
-}
+
 .app-header {
-    color:green;
+    font-family: font-family: 'Rubik', sans-serif;
+    color:#84866F;
+    font-size: 40px;
+}
+img {
+    width:300px;
+}
+h2 {
+    font-family: font-family: 'Rubik', sans-serif;
+    color:#84866F
+}
+
+body {
+    background-image: url('https://www.xmple.com/wallpaper/linear-white-gradient-blue-1920x1080-c2-b0c4de-fff5ee-a-60-f-14.svg')
+}
+.grid-container {
+    display: grid;
 }

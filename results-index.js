@@ -1,4 +1,5 @@
-import App from './js/components/app.js';
+import ResultsApp from './results-app.js';
+
 let root = document.getElementById('root');
-let app = new App();
+let app = new ResultsApp();
 root.appendChild(app.render());

@@ -10,15 +10,18 @@ let template = function() {
 `;
 };
 export default class ProductsList {
-    constructor(products) {
-        this.products = products;
+    constructor(props) {
+        this.onSelect = props.onSelect;
+        this.products = props.products;
     }
 
     renderProduct(product) {
-        let productCard = new ProductCard(product);
+        let productCard = new ProductCard({
+            product: product,
+            onSelect: this.onSelect
+        });
         this.ul.appendChild(productCard.render());
         //this.productCard.push(productCard);
-        console.log(productCard);
     }
     render() {  
         let products = this.products;

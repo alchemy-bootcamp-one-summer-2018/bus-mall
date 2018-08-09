@@ -124,14 +124,21 @@ export default {
     getRandomProducts: function(){
         let imageDisplayed = [];
 
-        for(let i = 0; i < 3; i++) {
+        while(imageDisplayed.length < 3) {
             let randomIndex = Math.floor(Math.random() * products.length);
-            console.log(products[randomIndex]);
-            imageDisplayed.push(products[randomIndex]);
+            let product = products[randomIndex];
+
+            if(imageDisplayed.includes(product)) continue;
+            imageDisplayed.push(product);
     
         }
         return imageDisplayed;
 
+        // }
+    //handleSelect: function(productName) => {
+        //  let selectedImage = products.filter(product => product.name === productName);
+        //  let index = products.indexOf(selectedImage[0]);
+        // products[index].votes++;
     }
-
 };
+
