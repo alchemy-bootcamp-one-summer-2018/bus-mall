@@ -5,11 +5,12 @@ import ProductsList from './productsList.js';
 let template = function() {
     return html`
         <header>
-            <h1 class="app-header"> Bus Mall</h1>
+            <h1 class="firstHeader"> Bus Mall</h1>
         </header>
-            <main>
-            <div></div>
-            <div class="grid-container">
+        <div class="flex-container"></div>
+        <div>1</div>
+        <div>2</div>
+            <main class="mainstuff"> This is where stuff goes
             </main>
     `;
 };
@@ -30,7 +31,6 @@ export default class App {
         main.appendChild(productsList.render());
         console.log(products);
         return dom;
+    
     }
 }
-
-

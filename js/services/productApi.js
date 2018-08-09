@@ -106,16 +106,7 @@ function createProducts() {
     
     }];
     return data;
-}
-
-//show only 3 random images
-
-//delete repeat images
-    
-//poll
-
-//results
-   
+}  
 
 export default {
     get: function() {
@@ -127,17 +118,18 @@ export default {
         while(imageDisplayed.length < 3) {
             let randomIndex = Math.floor(Math.random() * products.length);
             let product = products[randomIndex];
-
             if(imageDisplayed.includes(product)) continue;
             imageDisplayed.push(product);
     
         }
-        return imageDisplayed;
 
-        // }
-    //handleSelect: function(productName) => {
-        //  let selectedImage = products.filter(product => product.name === productName);
-        //  let index = products.indexOf(selectedImage[0]);
+        // imageDisplayed.forEach(product => product.views ++);
+        // return imageDisplayed;
+
+    
+        // handleSelect: function(productName) => {
+        // let selectedImage = products.filter(product => product.name === productName);
+        //let index = products.indexOf(selectedImage[0]);
         // products[index].votes++;
     }
 };
