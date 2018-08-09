@@ -1,4 +1,5 @@
 let data = [{
+    //TODO Vote and View Count
     name: 'bag',
     image: '../../assets/bag.jpg'
 }, {

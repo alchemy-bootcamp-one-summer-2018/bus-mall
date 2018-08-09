@@ -19,15 +19,23 @@ let template = function() {
 };
 
 export default class App {
+    constructor() {
+        this.products = productApi.randomize();
+        this.totalCount = 0;
+    }
 
     render() {
         let dom = template();
         let resultsDiv = dom.querySelector('main');
-        let displayProducts = productApi.randomize();
-        console.log('display products', displayProducts);
     
+        let productProps = {
+            products: this.products,
+            onSelect: (product) => {
+                console.log('onSelect in App:', product);
+            }
+        };
 
-        let productList = new ProductList(displayProducts);
+        let productList = new ProductList(productProps);
 
         resultsDiv.appendChild(productList.render());
         

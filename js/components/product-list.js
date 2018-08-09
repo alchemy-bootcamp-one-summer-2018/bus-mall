@@ -12,13 +12,28 @@ let template = function() {
 
 export default class ProductList {
     constructor(props) {
-        this.products = props;
+        this.products = props.products;
+        this.onSelect = props.onSelect;
     }
 
-    renderProducts(product) {
-        let productCard = new Product(product);
-        this.ul.appendChild(productCard.render());
+    update(props) {
+        this.products = props.products;
 
+        while(this.ul.lastElementChild) {
+            this.ul.lastElementChild.remove();
+        }
+
+        this.renderList();
+    }
+
+    renderProducts() {
+        for(let i = 0; i < this.products.length; i++) {
+            let product = new Product({
+                product: this.products[i],
+                onSelect: this.onSelect
+            });
+            this.ul.appendChild(product.render());
+        }
     }
 
     render() {
@@ -27,10 +42,7 @@ export default class ProductList {
         let dom = template();
         this.ul = dom.querySelector('ul');
         
-        for(let i = 0; i < products.length; i++) {
-            this.renderProducts(products[i]);
-
-        }
+        this.renderProducts();
         return dom;
     }
 }
