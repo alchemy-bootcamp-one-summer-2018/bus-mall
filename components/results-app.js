@@ -3,6 +3,7 @@ import Results from './results.js';
 import ProductChart from './product-chart.js';
 import productApi from '../services/product-api.js';
 import Header from './header.js';
+import Methods from './lorem-ipsum.js';
 let template = function() {
     return html `
         <header></header>
@@ -50,8 +51,13 @@ export default class ResultsApp {
 
         });
 
+        let methods = new Methods ({
+
+        });
+
         this.renderResults();
         this.main.appendChild(productChart.render());
+        this.main.appendChild(methods.render());
         this.header.appendChild(header.render());
         return dom;
     }
