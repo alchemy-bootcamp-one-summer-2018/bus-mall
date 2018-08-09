@@ -1,3 +1,4 @@
+
 .firstHeader {
     font-family:sans-serif;
     color: gray;
@@ -5,7 +6,7 @@
 body {
     display:grid;
     min-height: 100%;
-
+    background-image:url();
 }
 .mainstuff {
     grid-area:content;

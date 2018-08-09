@@ -1,6 +1,7 @@
 import html from '../html.js'; 
 import productApi from '../services/productApi.js';
 import ProductsList from './productsList.js';
+import Results from './results.js';
  
 let template = function() {
     return html`
@@ -15,6 +16,9 @@ let template = function() {
 
 
 export default class App {
+    constructor(){
+        this.rounds = 5;
+    }
     render() {
         let dom = template();
         let main = dom.querySelector('main');
@@ -25,9 +29,22 @@ export default class App {
             products: products,
             onSelect:(product) => {
                 productApi.handleSelect(product.name);
+                //increase clicks
+                //generate new products
+                //updates
+                this.rounds--;
+                if(this.rounds === 0){
+                    let results = new Results({
+                        results: productApi.get()
+                    });
+                    main.appendChild(results.render());
+                }
+                productsList.update(productApi.getRandomProducts());
+                
             }
         });
         main.appendChild(productsList.render());
+        
         console.log(products);
         return dom;
     

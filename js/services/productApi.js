@@ -123,16 +123,18 @@ export default {
     
         }
 
-        // imagesDisplayed.forEach(product => product.views ++);
-        // return imagesDisplayed;
+        imagesDisplayed.forEach(product => product.viewCount ++);
+        console.log('is this working', imagesDisplayed);
 
-    
-        // handleSelect: function(productName) => {
-        // let selectedImage = products.filter(product => product.name === productName);
-        //let index = products.indexOf(selectedImage[0]);
-        // products[index].votes++;
         return imagesDisplayed;
+
+    },
+
+    handleSelect: (productName) => {
+        let selectedImage = products.filter(product => product.name === productName);
+        selectedImage[0].numberClicks++;
     }
+    
 
 };
 
