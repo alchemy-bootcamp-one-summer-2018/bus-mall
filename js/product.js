@@ -13,7 +13,6 @@ export default class Product {
     constructor(props) {
         this.product = props.product;
         this.onSelect = props.onSelect;
-        
 
     }
 

@@ -122,7 +122,6 @@ export default {
     
     },
 
-
     
     getRandomImages: function() {
         // empty array to fill with random images

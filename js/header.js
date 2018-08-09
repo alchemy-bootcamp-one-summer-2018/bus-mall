@@ -3,7 +3,7 @@ import html from '/js/html.js';
 let template = function() {
     return html`
 <div class="above-nav">
-    <h1> hello bus </h1>
+    <h1> BUSMALL </h1>
 </div>
 <nav>  
   <span class="menu-toggle">Menu</span>
@@ -18,12 +18,12 @@ let template = function() {
 <div class="header">
 <div class="text-on-header">
  
-<h1>Bus Mall</h1>
+<h1>Get A Free Hop Pass</h1>
+<p>Participate in our survey and get <b>a free</b> month on your HOP pass.
 </div>
 </div>
 </div>
 
-        
    `;
 };
 

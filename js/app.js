@@ -1,10 +1,10 @@
 
 import html from './html.js';
-import imagesApi from './products-api.js';
+// import imagesApi from './products-api.js';
 import ProductImages from './products.js';
 import Header from './header.js';
 import Footer from './footer.js';
-import Results from './results.js';
+import Results from './product-results.js';
 import productsApi from './products-api.js';
 
 let template = function() {
@@ -34,7 +34,7 @@ export default class App {
         let productImages = new ProductImages({
             products: this.products,
             onSelect: function(product) {
-                imagesApi.handleSelect(product.name);
+                productsApi.handleSelect(product.name);
                 let updateProducts = productsApi.getRandomImages();
                 productImages.tallyRounds(updateProducts);
             
