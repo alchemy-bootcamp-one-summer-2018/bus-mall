@@ -30,28 +30,22 @@ export default class App {
     render() {
         let dom = template();
         let main = dom.querySelector('main');
-        
-        //this is getting data
-        let threeProducts = imagesApi.getRandomImages();
-        //this is creating an object and adding the properties 
-        //that will be passed to the child
-        
-        //making the new instance and passing in the props(properties)
+    
         let productImages = new ProductImages({
             products: this.products,
             onSelect: function(product) {
                 imagesApi.handleSelect(product.name);
+                let updateProducts = productsApi.getRandomImages();
+                productImages.tallyRounds(updateProducts);
+            
             }
         });
 
-        //remove images on click
-        // get more images 
         
         let header = new Header;
         let footer = new Footer;
         let results = new Results;
 
-        //telling it to render
         main.appendChild(header.render());
         main.appendChild(productImages.render());
         

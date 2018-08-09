@@ -7,8 +7,6 @@ let template = function() {
 
     <div class="products-area">
 
-    <p> this is the product images </p>
-
   
     </div>
 
@@ -23,26 +21,40 @@ export default class ProductImages {
         this.onSelect = props.onSelect;
     }
 
-    render() {
+    tallyRounds(products) {
+        while(this.div.children.length) {
+            this.div.lastChild.remove();
+        }
 
-        let dom = template();
-        
+        this.products = products;
+        console.log('this.products', this.products);
         for(let i = 0; i < 3; i++) {
-
-            let div = dom.querySelector('div');
             let product = new Product({
                 product: this.products[i],
                 onSelect: this.onSelect,
             });
         
-
-            div.appendChild(product.render());
-
-
-        
-        // console.log('this.images: ', this.images);
+            this.div.appendChild(product.render());
 
         }
+
+    }
+
+    render() {
+
+        let dom = template();
+        this.div = dom.querySelector('div');
+        
+        for(let i = 0; i < 3; i++) {
+            let product = new Product({
+                product: this.products[i],
+                onSelect: this.onSelect,
+            });
+        
+            this.div.appendChild(product.render());
+
+        }
+
         return dom;
     
     }
