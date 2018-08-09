@@ -1,6 +1,7 @@
 import html from '../html.js';
 import Results from './results.js';
 import salesApi from '../services/sales-api.js';
+import ReportChart from '../components/report-chart.js';
 
 let template = function() {
     return html `
@@ -28,6 +29,12 @@ export default class App {
         let _results = new Results();
         section.appendChild(_results.render());
         console.log('results', _results);
+
+        let div = dom.querySelector('div');
+        let reportChart = new ReportChart({
+            results: this.items
+        });
+        div.appendChild(reportChart.render());
         
         for(let i = 0; i < this.items.length; i++) {
             
