@@ -107,10 +107,5 @@ export default {
 
 
 
-//need to loop through images
-
-//need to send out 3 random that don't repeat
-
-//need to get into the product image file
 
 

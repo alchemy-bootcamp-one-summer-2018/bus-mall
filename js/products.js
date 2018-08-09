@@ -3,12 +3,15 @@ import html from './html.js';
 let template = function(images) {
 
     return html`
-    <h1>Bus Mall</h1>
+
+    <div class="products-area">
+
     <p> this is the product images </p>
 
-    <img class="image-1" src=${images[0].image}>
-    <img class="image-2" src=${images[1].image}>
-    <img class="image-3" src=${images[2].image}>
+    <img class="image-1" src=${images.image}>
+  
+
+    </div>
 
     `;
 
@@ -17,6 +20,7 @@ let template = function(images) {
 export default class ProductImages {
 
     constructor(props){ //whatever is passed from app(parent)
+        this.products = props.products;
         this.images = props.images;
 
     }
@@ -24,7 +28,15 @@ export default class ProductImages {
     render() {
         
         let dom = template(this.images);
+        this.div = dom//('div')
         console.log('this.images: ', this.images);
+
+        // let img = dom.querySelector('img');
+        // img.addEventListener('click', () =>{
+        //     this.onSelect(this.products);
+        // });
+
+        // event listener attached to all 3
         return dom;
     }
 }

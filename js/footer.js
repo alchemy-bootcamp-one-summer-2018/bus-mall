@@ -2,7 +2,9 @@ import html from '/js/html.js';
 
 let template = function() {
     return html`
-         <p>This is footer</p>
+    <footer>
+    BUS MALL | THE FIRST SHOPPING EXPERIENCE OF IT'S KIND
+</footer>
    `;
 };
 

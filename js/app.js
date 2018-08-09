@@ -9,10 +9,12 @@ import Results from './results.js';
 let template = function() {
 
     return html`
-  
+<body>
 
     <main>
     </main>
+
+</body>
     
     `;
 };
@@ -32,6 +34,9 @@ export default class App {
         };
         //making the new instance and passing in the props(properties)
         let productImages = new ProductImages(productImagesProps);
+
+        //remove images on click
+        // get more images 
         
         let header = new Header;
         let footer = new Footer;
