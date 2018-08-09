@@ -11,7 +11,6 @@
 
 ## TODO
 
-* remove rest of vote-box when results display
 * work on displaying chart
 * work on displaying products
 * work on grid model
