@@ -1,11 +1,11 @@
 import html from '../html.js';
 import ProductForm from './product-form.js'; 
-import productApi from '../services/productapi.js';
+import productApi from '../services/productApi.js';
 
 let template = function() {
     return html `
         <header>
-            <h1> Bus Mall </h1>
+            <h1> BusMall </h1>
         </header>
         <main></main>
     `;
@@ -13,7 +13,7 @@ let template = function() {
 export default class App {
     
     constructor(){
-        this.products = productApi.get();
+        this.products = productApi.getRandomThree();
         this.rounds = 0;
     }
 
@@ -23,8 +23,9 @@ export default class App {
         let productForm = new ProductForm({
             products: this.products
         });
+        console.log(this.products);
         main.appendChild(productForm.render());
-
+        //productApi.getRandomThree();
         return dom;  
     }
 }

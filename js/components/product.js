@@ -1,10 +1,10 @@
 import html from '/js/html.js';
 
-let template = function(item) {
+let template = function(product) {
     return html`
         <li>
-            <img src="${item.image}" width=300 height= 300 
-            id=${item.id}>                
+            <img src="${product.image}" width=300 height= 300 
+            id=${product.id}>                
         </li>
    `;
    //use a hover listener for the event name
@@ -18,18 +18,18 @@ let template = function(item) {
 
 export default class Product {
     constructor(props) {
-        this.item = props.item;
+        this.product = props.product;
         this.onSelect = props.onSelect;
        
     }
 
     render() {
-        let dom = template(this.item);
+        let dom = template(this.product);
         
         let li = dom.querySelector('li');
         li.addEventListener('click', () => {
-            this.onSelect(this.item.id);
-            console.log('item selected', this.item.name);
+            this.onSelect(this.product.id);
+            console.log('product selected', this.product.name);
         });
         return dom;
     }

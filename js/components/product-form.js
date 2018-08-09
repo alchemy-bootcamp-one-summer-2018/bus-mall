@@ -20,23 +20,19 @@ export default class ProductForm {
     render() {
         let dom = template();
         
-        function randomProductIndex(max){
-            return Math.floor(Math.random() * max);
-        }
-        let copy = this.products.slice();
         
+        // let copy = this.products.slice();        
     
         for(let i = 0; i < 3; i++){
-            let index = randomProductIndex(copy.length);
-            let randomProduct = copy[index];
-            console.log(randomProduct);
+            
             
             let ul = dom.querySelector('ul');
             let product = new Product({
-                item: randomProduct
+                product: this.products[i]
             });
             ul.appendChild(product.render());
-            copy.splice(index, 1);
+            
+            
         }
 
         return dom;
