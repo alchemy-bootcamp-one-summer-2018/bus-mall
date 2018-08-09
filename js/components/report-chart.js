@@ -56,12 +56,27 @@ export default class ReportChart {
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
-                    yAxes: [{
+                    xAxes: [{
+                        stacked: false,
+                        beginAtZero: true,
+                        scaleLabel: {
+                            labelString: 'Month'
+                        },
                         ticks: {
-                            beginAtZero:true
+                            stepSize: 1,
+                            min: 0,
+                            autoSkip: false
                         }
                     }]
-                }
+                },
+                layout: {
+                    padding: {
+                        left: 20,
+                        right: 20,
+                        top: 0,
+                        bottom: 0
+                    }
+                },
             }
         });
 

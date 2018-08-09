@@ -6,7 +6,7 @@ let template = function(product) {
         <img src="/img/${product.name}.jpg" alt="${product.name}" class="${product.name}">
         <p>Name: ${product.name}</p>
         <p>Views: ${product.views}</p>
-        <p>Votes: ${product.votes}</p>
+        <p class='votes-p'>Votes: ${product.votes}</p>
     </div>
     `;
 

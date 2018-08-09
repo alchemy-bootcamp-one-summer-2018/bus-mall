@@ -7,7 +7,6 @@ let template = function() {
     return html`        
         <body>
             <section class="header"></section>  
-            <section class="chart"></section>
             <section class="results-list"></section>
             <section class="methodology">
 

@@ -6,9 +6,9 @@ let template = function() {
                 <h1>Bus Mall</h1>
             </header>
             <nav>
-                <a id="results" href="../../results.html">Results</a>
-                <a id="index" href="../../index.html">Market Research</a>
                 <a id="products" href="../../products.html">Products</a>
+                <a id="index" href="../../index.html">Market Research</a>
+                <a id="results" href="../../results.html">Results</a>
             </nav>
     `;
 };

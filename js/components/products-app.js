@@ -6,7 +6,7 @@ import Header from './header.js';
 let template = function() {
     return html`        
         <body>
-            <section class="header"></section>
+            <section class="products-header"></section>
             <section class="product-display"></section>
         <body>
     `;
@@ -22,7 +22,7 @@ export default class ProductsApp {
         let productDisplay = dom.querySelector('.product-display');
         console.log('hello!');
 
-        let headerDisplay = dom.querySelector('.header');
+        let headerDisplay = dom.querySelector('.products-header');
         let header = new Header ({});
         headerDisplay.appendChild(header.render());
 
@@ -33,8 +33,6 @@ export default class ProductsApp {
             });
 
             productDisplay.appendChild(productImage.render());
-
-
         }
 
         

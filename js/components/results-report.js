@@ -4,9 +4,10 @@ import ReportChart from './report-chart.js';
 
 let template = function() {
     return html`
+        <section class="chart"></section>
         <h2 class="voting-h2">Voting Results</h2>
         <ul class="ul"></ul>
-        <section class="chart"></section>
+        
     `;
 };
 
