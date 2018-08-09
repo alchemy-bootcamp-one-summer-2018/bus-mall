@@ -16,13 +16,13 @@ export default data;
 
 // save data "at the end"
 // special event for when window is done
-// window.addEventListener('beforeunload', () => {
-//     // turn data back into a string (of json)
-//     let json = JSON.stringify(data);
-//     console.log('window unload, json is', json);
-//     // store in localStorage
-//     window.localStorage.setItem('data', json);
-// });
+window.addEventListener('beforeunload', () => {
+    // turn data back into a string (of json)
+    let json = JSON.stringify(data);
+    console.log('window unload, json is', json);
+    // store in localStorage
+    window.localStorage.setItem('data', json);
+});
 
 window.resetData = function() {
     window.localStorage.removeItem('data');

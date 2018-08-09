@@ -65,7 +65,7 @@ export default class App {
                     
                     for(let i = 0; i < this.items.length; i++) {
 
-                        let el = document.getElementById('results');
+                        let el = document.getElementById('report');
                         console.log('this.items', this.items);
                         var results = '<p>' + this.items[i].name + ' received ' + this.items[i].clicks + ' clicks and was viewed ' + this.items[i].views + ' times.</p>';
                         el.innerHTML = el.innerHTML + results;
@@ -78,8 +78,6 @@ export default class App {
             }
             
         });
-        
-        
 
         div.appendChild(productSurvey.render());
 
