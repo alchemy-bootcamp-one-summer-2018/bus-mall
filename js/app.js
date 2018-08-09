@@ -5,6 +5,7 @@ import ProductImages from './products.js';
 import Header from './header.js';
 import Footer from './footer.js';
 import Results from './results.js';
+import productsApi from './products-api.js';
 
 let template = function() {
 
@@ -21,6 +22,11 @@ let template = function() {
 
 export default class App {
 
+    constructor(){
+        this.products = productsApi.getRandomImages();
+
+    }
+
     render() {
         let dom = template();
         let main = dom.querySelector('main');
@@ -33,7 +39,9 @@ export default class App {
             images: threeProducts
         };
         //making the new instance and passing in the props(properties)
-        let productImages = new ProductImages(productImagesProps);
+        let productImages = new ProductImages({
+            products: this.products
+        });
 
         //remove images on click
         // get more images 

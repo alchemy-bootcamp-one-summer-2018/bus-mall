@@ -9,10 +9,7 @@ let template = function() {
 
     <p> this is the product images </p>
 
-
-
   
-
     </div>
 
     `;
@@ -23,28 +20,28 @@ export default class ProductImages {
 
     constructor(props){ //whatever is passed from app(parent)
         this.products = props.products;
-        this.images = props.images;
-
+        
     }
 
     render() {
-        //
 
-        let dom = template(this.images);
-        let div = dom.querySelector('div');
-       
+        let dom = template();
         
         for(let i = 0; i < 3; i++) {
-            let product = new Product();
-            div.appendChild(product.render());
-  
-        }
 
-    
+            let div = dom.querySelector('div');
+            let product = new Product({
+                product: this.products[i] 
+            });
+
+            div.appendChild(product.render());
+
+
         
         // console.log('this.images: ', this.images);
 
-        
+        }
         return dom;
+    
     }
 }

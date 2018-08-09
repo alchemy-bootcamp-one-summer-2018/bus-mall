@@ -2,31 +2,25 @@ import html from './html.js';
 
 
 
-let template = function() {
+let template = function(product) {
     return html`
-    <div>
-        <h2>What product would you most likely buy</h2>
-        <h3><span></span></h3>
-        <div class=""></div>
-        <ul></ul>
-    </div>
+
+    <img src="${product.image}" width=200px; height=200px>
     `;
 };
 
 export default class Product {
-    constructor() {
-      
-      
+    constructor(props) {
+        this.product = props.product;
+
     }
 
     
     render() {
-        let dom = template();
-        this.div = dom.querySelector('div');
-        
-
-
-        //this.ul.addEventListener('click', this.something here);
+        let dom = template(this.product);
+        this.img = dom.querySelector('img');
+    
+        this.img.addEventListener('click', () => console.log(this.product.name));
 
         return dom;
     }
