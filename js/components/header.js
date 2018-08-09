@@ -11,4 +11,12 @@ let template = function() {
 
    `;
 };
-template();
+export default class Footer{
+    constructor(props) {
+       
+    }
+    render() {
+        let dom = template();
+        return dom;
+    }
+}
