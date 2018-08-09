@@ -23,7 +23,7 @@ export default class App {
 
     constructor() {
         this.products = productApi.getRandomProducts();
-        this.rounds = 25;
+        this.rounds = 3;
     }
 
     renderResultsBox(products) {
@@ -36,8 +36,7 @@ export default class App {
             });
             this.resultBox.appendChild(resultCard.render());
 
-        }
-        );
+        });
     }
 
     render() {
@@ -53,12 +52,16 @@ export default class App {
                 votingBox.rounds--;
                 this.rounds--;
                 
-                productApi.handleClick(product.name);
+                productApi.handleClick(product);
                 
-                this.rounds
-                    ? votingBox.newRound()
-                    : this.renderResultsBox(productApi.get());
-                
+                if(this.rounds){
+                    votingBox.newRound();
+                }
+                else {
+
+                    votingBox.removeRow();
+                    this.renderResultsBox(productApi.get());
+                }   
             }
         });
         

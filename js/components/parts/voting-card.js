@@ -19,9 +19,10 @@ export default class VotingCard {
     render() {
         let dom = template(this.product);
 
-        let div = dom.querySelector('div');
-        div.addEventListener('click', () => {
-            this.onSelect(this.product);
+        this.div = dom.querySelector('div');
+
+        this.div.addEventListener('click', () => {
+            this.onSelect(this.product.name);
         });
 
 

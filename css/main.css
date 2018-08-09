@@ -36,7 +36,7 @@ input.radio {
     cursor: pointer;
 }
 
-.voting-card {
+.voting-container {
   /* Grid Fallback */
   display: flex;
   flex-wrap: wrap;

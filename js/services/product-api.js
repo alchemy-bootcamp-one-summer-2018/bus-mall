@@ -96,9 +96,7 @@ let products = [{
 
 
 export default {
-    get: function() {
-        return products;
-    },
+    get: () => products,
     getRandomProducts: () => {
         let randomProducts = [];
 

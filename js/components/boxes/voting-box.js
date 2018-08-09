@@ -10,8 +10,8 @@ import productApi from '/js/services/product-api.js';
 let template = (rounds) => {
     return html`        
         <h2>Let's vote!</h2>
-        <h3>Total Rounds: <span class="count">${rounds}</span></h3>
-        <div class="voting-card"></div>
+        <h3>Rounds Left: <p class="count" style="display: inline;">${rounds}</p></h3>
+        <div class="voting-container"></div>
     `;
 };
 
@@ -25,13 +25,11 @@ export default class VotingBox {
     
     renderProducts(products) {
         for(let i = 0; i < products.length; i++){
-            let votingCard = new VotingCard(
-                {
-                    product: products[i],
-                    onSelect: this.onSelect
-                }
-            );
-            this.votingCard.appendChild(votingCard.render());
+            let votingCard = new VotingCard({
+                product: products[i],
+                onSelect: this.onSelect
+            });
+            this.votingContainer.appendChild(votingCard.render());
         }
     }
     
@@ -39,18 +37,22 @@ export default class VotingBox {
 
         this.count.innerText = this.rounds;
 
-        while(this.votingCard.children.length) {
-            this.votingCard.lastChild.remove();
-        }
+        this.removeRow();
 
         this.products = productApi.getRandomProducts();
         this.renderProducts(this.products);
     }
 
+    removeRow() {
+        while(this.votingContainer.children.length) {
+            this.votingContainer.lastChild.remove();
+        }
+    }
+
     render() {
         let dom = template(this.rounds);
         this.count = dom.querySelector('.count');
-        this.votingCard = dom.querySelector('.voting-card');
+        this.votingContainer = dom.querySelector('.voting-container');
 
         this.renderProducts(this.products);
 

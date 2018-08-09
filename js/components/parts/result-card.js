@@ -24,4 +24,4 @@ export default class ResultCard {
         let dom = template(this.image, this.views, this.votes);
         return dom;
     }
-};
+}
