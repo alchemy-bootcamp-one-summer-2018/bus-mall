@@ -40,7 +40,7 @@ export default class App {
         let productImages = new ProductImages({
             products: this.products,
             onSelect: function(product) {
-                console.log(product.name);
+                imagesApi.handleSelect(product.name);
             }
         });
 
