@@ -130,9 +130,9 @@ function randomProductIndex(max){
 let randomProductArray = [];
 
 export default {
-    get: function() {
-        return products;
-    },
+    // get: function() {
+    //     return products;
+    // },
     getRandomThree: function() {
         for(let i = 0; i < 3; i++){
             let index = randomProductIndex(copy.length);
@@ -141,8 +141,13 @@ export default {
             copy.splice(index, 1);
             randomProductArray.push(randomProduct);
         }
-        console.log('this is my random product array', randomProductArray);
         return randomProductArray;
+    },
+
+    handleSelect: function(productId) {
+        let selectedProduct = products.filter(product => product.id === productId);
+        console.log(selectedProduct, productId);
+        selectedProduct[0].votes ++;
     }
     
     

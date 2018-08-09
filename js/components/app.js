@@ -21,12 +21,20 @@ export default class App {
     render() {
         let dom = template();
         let main = dom.querySelector('main');
+        
         let productForm = new ProductForm({
-            products: this.products
+            products: this.products,
+            onSelect: function(product) {
+                console.log('app product id', product.id);
+                productApi.handleSelect(product.id);
+                let updateProducts = productApi.getRandomThree();
+                productForm.tallyRounds(updateProducts);
+            }
         });
-        // console.log(this.products);
+        
+        console.log(this.products);
         main.appendChild(productForm.render());
-        //productApi.getRandomThree();
+        // productApi.getRandomThree();
         return dom;  
     }
 

@@ -27,7 +27,9 @@ export default class ProductForm {
             
             let product = new Product({
                 product: this.products[i],
+                onSelect: this.onSelect
             });
+            
             this.products[i].viewed++;
             console.log(this.products[i].name, this.products[i].viewed);
 
