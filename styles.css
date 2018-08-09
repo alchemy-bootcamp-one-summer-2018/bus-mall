@@ -95,14 +95,14 @@ nav a:link {
 }
 
 
-nav a:visited {
+/* nav a:visited {
     color: ;
-}
+} */
 
 nav a:hover {
     background-color: rgb(255, 226, 231);
 }
 
-nav a:active {
+/* nav a:active {
     color: blue;
-
+} */
