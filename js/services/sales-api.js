@@ -1,4 +1,13 @@
 
+import data from './data.js';
+
+let items = data.items;
+
+if(!items) {
+    data.items = createItems();
+    items = data.items;
+}
+
 function createItems() {
     let data = [{
         name: 'breakfast',
@@ -44,6 +53,42 @@ function createItems() {
         name: 'pen.jpg',
         image: 'images/pen.jpg',
         clicks: 0
+    }, {
+        name: 'pet-sweep',
+        image: 'images/pet-sweep.jpg',
+        clicks: 0
+    }, {
+        name: 'scissors',
+        image: 'images/scissors.jpg',
+        clicks: 0
+    }, {
+        name: 'shark',
+        image: 'images/shark.jpg',
+        clicks: 0
+    }, {
+        name: 'sweep',
+        image: 'images/sweep.png',
+        clicks: 0
+    }, {
+        name: 'tauntaun',
+        image: 'images/tauntaun.jpg',
+        clicks: 0
+    }, {
+        name: 'unicorn.jpg',
+        image: 'images/unicorn.jpg',
+        clicks: 0
+    }, {
+        name: 'usb',
+        image: 'images/usb.gif',
+        clicks: 0
+    }, {
+        name: 'water-can',
+        image: 'images/water-can.jpg',
+        clicks: 0
+    }, {
+        name: 'wine-glass',
+        image: 'images/wine-glass.jpg',
+        clicks: 0
     }
     
     ];
@@ -51,7 +96,7 @@ function createItems() {
     return data;
 }
 
-let items = createItems();
+// let items = createItems();
 
 export default {
 

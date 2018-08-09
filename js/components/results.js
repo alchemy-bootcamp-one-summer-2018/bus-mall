@@ -2,9 +2,8 @@ import html from '../html.js';
 
 let template = function() {
     return html `
-        <div>
-            <h2>Results</h2>
-        </div>
+        <h2>Results</h2>
+        <div id="results"></div>
       `;
 };
 

@@ -1,7 +1,6 @@
 import html from '../html.js';
 import ProductSurvey from './product-survey.js';
 import Results from './results.js';
-// import getRandomImage from '../services/sales-api.js';
 import salesApi from '../services/sales-api.js';
 
 let template = function() {
@@ -20,10 +19,6 @@ let template = function() {
 
 export default class App {
 
-    // constructor(props) {
-    //     this.section = props.section;
-    // }
-
     render() {
         let dom = template();
         let div = dom.querySelector('div');
@@ -34,12 +29,13 @@ export default class App {
 
         let productSurvey = new ProductSurvey({
             products: items,
-            // additional things that get passed down -- handleClick - everytime we get a click...
+            // additional things that get passed down
             onSelect: (product) => {
                 
                 this.product = product;
                 this.product.clicks++,
-                console.log('clicks', this.product.clicks);
+                console.log('this product clicks', this.product.clicks);
+
                 this.totalClicks++;
                 console.log('total clicks:', this.totalClicks);
 
@@ -51,15 +47,26 @@ export default class App {
                 let randomProducts = salesApi.getRandomProducts();
                 productSurvey.products = randomProducts;
                 productSurvey.renderImages();
-                console.log('second round of random products', randomProducts);
                 
                 if(this.totalClicks > 4) {
-                    console.log('RESULTS!');
-                }
+                    while(section.children.length) {
+                        section.lastChild.remove();
+                    }
+                    
+                    for(let i = 0; i < items.length; i++) {
+                        
+                        console.log('items', items);
+                        
+                        let el = document.getElementById('results');
+                        var results = 'Tally:' + items[i].name + 'received ' + items[i].clicks + ' clicks.';
+                        el.textContent = results;
+                        
+                        console.log('RESULTS!');
+                    }
 
-                // this.onSelect(this.product);
-                console.log('hello');
+                }
                 
+        
             }
             
         });
