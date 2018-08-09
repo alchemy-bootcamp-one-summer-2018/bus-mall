@@ -16,6 +16,26 @@ body {
     display: block;
     text-align: center;
 }
+#results-header {
+    padding: 40px;
+    border: 0;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+#ul{
+    grid-area: "main";
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  
+}
+
+li{
+    text-align: center;
+}
 .header-div{
 text-align: left;
 border: 0;
@@ -60,8 +80,8 @@ a:hover {
 }
   
 .img {
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     grid-area: "main";
     opacity: .8;
     transition: all .2s ease-in-out;

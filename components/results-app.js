@@ -7,7 +7,7 @@ import Methods from './lorem-ipsum.js';
 let template = function() {
     return html `
         <header></header>
-        <main></main>
+        <main class="grid"></main>
     `;
 };
 

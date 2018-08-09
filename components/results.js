@@ -3,9 +3,11 @@ import ProductResult from './product-result.js';
 
 let template = function() {
     return html`
-        <h2>Results</h2>
-         <ul><ul>
-        <section></section>
+    <div class="content">
+        <h2 id="results-header">Results</h2>
+        <ul><ul>
+    </div>
+        
     `;
 };
 

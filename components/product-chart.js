@@ -2,10 +2,10 @@ import html from '../html.js';
 
 let template = function() {
     return html`
+    <div class="content">
         <h2>Chart</h2>
-        <div class="chart-container">
-            <canvas width="400"></canvas>
-        </div>
+        <canvas width="400"></canvas>
+    </div>
     `;
 };
 
