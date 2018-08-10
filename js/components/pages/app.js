@@ -9,7 +9,7 @@ import ResultCard from '/js/components/parts/result-card.js';
 
 let template = function() {
     return html`        
-        <header></header>
+        <header class="header-container"></header>
         
         <main>
             <section>

@@ -1,3 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Do+Hyeon|Source+Serif+Pro');
+
+
+
+/* 
+blueberry: rgba(66, 134, 244, 1)
+jet: rgba(52, 46, 55, 1)
+yellow-green: rgba(162, 215, 41, 1)
+coral: rgba(250, 130, 76, 1)
+white: rgba(250, 255, 253, 1)
+*/
+
+
 body {
   margin: 0 auto;
   max-width: 56em;
@@ -12,21 +26,6 @@ h1 {
 h2 {
     text-align: center;
     margin: 15px;
-}
-
-table {
-    margin: 15px;
-    text-align: center;
-    border: solid black 2px;
-}
-
-th, td {
-    border: solid black 1px;
-    padding: 5px;
-}
-
-input.radio {
-    cursor: pointer;
 }
 
 .product {
@@ -67,4 +66,83 @@ input.radio {
   .module {
     margin: 0;
   }
+}
+
+
+
+/* 
+blueberry: rgba(66, 134, 244, 1)
+jet: rgba(52, 46, 55, 1)
+yellow-green: rgba(162, 215, 41, 1)
+coral: rgba(250, 130, 76, 1)
+white: rgba(250, 255, 253, 1)
+*/
+
+
+/*Header*/
+
+.header-container {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 2.3em 0;
+    border-bottom: 3px solid rgb(255, 184, 28);
+    background: linear-gradient(to top left, rgb(0, 56, 130),rgb(66, 134, 244));
+}
+
+.logo-container {
+    text-decoration: none;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+/* .logo-container img {
+    display: block;
+} */
+
+.logo-container h1 {
+    padding: 0;
+    display: block;
+    font-weight: bold;
+    color: rgb(255, 184, 28);
+}
+
+nav {
+    margin: 1.5em 0 0 5%;
+    position: relative;
+    top: 40px;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 1.4em 0 0;
+    font-size: 0.9em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgb(255, 184, 28);
+}
+
+/* li a.active {
+    font-weight: 300;
+    color: rgba(239, 132, 105, 1);
+    border-bottom: 2px solid rgba(64, 249, 155, 1);
+}
+
+li a:hover {
+    color: #B6B6B6;
+} */
+
+.core-info {
+    font-family: "Saira", sans-serif;
+    text-align: right;
+    font-size: 0.6em;
+    color: rgba(239, 132, 105, 1);
+    position: absolute;
+    left: 90%;
+    top: 0;
 }

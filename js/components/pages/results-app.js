@@ -9,7 +9,7 @@ import ChartBox from '/js/components/boxes/chart-box.js';
 
 let template = function() {
     return html`        
-        <header></header>
+        <header class="header-container"></header>
         
         <main>
             <h2>Charty McCharty Chart</h2>
