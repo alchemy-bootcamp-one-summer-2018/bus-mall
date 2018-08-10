@@ -11,7 +11,6 @@ let template = function() {
 
 export default class Report {
     constructor(props) {
-        // this.products = props.products;
         this.results = props.results;
     }
 

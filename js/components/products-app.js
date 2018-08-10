@@ -20,7 +20,6 @@ export default class ProductsApp {
     render() {
         let dom = template();
         let productDisplay = dom.querySelector('.product-display');
-        console.log('hello!');
 
         let headerDisplay = dom.querySelector('.products-header');
         let header = new Header ({});
