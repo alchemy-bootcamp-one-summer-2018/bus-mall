@@ -1,6 +1,7 @@
 import html from '/js/html.js';
 
 import Header from '/js/components/layout/header.js';
+import Footer from '/js/components/layout/footer.js';
 
 import productApi from '/js/services/product-api.js';
 import VotingBox from '/js/components/boxes/voting-box.js';
@@ -16,6 +17,8 @@ let template = function() {
                 <ul class="results-box"></ul>
             </section>
         </main>
+
+        <footer></footer>
     `;
 };
 
@@ -41,6 +44,7 @@ export default class App {
     render() {
         let dom = template(this.rounds);
         this.header = dom.querySelector('header');
+        this.footer = dom.querySelector('footer');
 
         this.resultBox = dom.querySelector('.results-box');
         
@@ -69,6 +73,9 @@ export default class App {
 
         let header = new Header();
         this.header.appendChild(header.render());
+
+        let footer = new Footer();
+        this.footer.appendChild(footer.render());
 
         this.votingBox = dom.querySelector('.voting-box');
         this.votingBox.appendChild(votingBox.render());
