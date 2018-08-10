@@ -9,92 +9,92 @@ if(!products) {
 
 function createProducts() {
     let data = [{
-        name: 'bag',
+        name: 'Bag',
         image: '/img/bag.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'banana',
+        name: 'Banana',
         image: '/img/banana.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'bathroom',
+        name: 'Bathroom',
         image: '/img/bathroom.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'boots',
+        name: 'Boots',
         image: '/img/boots.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'breakfast',
+        name: 'Breakfast',
         image: '/img/breakfast.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'bubblegum',
+        name: 'Bubblegum',
         image: '/img/bubblegum.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'chair',
+        name: 'Chair',
         image: '/img/chair.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'cthulhu',
+        name: 'Cthulhu',
         image: '/img/cthulhu.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'dog-duck',
+        name: 'Doggie Duck',
         image: '/img/dog-duck.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'dragon',
+        name: 'Dragon',
         image: '/img/dragon.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'pen',
+        name: 'Pen',
         image: '/img/pen.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'pet-sweep',
+        name: 'Pet Sweep',
         image: '/img/pet-sweep.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'scissors',
+        name: 'Scissors',
         image: '/img/scissors.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'shark',
+        name: 'Shark',
         image: '/img/shark.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'tauntaun',
+        name: 'Tauntaun',
         image: '/img/tauntaun.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'unicorn',
+        name: 'Unicorn',
         image: '/img/unicorn.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'water-can',
+        name: 'Water Can',
         image: '/img/water-can.jpg',
         views: 0,
         votes: 0,
     }, {
-        name: 'wine-glass',
+        name: 'Wine Glass',
         image: '/img/wine-glass.jpg',
         views: 0,
         votes: 0,
@@ -102,6 +102,9 @@ function createProducts() {
 
     return data;
 }
+
+// exposing for dev purposes
+
 
 
 export default {
@@ -130,4 +133,6 @@ export default {
 
         console.log(products[index].name, 'votes:', products[index].votes);
     }
+
+
 };
