@@ -15,7 +15,6 @@ export default class Product {
         this.onSelect = props.onSelect;
 
     }
-
     
     render() {
         let dom = template(this.product);

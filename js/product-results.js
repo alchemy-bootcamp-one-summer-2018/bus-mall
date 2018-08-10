@@ -14,10 +14,11 @@ let template = function(product) {
 export default class ProductResults {
     constructor(props) {
         this.product = props.product;
-       
+
     }
 
     render() {
+        console.log('yay', this.product);
         let dom = template(this.product);
         return dom;
     }

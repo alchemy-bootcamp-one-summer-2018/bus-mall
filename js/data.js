@@ -18,7 +18,7 @@ window.addEventListener('beforeunload', () => {
     let json = JSON.stringify(data);
     console.log('window unload, json is', json);
 
-    window.localStorage.setItem('data, json');
+    window.localStorage.setItem('data', json);
 
 });
 
