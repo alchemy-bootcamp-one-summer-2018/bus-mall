@@ -8,10 +8,7 @@ let template = function() {
    `;
 };
 
-export default class Header {
-    constructor(props) {
-       
-    }
+export default class Footer {
 
     render() {
         let dom = template();
