@@ -11,10 +11,6 @@
 
 note: user = person in the focus group (this is not a public-facing app)
 
-## Tasks
-
-1. Upon receiving a click, three new non-duplicating random images need to be automatically displayed. In other words, the three images that are displayed should contain no duplicates, nor should they duplicate with any images that we displayed immediately before.
-
 ## TODO
 
 * work on grid model
