@@ -27,11 +27,12 @@ export default class App {
         this.header = dom.querySelector('header');
         this.footer = dom.querySelector('footer');
         this.main = dom.querySelector('main');
-        console.log(this.header, 'header');
-        console.log('randomProducts', this.randomProducts);
         
         const header = new Header();
-        let productList = new ProductList({});
+        let productList = new ProductList({
+            randomProducts: this.randomProducts
+        });
+
         const footer = new Footer();
 
         this.header.appendChild(header.render());

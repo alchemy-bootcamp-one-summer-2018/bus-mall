@@ -1,127 +1,127 @@
 const products = [
     {
         name:'bag',
-        image:'bag.jpg',
+        url:'bag.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'banana',
-        image:'banana.jpg',
+        url:'banana.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'bathroom',
-        image:'bathroom.jpg',
+        url:'bathroom.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'boots',
-        image:'boots.jpg',
+        url:'boots.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'breakfast',
-        image:'breakfast.jpg',
+        url:'breakfast.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'bubblegum',
-        image:'bubblegum.jpg',
+        url:'bubblegum.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'chair',
-        image:'chair.jpg',
+        url:'chair.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'cthulhu',
-        image:'cthulu.jpg',
+        url:'cthulu.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'dog-duck',
-        image:'dog-duck.jpg',
+        url:'dog-duck.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'dragon',
-        image:'dragon.jpg',
+        url:'dragon.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'pen',
-        image:'pen.jpg',
+        url:'pen.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'bag',
-        image:'bag.jpg',
+        url:'bag.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'pet-sweep',
-        image:'pet-sweep.jpg',
+        url:'pet-sweep.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'scissors',
-        image:'scissors.jpg',
+        url:'scissors.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'shark',
-        image:'shark.jpg',
+        url:'shark.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'sweep',
-        image:'sweep.jpg',
+        url:'sweep.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'tauntaun',
-        image:'tauntaun.jpg',
+        url:'tauntaun.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'unicorn',
-        image:'unicorn.jpg',
+        url:'unicorn.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'usb',
-        image:'usb.gif',
+        url:'usb.gif',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'water-can',
-        image:'water-can.jpg',
+        url:'water-can.jpg',
         viewCount: 0,
         voteCount: 0
     }, 
     {
         name:'wine-glass',
-        image:'wine-glass.jpg',
+        url:'wine-glass.jpg',
         viewCount: 0,
         voteCount: 0
     }
