@@ -12,6 +12,11 @@ else {
     data = {};
 }
 
+// exposing for dev purposes
+window.resetProducts = function() {
+    data = {};
+};
+
 // make accessible (export the data object)
 export default data;
 
