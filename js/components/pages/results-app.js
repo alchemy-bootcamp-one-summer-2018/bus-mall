@@ -1,6 +1,6 @@
 import html from '/js/html.js';
 
-// import productApi from '/js/services/product-api.js';
+import productApi from '/js/services/product-api.js';
 import ChartBox from '/js/components/boxes/chart-box.js';
 // import ResultCard from '/js/components/parts/result-card.js';
 
@@ -25,14 +25,22 @@ export default class App {
         this.test = "I'm a placeholder";
     }
 
+    renderChart(products) {
+        let chartBox = new ChartBox({
+            products: products,
+        });
 
+        this.chartBox.appendChild(chartBox.render());
+        
+    }
+    
     render() {
         let dom = template();
-
         this.chartBox = dom.querySelector('.chart-box');
+    
+        this.renderChart(productApi.get());
 
-        let chartBox = new ChartBox({});
-        this.chartBox.appendChild(chartBox.render());
+        
 
         return dom;
     }
