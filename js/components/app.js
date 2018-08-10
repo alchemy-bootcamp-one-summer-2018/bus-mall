@@ -18,7 +18,7 @@ export default class App {
     }
     
     render() {
-        console.log(this.products);
+        // console.log(this.products);
         let dom = template();
         let main = dom.querySelector('main');
         
@@ -30,7 +30,7 @@ export default class App {
                 console.log('you have ', this.rounds, 'rounds');
                 productApi.handleSelect(product.id);
                 let updateProducts = productApi.getRandomThree();
-                console.log('new products', updateProducts);
+                // console.log('new products', updateProducts);
                 productForm.updateForm(updateProducts);
 
                 if(!this.rounds) {

@@ -31,8 +31,8 @@ export default class Product {
             
             this.onSelect(this.product);
             // console.log('product selected', this.product.name);
-            this.product.votes++;
-            console.log(this.product.votes);
+            
+            console.log(this.product.name, this.product.votes);
 
         });
         return dom;

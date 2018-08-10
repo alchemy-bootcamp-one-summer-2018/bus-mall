@@ -144,11 +144,9 @@ export default {
     },
 
     handleSelect: function(productId) {
-        let selectedProduct = products.filter(product => product.id === productId);
-        selectedProduct[0].votes ++;
+        let selectedProduct = products.filter(product => product.id === productId);        
+        selectedProduct[0].votes ++;        
     },
     
-    // tallyRounds: function() {
-        //going to need to increment total rounds 
-    //}
+   
 };

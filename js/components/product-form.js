@@ -56,7 +56,7 @@ export default class ProductForm {
                 onSelect: this.onSelect
             });
 
-            console.log(this.products[i].name, this.products[i].viewed);
+            // console.log(this.products[i].name, this.products[i].viewed);
 
             this.div.appendChild(product.render());
             
