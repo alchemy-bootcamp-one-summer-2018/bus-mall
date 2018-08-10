@@ -22,7 +22,7 @@ let template = function() {
 export default class App {
 
     constructor() {
-        this.test = "I'm a placeholder";
+        this.test = 'I a placeholder';
     }
 
     renderChart(products) {

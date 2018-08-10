@@ -1,10 +1,9 @@
 import html from '/js/html.js';
-// import Chart from '/js/libs/Chart.js';
 
 
 let template = () => {
     return html`        
-        <h2>Results Chart</h2>
+        <h2>Votes Chart</h2>
         <div>
             <canvas width="800"></canvas>
         </div>
@@ -56,7 +55,7 @@ export default class ChartBox {
             }
             return data;
         }
-        
+
         let chartData = {
             labels: labels,
             datasets: [{
@@ -83,6 +82,7 @@ export default class ChartBox {
             data: chartData,
             options: chartOptions
         });
+
 
         return dom;
     }
