@@ -2,14 +2,12 @@ import html from './html.js';
 import Product from './product.js';
 // import productsApi from './products-api.js';
 
-let template = function(rounds){
+let template = function(){
 
     return html`
 
     <div class="products-area">
-<p> Total Rounds: <span> ${rounds} </span> </p> 
 
-  <ul> </ul>
     </div>
 
     `;
@@ -29,7 +27,6 @@ export default class ProductImages {
         while(this.div.children.length) {
             this.div.lastChild.remove();
         }
-
 
     }
 

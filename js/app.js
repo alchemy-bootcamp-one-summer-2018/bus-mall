@@ -25,6 +25,7 @@ export default class App {
     constructor(){
         this.products = productsApi.getRandomImages();
         this.rounds = 25;
+        this.allProducts = productsApi.get();
        
 
     }
@@ -35,8 +36,9 @@ export default class App {
         }
 
         let results = new Results ({
-            products: this.products
-
+            products: this.products,
+            allProducts: this.allProducts,
+        
         });
 
         this.main.appendChild(results.render());
@@ -44,35 +46,38 @@ export default class App {
 
     render() {
         let dom = template();
-        let main = dom.querySelector('main');
+        this.main = dom.querySelector('main');
         let productImages = new ProductImages({
             products: this.products,
+           
             
             onSelect:(product) => {
-                console.log('ya', this.rounds);
+                // console.log('ya', this.rounds);
                 productsApi.handleSelect(product.name);
                 let updateProducts = productsApi.getRandomImages();
                 productImages.tallyRounds(updateProducts);
                 this.rounds--;
 
                 if(!this.rounds) {
-                   
                     productImages.removeImages();
-            
+                }
+
+                if(this.rounds === 0) {
+                  this.renderResults();
+                    
                 }
             }
 
         });
+        console.log('productlist', this.allProducts);
 
-        
         let header = new Header;
         let footer = new Footer;
-        //let results = new Results;
 
-        main.appendChild(header.render());
-        main.appendChild(productImages.render());
+        this.main.appendChild(header.render());
+        this.main.appendChild(productImages.render());
         
-        main.appendChild(footer.render());
+        this.main.appendChild(footer.render());
         // resultSection.appendChild(results.render());
 
 
