@@ -72,6 +72,7 @@ export default class ChartBox {
                 xAxes: [{
                     ticks: {
                         beginAtZero: true,
+                        stepSize: 1,
                     }
                 }]
             }
