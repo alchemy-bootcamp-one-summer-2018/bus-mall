@@ -71,8 +71,8 @@ export default class ReportChart {
                 },
                 layout: {
                     padding: {
-                        left: 20,
-                        right: 20,
+                        left: 0,
+                        right: 0,
                         top: 0,
                         bottom: 0
                     }

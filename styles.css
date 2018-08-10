@@ -26,7 +26,6 @@ h2 {
 #root {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    /* grid-template-rows: repeat(4, 25vh); */
     grid-template-areas:    "a a a a a a"
                             "b b b b b b"
                             "e e e e e e"
@@ -43,7 +42,6 @@ h2 {
     height: 30vh;
     width: 33vw;
     display: inline-block;
-    background-color: white;
 }
 
 img {
@@ -87,12 +85,17 @@ img {
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 li {
     padding: 20px;
     font-size: 1.3em;
     width: 270px;
+}
+
+.ul li {
+    margin: 0 auto;
 }
 
 nav {
@@ -143,4 +146,49 @@ nav a:active {
 
 .instructions h2 {
     padding: 0 0 20px;
+}
+  
+/* On screens that are 992px or less, set the background color to blue */
+/* @media screen and (max-width: 992px) {
+    body {
+    background-color: blue;
+    }
+} */
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        margin: 0px auto;
+    }
+
+    .product-display .image-container {
+        margin: 80px auto;
+    }
+
+    .product-display p {
+        font-size: 1.5em;
+    }
+
+    nav {
+        font-size: 1.4em;
+    }
+
+    .voting-h2 {
+        padding-top: 10px;
+        padding-bottom: 6px;
+    }
+
+    .chart-container {
+        padding: 10px;
+        margin: 0 auto;
+    }
+
 }
