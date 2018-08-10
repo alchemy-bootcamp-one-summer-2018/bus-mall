@@ -1,7 +1,9 @@
-//import data from './data.js';
+import data from '../../data.js';
+if(!data.products) {
+    data.products = createProducts();
+}
 
-let products = createProducts();
-console.log('products', products);
+console.log('products', data.products);
 function createProducts() {
     return [{
         name: 'bag',
@@ -110,28 +112,27 @@ function createProducts() {
 
 export default {
     get: function() {
-        return products;
+        return data.products;
     },
     getRandomProducts: function(){
         let imagesDisplayed = [];
 
         while(imagesDisplayed.length < 3) {
-            let randomIndex = Math.floor(Math.random() * products.length);
-            let product = products[randomIndex];
+            let randomIndex = Math.floor(Math.random() * data.products.length);
+            let product = data.products[randomIndex];
             if(imagesDisplayed.includes(product)) continue;
             imagesDisplayed.push(product);
     
         }
 
         imagesDisplayed.forEach(product => product.viewCount ++);
-        console.log('is this working', imagesDisplayed);
 
         return imagesDisplayed;
 
     },
 
     handleSelect: (productName) => {
-        let selectedImage = products.filter(product => product.name === productName);
+        let selectedImage = data.products.filter(product => product.name === productName);
         selectedImage[0].numberClicks++;
     }
     

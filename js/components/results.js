@@ -17,7 +17,7 @@ export default class Results {
     render() {
         let dom = template();
         let ul = dom.querySelector('ul');
-        for(let i=0; i < this.results.length; i++) {
+        for(let i = 0; i < this.results.length; i++) {
             let productReport = new ProductReport({
                 result: this.results[i]
             });

@@ -17,21 +17,18 @@ let template = function() {
 
 export default class App {
     constructor(){
-        this.rounds = 5;
+        this.rounds = 25;
     }
     render() {
         let dom = template();
         let main = dom.querySelector('main');
 
         let products = productApi.getRandomProducts();
-        console.log('is this working', products);
         let productsList = new ProductsList({
             products: products,
             onSelect:(product) => {
                 productApi.handleSelect(product.name);
-                //increase clicks
-                //generate new products
-                //updates
+               
                 this.rounds--;
                 if(this.rounds === 0){
                     let results = new Results({
@@ -45,7 +42,6 @@ export default class App {
         });
         main.appendChild(productsList.render());
         
-        console.log(products);
         return dom;
     
     }
