@@ -1,16 +1,16 @@
 # BusMall Pages and Layout
 
-Time to update the BusMall site to be split into multiple web pages, and to design the layout of the individual pages. 
+Time to update the BusMall site to be split into multiple web pages, and to design the layout of the individual pages.
 
 This is going to entail:
 
 * Create a new "results" html page and associated app components
 * Create a new "products" html page and associated app components
 * Using CSS Grid, Flexbox and other CSS layout techniques to have a responsive, attractive:
-    * Header with Navigation
-    * index.html page (Product Voting)
-    * results.html (Results Page)
-    * products.html (Products Page)
+  * Header with Navigation
+  * index.html page (Product Voting)
+  * results.html (Results Page)
+  * products.html (Products Page)
 * Storing the product data in localStorage so the two pages can share data.
 
 ## Adding Additional Pages

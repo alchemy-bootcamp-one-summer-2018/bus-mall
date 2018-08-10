@@ -1,4 +1,4 @@
-import data from '/js/services/results-data.js';
+import data from '/js/services/results-api.js';
 
 let products = data.products;
 
