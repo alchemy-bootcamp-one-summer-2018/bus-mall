@@ -1,0 +1,45 @@
+h1 {
+    font-size: 110px;
+    color: white;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 6px 2px darkmagenta;
+}
+
+h2 {
+    font-size:30px;
+    color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+body {
+    background-color: #B39EB5;
+}
+
+img {
+    width: 160px;
+    padding: 15px;
+}
+
+li {
+    display:inline-block;
+        *display:inline; /*IE7*/
+        *zoom:1; /*IE7*/
+        background: #8f6aa0;
+        color:white;
+        margin-right:80px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+div.image {
+    content:url(https://preview.ibb.co/hed1gU/bus_copy.png);
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
