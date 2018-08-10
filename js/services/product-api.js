@@ -103,9 +103,6 @@ function createProducts() {
     return data;
 }
 
-// exposing for dev purposes
-
-
 
 export default {
     get: () => products,

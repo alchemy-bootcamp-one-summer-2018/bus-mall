@@ -24,7 +24,7 @@ let template = function() {
 export default class App {
 
     constructor() {
-        this.test = "I'm a placeholder";
+        this.test = 'I a placeholder';
     }
 
     renderResultsBox(products) {
@@ -41,7 +41,7 @@ export default class App {
 
     render() {
         let dom = template();
-        
+
         this.header = dom.querySelector('header');
         this.footer = dom.querySelector('footer');
         let header = new Header();
