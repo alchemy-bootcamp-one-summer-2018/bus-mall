@@ -1,29 +1,61 @@
 import html from '../html.js';
 import imageLoading from '../data-wrangling/data.js';
+import ImageCard from './image-card.js';
 
-let foo = imageLoading();
 
-let template = function() {
+//let refreshCounter = 0;
+
+let template = function(foo) {
     return html`        
         <div class="row">
-            <div class="column">${foo[0].src}</div>
-            <div class="column">${foo[1].src}</div>
-            <div class="column">${foo[2].src}</div>
         </div>
-        <section class="buttons">
-            <div class="row">
-                <div class="column"><input type="radio" name="clickMe" id=${foo[0].id}></div>
-                <div class="column"><input type="radio" name="clickMe" id=${foo[1].id}></div>
-                <div class="column"><input type="radio" name="clickMe" id=${foo[2].id}></div>
-            </div>
-        </section>
     `;
 };
 
+
+
 export default class ImageForm {
+
+    constructor(props) {
+        this.images = props.images;
+        this.onSelect = props.onSelect;
+    }
     
+    updateImages(props) {
+        this.images = props;
+        console.log(props);
+        while(this.row.lastElementChild) {
+            this.row.lastElementChild.remove();
+        }
+
+        this.renderImages();
+    }
+
+    disableImages(props) {
+        this.images = props;
+        while(this.row.lastElementChild) {
+            this.row.lastElementChild.remove();
+        }
+    }
+
+    renderImages() {
+        for(let i = 0; i < this.images.length; i++) {
+            let imageCard = new ImageCard(
+                {
+                    image: this.images[i],
+                    onSelect: this.onSelect
+                }
+            );
+            this.row.appendChild(imageCard.render());
+        }
+    }
+
     render() {
-        let dom = template();
+        let foo = imageLoading();
+        let dom = template(foo);
+        this.row = dom.querySelector('.row');
+        
+        this.renderImages();
 
         return dom;
     }
