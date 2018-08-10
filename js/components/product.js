@@ -1,5 +1,5 @@
 import html from '/js/html.js';
-import App from './app.js';
+//import App from './app.js';
 
 let template = function(product) {
     return html`
