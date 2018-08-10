@@ -29,8 +29,8 @@ export default class App {
                 this.rounds--;
                 console.log('you have ', this.rounds, 'rounds');
                 productApi.handleSelect(product.id);
+                // productApi.copyRepopulator();
                 let updateProducts = productApi.getRandomThree();
-                // console.log('new products', updateProducts);
                 productForm.updateForm(updateProducts);
 
                 if(!this.rounds) {

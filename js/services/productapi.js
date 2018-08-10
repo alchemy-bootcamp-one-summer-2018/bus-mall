@@ -123,7 +123,6 @@ function createProducts() {
     }];
 }
 
-let copy = products.slice();
 function randomProductIndex(max){
     return Math.floor(Math.random() * max);
 }
@@ -132,13 +131,18 @@ export default {
     
     getRandomThree: function() {
         let randomProductArray = [];
-        for(let i = 0; i < 3; i++){
-            
-            let index = randomProductIndex(copy.length);            
-            let randomProduct = copy[index];
+        while(randomProductArray.length < 3){
+                   
+            let index = randomProductIndex(products.length);            
+            let randomProduct = products[index];
+    
             randomProduct.viewed++;
-            copy.splice(index, 1);
+            if(randomProductArray.includes(randomProduct)){
+                continue;
+            }
+                
             randomProductArray.push(randomProduct);
+            
         }
         return randomProductArray;
     },

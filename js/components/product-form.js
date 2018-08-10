@@ -29,14 +29,12 @@ export default class ProductForm {
         this.products = products;
         for(let i = 0; i < 3; i++){          
             
-            // this.div = dom.querySelector('div');
-            
             let product = new Product({
                 product: this.products[i],
                 onSelect: this.onSelect
             });
 
-            // console.log(this.products[i].name, this.products[i].viewed);
+            console.log(this.products[i].name, this.products[i].viewed);
 
             this.div.appendChild(product.render());
             
