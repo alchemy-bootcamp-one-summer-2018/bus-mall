@@ -6,8 +6,8 @@
 
 ## TODO
 
-* work on displaying products
 * work on grid model
 * work on header and footer
+* fix how I make products into components (and make products page not show views or votes, unless you set the flag)
 * make the results list display more legibly
 * make more and better charts
