@@ -1,14 +1,14 @@
 import html from '/js/html.js';
 
+import Header from '/js/components/layout/header.js';
+
 import productApi from '/js/services/product-api.js';
 import VotingBox from '/js/components/boxes/voting-box.js';
 import ResultCard from '/js/components/parts/result-card.js';
 
 let template = function() {
     return html`        
-        <header>
-            <h1>Bus Mall</h1>
-        </header>
+        <header></header>
         
         <main>
             <section>
@@ -40,8 +40,11 @@ export default class App {
 
     render() {
         let dom = template(this.rounds);
+        this.header = dom.querySelector('header');
+
         this.resultBox = dom.querySelector('.results-box');
         
+
         let votingBox = new VotingBox({ 
             products: this.products,
             rounds: this.rounds,
@@ -63,7 +66,10 @@ export default class App {
                 }
             }
         });
-        
+
+        let header = new Header();
+        this.header.appendChild(header.render());
+
         this.votingBox = dom.querySelector('.voting-box');
         this.votingBox.appendChild(votingBox.render());
 
