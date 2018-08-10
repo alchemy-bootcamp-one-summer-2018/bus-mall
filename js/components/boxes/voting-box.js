@@ -61,23 +61,3 @@ export default class VotingBox {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

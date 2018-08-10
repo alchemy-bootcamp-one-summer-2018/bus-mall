@@ -23,7 +23,7 @@ export default class App {
 
     constructor() {
         this.products = productApi.getRandomProducts();
-        this.rounds = 3;
+        this.rounds = 25;
     }
 
     renderResultsBox(products) {
