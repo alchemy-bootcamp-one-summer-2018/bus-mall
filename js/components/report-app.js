@@ -1,7 +1,7 @@
 import html from '../html.js';
 import Results from './results.js';
 import salesApi from '../services/sales-api.js';
-import ReportChart from '../components/report-chart.js';
+import ReportChart from './report-chart.js';
 
 let template = function() {
     return html `

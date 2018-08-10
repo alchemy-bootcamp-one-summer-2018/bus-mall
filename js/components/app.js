@@ -1,6 +1,5 @@
 import html from '../html.js';
 import ProductSurvey from './product-survey.js';
-import Results from './results.js';
 import salesApi from '../services/sales-api.js';
 
 let template = function() {
@@ -58,13 +57,13 @@ export default class App {
                 
                 console.log('three items', threeItems);
                 
-                if(this.totalClicks > 4) {
+                if(this.totalClicks > 24) {
                     while(section.children.length) {
                         section.lastChild.remove();
                     }
 
                     let el = document.querySelector('section.results');
-                    let msg = '<p>You\'re done voting! Click below to see results.</p>';
+                    let msg = '<p>You\'re done voting! <a href="report.html">Click here to see results.</a></p>';
                     el.innerHTML = msg;
                     
 
@@ -75,11 +74,6 @@ export default class App {
         });
 
         div.appendChild(productSurvey.render());
-
-        let section = dom.querySelector('section.results');
-        let results = new Results();
-        section.appendChild(results.render());
-        console.log('results', results);
 
         return dom;
     }  
