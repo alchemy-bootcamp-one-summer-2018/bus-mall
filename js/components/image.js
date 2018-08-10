@@ -1,5 +1,5 @@
 import html from '/js/html.js';
-import productList from '../../products.js';
+//import productList from '../../products.js';
 
 
 let template = function(image) {
