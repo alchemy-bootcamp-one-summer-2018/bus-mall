@@ -2,7 +2,8 @@ import html from '/js/html.js';
 
 let template = function() {
     return html`
-        <p>I'm a footer!</p>
+        <img src="/assets/favicon.png" width="72">
+        <p> &copy; 2018 Bus Mall - All Rights Reserved</p>
 
    `;
 };

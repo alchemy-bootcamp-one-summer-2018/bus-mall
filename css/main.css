@@ -89,7 +89,7 @@ white: rgba(250, 255, 253, 1)
     flex-direction: column;
     padding: 2.3em 0;
     border-bottom: 3px solid rgb(255, 184, 28);
-    background: linear-gradient(to top left, rgb(0, 56, 130),rgb(66, 134, 244));
+    background: rgb(0, 56, 130);
 }
 
 .logo-container {
@@ -145,4 +145,23 @@ li a:hover {
     position: absolute;
     left: 90%;
     top: 0;
+}
+
+/*Footer*/
+footer {
+background: radial-gradient(rgb(0, 98, 226) 5%, rgb(0, 77, 179) 15%, rgba(0, 56, 130) 60%);
+    padding: 3.3em;
+    text-align: center;
+}
+
+footer p {
+    font-family: Roboto, sans-serif;
+    font-size: 0.7em;
+    font-weight: 300;
+    color: rgb(255, 184, 28);
+    line-height: 130%;
+}
+
+footer img {
+    padding: 0.4em 0 1.3em 0;
 }

@@ -10,16 +10,13 @@ let template = function() {
         <nav>
             <ul>
                 <li>
-                    <a href="/index.html" title="Home">Home</a>
+                    <a href="/index.html" title="Survey">Survey</a>
+                </li>
+                <li>
+                <a href="/pages/results.html" title="Survey Results">Survey Results</a>
                 </li>
                 <li>
                     <a href="/pages/products.html" title="Product Gallery">Product Gallery</a>
-                </li>
-                <li>
-                    <a href="/pages/results.html" title="Survey Results">Survey Results</a>
-                </li>
-                <li>
-                    <a href="/pages/about.html" title="Our story">Our Story</a>
                 </li>
             </ul>
         </nav>
