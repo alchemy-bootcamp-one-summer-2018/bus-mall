@@ -14,7 +14,33 @@ export default class ProductForm {
     constructor(props) {
         this.products = props.products; 
         this.onSelect = props.onSelect;
+
         //update method to       
+    }
+
+    removeImages() {
+        while(this.div.children.length) {
+            this.div.lastChild.remove();
+        }
+    }
+
+    updateForm(products) {
+        this.removeImages();
+        this.products = products;
+        for(let i = 0; i < 3; i++){          
+            
+            // this.div = dom.querySelector('div');
+            
+            let product = new Product({
+                product: this.products[i],
+                onSelect: this.onSelect
+            });
+
+            // console.log(this.products[i].name, this.products[i].viewed);
+
+            this.div.appendChild(product.render());
+            
+        }
     }
 
     render() {
@@ -23,17 +49,16 @@ export default class ProductForm {
            
         for(let i = 0; i < 3; i++){          
             
-            let div = dom.querySelector('div');
+            this.div = dom.querySelector('div');
             
             let product = new Product({
                 product: this.products[i],
                 onSelect: this.onSelect
             });
-            
-            this.products[i].viewed++;
+
             console.log(this.products[i].name, this.products[i].viewed);
 
-            div.appendChild(product.render());
+            this.div.appendChild(product.render());
             
         }
 

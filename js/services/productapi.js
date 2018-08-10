@@ -127,17 +127,16 @@ let copy = products.slice();
 function randomProductIndex(max){
     return Math.floor(Math.random() * max);
 }
-let randomProductArray = [];
 
 export default {
-    // get: function() {
-    //     return products;
-    // },
+    
     getRandomThree: function() {
+        let randomProductArray = [];
         for(let i = 0; i < 3; i++){
-            let index = randomProductIndex(copy.length);
             
+            let index = randomProductIndex(copy.length);            
             let randomProduct = copy[index];
+            randomProduct.viewed++;
             copy.splice(index, 1);
             randomProductArray.push(randomProduct);
         }
@@ -146,9 +145,10 @@ export default {
 
     handleSelect: function(productId) {
         let selectedProduct = products.filter(product => product.id === productId);
-        console.log(selectedProduct, productId);
         selectedProduct[0].votes ++;
-    }
+    },
     
-    
+    // tallyRounds: function() {
+        //going to need to increment total rounds 
+    //}
 };

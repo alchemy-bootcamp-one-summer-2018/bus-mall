@@ -14,27 +14,34 @@ export default class App {
     
     constructor(){
         this.products = productApi.getRandomThree();
-        this.rounds = 0;
+        this.rounds = 25;
     }
-    //add a click event listener to main 
-    //that will render a new set of images
+    
     render() {
+        console.log(this.products);
         let dom = template();
         let main = dom.querySelector('main');
         
         let productForm = new ProductForm({
             products: this.products,
-            onSelect: function(product) {
-                console.log('app product id', product.id);
+           
+            onSelect: (product) => {
+                this.rounds--;
+                console.log('you have ', this.rounds, 'rounds');
                 productApi.handleSelect(product.id);
                 let updateProducts = productApi.getRandomThree();
-                productForm.tallyRounds(updateProducts);
+                console.log('new products', updateProducts);
+                productForm.updateForm(updateProducts);
+
+                if(!this.rounds) {
+                    productForm.removeImages();
+                }
+               
             }
         });
-        
-        console.log(this.products);
+ 
         main.appendChild(productForm.render());
-        // productApi.getRandomThree();
+        
         return dom;  
     }
 

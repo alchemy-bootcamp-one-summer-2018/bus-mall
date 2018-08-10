@@ -28,7 +28,7 @@ export default class Product {
         
         let div = dom.querySelector('div');
         div.addEventListener('click', () => {
-            console.log('this product id', this.product.id);
+            
             this.onSelect(this.product);
             // console.log('product selected', this.product.name);
             this.product.votes++;
