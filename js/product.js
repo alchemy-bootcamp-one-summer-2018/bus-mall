@@ -5,7 +5,12 @@ import html from './html.js';
 let template = function(product) {
     return html`
 
-    <img src="${product.image}" width=200px; height=200px>
+
+<div class ="product-area">
+
+    <img class="products" src="${product.image}">
+
+</div>
     `;
 };
 

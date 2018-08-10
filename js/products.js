@@ -1,6 +1,6 @@
 import html from './html.js';
 import Product from './product.js';
-import productsApi from './products-api.js';
+// import productsApi from './products-api.js';
 
 let template = function(rounds){
 

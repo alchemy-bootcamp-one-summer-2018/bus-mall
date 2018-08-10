@@ -12,7 +12,7 @@ let template = function() {
 <body>
 
     <main>
-        <section class="results"> </section>
+        
     </main>
 
 </body>

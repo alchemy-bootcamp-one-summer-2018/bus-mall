@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,500|Work+Sans:400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500|Work+Sans:400,500,600|Playfair+Display:700i');
+
 
 p {
     font-family: 
     'Work Sans', sans-serif;
-    color: #3f3f3f;
+    color: #5E6672;
 }
 
 h1 {
@@ -11,12 +12,20 @@ h1 {
     text-transform: uppercase;
     font-weight: 400;
     font-size: 40px;
-    color: #3f3f3f;
+    color: #5E6672;
+}
+
+h3 {
+    color: #5E6672;
 }
 /** nav **/
 
 .above-nav h1 {
     text-align: center;
+    background-color: #5E6672;
+    margin: 0;
+    padding: 10px;
+    color: white;
 
 }
 
@@ -24,6 +33,9 @@ h1 {
     display:none;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 100%;
 }
 
 .menu-content a {
@@ -35,20 +47,22 @@ h1 {
     margin: 0;
     color: white;
     text-decoration: none;
-    width:100%;
+    width: 100%;
     text-align: center;
     padding: 20px;
+    
+    
 }
 
 nav:hover .menu-content { 
-    background-color: #CCFF00;
-    color: #2C2C2E;
-
+    background-color: #747B85;
+  
 }
 a:hover{
-    background-color: #CCFF00;
-    color: #2C2C2E;
+    background-color: #747B85;
+    
 }
+
 
 /** footer **/
 
@@ -78,17 +92,46 @@ footer {
   
 
   .header{
-    height: 400px;
-    width: 100%;
+    height: 350px;
     padding: 1em;
-    grid-column: 1 / 4;
-    background: url(/images/Bus_Mall_Banner.jpg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    
+    grid-column: 1/4;
+    background: url(/images/Bus_Mall_Banner.jpg) no-repeat center center; 
+   
+    background-size: cover;  
   }
+.text-on-header p {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    margin: 0;
+}
+.text-on-header h1 {
+    
+    font-size: 67px;
+    margin: 0;
+}
+
+.text-on-header h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin:0;
+
+}
+  .text-on-header {
+    text-align: center;
+  }
+
+  button {
+    margin-top: 40px;
+    height: 44px;	
+    width: 250px;	
+    color:#5E6672;
+    background-color: #CCFF00;
+    font-family: 'Oswald', sans-serif;
+    font-size:18px;
+    text-transform: uppercase;
+}
+  
   
   
   .grid > * {
@@ -101,31 +144,35 @@ footer {
 
 .products-area{
     display: flex;
-    margin-top: 400px;
     
+    background-color: #FAF9F7;
+    justify-content: center;
+    padding-top: 240px;
+    padding-bottom: 40px;
+
 }
 
-.products-area p {
-    margin-top:-100px;
-    text-align: center;
+.products {
+    flex-direction: row;
+    padding:5px;
+    margin:15px;
+    border-radius: 5px;
+    box-shadow: 0 0.5px 0 0 #ffffff inset, 0 1px 2px 0 #B3B3B3;
+    width: 300px;
+    height: 300px;
 }
 
-.image-1{
-    width: 200px;
-    height: 200px;
-    margin-right:10px;
+.products:active{
+
+    -moz-box-shadow: inset 0 0 10px #B3B3B3;
+    -webkit-box-shadow: inset 0 0 10px #B3B3B3;
+    box-shadow: inset 0 0 10px #B3B3B3;
+   
+	
+
 }
 
-.image-2 {
-    width: 200px;
-    height: 200px;
-    margin-right:10px;
-}
 
-.image-3 {
-    width: 200px;
-    height: 200px;
-}
 
 @media screen and (min-width: 400px) {
     .menu-toggle {
@@ -134,5 +181,11 @@ footer {
     .menu-content {
       display: flex;
       flex-direction: row;
+    }
+
+    .products {
+        display: flex; 
+        flex-direction: column;
+        margin: 0px auto;
     }
 }

@@ -105,11 +105,6 @@ function createProducts() {
         views: 0,
         votes: 0,
     
-    }, { name:'wireframe',
-        image:'../images/wireframe.png',
-        views: 0,
-        votes: 0,
-    
     }];
     
 } 

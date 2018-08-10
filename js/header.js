@@ -17,9 +17,10 @@ let template = function() {
 <div class="grid">
 <div class="header">
 <div class="text-on-header">
- 
+<p> make your commute something to look forward to</p>
 <h1>Get A Free Hop Pass</h1>
-<p>Participate in our survey and get <b>a free</b> month on your HOP pass.
+<h3>Participate in our survey and get <b> a free </b> month on your HOP pass.</h3>
+<button type=onclick> Take the survey </button>
 </div>
 </div>
 </div>
