@@ -1,98 +1,107 @@
+import data from '/js/services/results-data.js';
 
+let products = data.products;
 
+if(!products) {
+    data.products = createProducts();
+    products = data.products;
+}
 
+function createProducts() {
+    let data = [{
+        name: 'bag',
+        image: '/img/bag.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'banana',
+        image: '/img/banana.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'bathroom',
+        image: '/img/bathroom.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'boots',
+        image: '/img/boots.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'breakfast',
+        image: '/img/breakfast.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'bubblegum',
+        image: '/img/bubblegum.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'chair',
+        image: '/img/chair.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'cthulhu',
+        image: '/img/cthulhu.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'dog-duck',
+        image: '/img/dog-duck.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'dragon',
+        image: '/img/dragon.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'pen',
+        image: '/img/pen.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'pet-sweep',
+        image: '/img/pet-sweep.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'scissors',
+        image: '/img/scissors.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'shark',
+        image: '/img/shark.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'tauntaun',
+        image: '/img/tauntaun.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'unicorn',
+        image: '/img/unicorn.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'water-can',
+        image: '/img/water-can.jpg',
+        views: 0,
+        votes: 0,
+    }, {
+        name: 'wine-glass',
+        image: '/img/wine-glass.jpg',
+        views: 0,
+        votes: 0,
+    }];
 
-let products = [{
-    name: 'bag',
-    image: '/img/bag.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'banana',
-    image: '/img/banana.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'bathroom',
-    image: '/img/bathroom.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'boots',
-    image: '/img/boots.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'breakfast',
-    image: '/img/breakfast.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'bubblegum',
-    image: '/img/bubblegum.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'chair',
-    image: '/img/chair.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'cthulhu',
-    image: '/img/cthulhu.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'dog-duck',
-    image: '/img/dog-duck.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'dragon',
-    image: '/img/dragon.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'pen',
-    image: '/img/pen.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'pet-sweep',
-    image: '/img/pet-sweep.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'scissors',
-    image: '/img/scissors.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'shark',
-    image: '/img/shark.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'tauntaun',
-    image: '/img/tauntaun.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'unicorn',
-    image: '/img/unicorn.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'water-can',
-    image: '/img/water-can.jpg',
-    views: 0,
-    votes: 0,
-}, {
-    name: 'wine-glass',
-    image: '/img/wine-glass.jpg',
-    views: 0,
-    votes: 0,
-}];
+    return data;
+}
 
 
 export default {
