@@ -6,9 +6,9 @@ import Results from './results.js';
 let template = function() {
     return html`
         <header>
-            <h1 class="firstHeader"> Bus Mall</h1>
+            <h1> Bus Mall</h1>
         </header>
-        <div class="flex-container"></div>
+        <div></div>
             <main> 
             </main>
     `;

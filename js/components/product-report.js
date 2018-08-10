@@ -6,7 +6,7 @@ let template = function(result) {
     let view = result.viewCount;
 
     return html`
-    <li>${name} has ${count} and ${view}</li>
+    <li>${name} has ${view} views and ${count} clicks</li>
         
    `;
 };

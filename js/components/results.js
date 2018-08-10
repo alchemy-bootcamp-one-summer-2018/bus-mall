@@ -3,7 +3,7 @@ import ProductReport from './product-report.js';
 
 let template = function() {
     return html`
-    <h1>Report</h1>
+    <h1>Results</h1>
     <ul></ul>
    `;
 };

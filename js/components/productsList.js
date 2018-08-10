@@ -14,7 +14,6 @@ export default class ProductsList {
     constructor(props) {
         this.onSelect = props.onSelect;
         this.products = props.products;
-        console.log('are you here', this.products);
     }
     update(products){
         this.products = products;

@@ -34,7 +34,7 @@ export default class ResultsApp {
         this.chart = new Chart(ctx, {
             type: 'bar',
             data: {
-                label: labels,
+                labels: labels,
                 datasets: [{
                     label: '# of views',
                     data: data,

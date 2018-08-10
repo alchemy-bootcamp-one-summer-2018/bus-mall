@@ -1,20 +1,16 @@
-
-.firstHeader {
+ 
+h1 {
     font-family:sans-serif;
-    color: gray;
+    color:#212E32;
 }
 body {
-    display:grid;
-    min-height: 100%;
-    background-image:url();
-}
-.mainstuff {
-    grid-area:content;
-}
-.flex-container {
-    display: flex;
-    flex-direction: column;
+    background-color:#8FB6C3;
 }
 img {
     width: 300px;
+    display: flex;
+    flex: 33.3%;
+}
+.chart-container {
+    height:500px;
 }
