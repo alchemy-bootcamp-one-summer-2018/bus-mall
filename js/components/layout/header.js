@@ -3,7 +3,7 @@ import html from '/js/html.js';
 let template = function() {
     return html`
         <a class="logo-container" href="/index.html" title="Bus Mall">
-            <img src="/assets/bus-logo.png" width="180">
+            <img src="/assets/bus-logo.png">
             <h1 class="head-title">Bus Mall</h1>
         </a>
         
@@ -27,7 +27,7 @@ let template = function() {
             <br> 12:02am - 11:58pm
             <br> (800) BUS - MALL
             <br>
-            <a style="color: rgba(66, 134, 244, 1);" href="https://www.youtube.com/watch?v=i9SSOWORzw4">totallylegitlinktobuystuff@aol.com</a> </p>
+            <a href="https://www.youtube.com/watch?v=i9SSOWORzw4">totallylegitlinktobuystuff@aol.com</a> </p>
 
    `;
 };
