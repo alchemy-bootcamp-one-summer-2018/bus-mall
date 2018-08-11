@@ -7,11 +7,11 @@ gold: rgb(255, 184, 28)
 */
 
 
-body {
+/* body {
   margin: 0 auto;
   max-width: 56em;
   padding: 1em 0;
-}
+} */
 
 h1 {
     text-align: center;
@@ -73,16 +73,47 @@ coral: rgba(250, 130, 76, 1)
 white: rgba(250, 255, 253, 1)
 */
 
+html, body {
+    margin:0; 
+    padding:0;
+    height: 100%;
+}
+
+
+div#root {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20% auto 15%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "footer footer footer";
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /*Header*/
 
-.header-container {
-    position: fixed;
+header {
+    grid-area: header;
+    /* position: fixed;
     width: 100%;
-    top: 0px;
-    display: flex;
+    top: 0px; */
+    /* display: flex;
     flex-direction: column;
-    padding: 2.3em 0;
+    padding: 2.3em 0; */
     border-bottom: 3px solid rgb(255, 184, 28);
     background: rgb(0, 56, 130);
 }
@@ -132,11 +163,16 @@ li a:hover {
     color: #B6B6B6;
 } */
 
+.core-info a {
+    text-decoration: none;
+}
+
 .core-info {
+    
     font-family: "Saira", sans-serif;
     text-align: right;
     font-size: 0.6em;
-    color: rgba(239, 132, 105, 1);
+    color: rgb(255, 184, 28);
     position: absolute;
     left: 90%;
     top: 0;
@@ -144,8 +180,9 @@ li a:hover {
 
 /*Footer*/
 footer {
-background: radial-gradient(rgb(0, 98, 226) 5%, rgb(0, 77, 179) 15%, rgba(0, 56, 130) 60%);
-    padding: 3.3em;
+    grid-area: footer;
+    background: radial-gradient(rgb(0, 98, 226) 5%, rgb(0, 77, 179) 15%, rgba(0, 56, 130) 60%);
+    padding: 0.3em;
     text-align: center;
 }
 
@@ -158,5 +195,13 @@ footer p {
 }
 
 footer img {
-    padding: 0.4em 0 1.3em 0;
+    padding: 0.4em 0 0.3em 0;
+}
+
+
+
+/* Main */
+
+main {
+    grid-area: main;
 }

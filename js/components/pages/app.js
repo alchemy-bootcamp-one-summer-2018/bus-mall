@@ -9,16 +9,16 @@ import ResultCard from '/js/components/parts/result-card.js';
 
 let template = function() {
     return html`        
-        <header class="header-container"></header>
+        <header class="header header-container"></header>
         
-        <main>
+        <main class="main">
             <section>
                 <div class="voting-box"></div>
                 <ul class="results-box"></ul>
             </section>
         </main>
 
-        <footer></footer>
+        <footer class="footer"></footer>
     `;
 };
 

@@ -13,7 +13,7 @@ let template = function() {
                     <a href="/index.html" title="Survey">Survey</a>
                 </li>
                 <li>
-                <a href="/pages/results.html" title="Survey Results">Survey Results</a>
+                    <a href="/pages/results.html" title="Survey Results">Survey Results</a>
                 </li>
                 <li>
                     <a href="/pages/products.html" title="Product Gallery">Product Gallery</a>
