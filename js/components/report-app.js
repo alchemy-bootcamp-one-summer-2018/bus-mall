@@ -2,17 +2,16 @@ import html from '../html.js';
 import Results from './results.js';
 import salesApi from '../services/sales-api.js';
 import ReportChart from './report-chart.js';
+import ShowHeader from '../components/header.js';
+import ShowFooter from '../components/footer.js';
 
 let template = function() {
     return html `
-        <header>
-            <h1>Bus Mall</h1>
-        </header>
         <body>
-            <div>
-            </div>
-            <section class="results">
-            </section>
+            <header><img src="/images/busmall.png" alt="busmall logo"></header>
+            <div></div>
+            <section class="results"></section>
+            <footer></footer>
         </body>
       `;
 };
@@ -25,10 +24,18 @@ export default class App {
 
     render() {
         let dom = template();
+
+        let header = dom.querySelector('header');
+        let showHeader = new ShowHeader();
+        header.appendChild(showHeader.render());
+
+        let footer = dom.querySelector('footer');
+        let showFooter = new ShowFooter();
+        footer.appendChild(showFooter.render());
+
         let section = dom.querySelector('section.results');
         let _results = new Results();
         section.appendChild(_results.render());
-        console.log('results', _results);
 
         let div = dom.querySelector('div');
         let reportChart = new ReportChart({

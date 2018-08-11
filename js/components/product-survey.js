@@ -1,8 +1,5 @@
 import html from '../html.js';
 import ShowImage from './image-display-app.js'; //from the child
-// import salesApi from '../services/sales-api.js';
-
-// import getRandomProducts from '../services/sales-api.js';
 
 let template = function() {
 
