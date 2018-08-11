@@ -127,6 +127,7 @@ export default {
         for(let i = 0; i < 3; i++) {
             let randomNum = Math.floor(Math.random() * (copyCreateProducts.length));
             let randomImage = copyCreateProducts[randomNum];
+            randomImage.views ++;
             randomArray.push(randomImage);
     
             copyCreateProducts.splice(randomNum, 1);

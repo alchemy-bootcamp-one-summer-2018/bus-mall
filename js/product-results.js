@@ -7,7 +7,7 @@ let template = function(product) {
 
     return html`
         
-        <li>${name} had ${views} and ${votes}</li>
+        <li>the ${name} had ${views} views and ${votes} votes</li>
    `;
 };
 

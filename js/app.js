@@ -24,7 +24,7 @@ export default class App {
 
     constructor(){
         this.products = productsApi.getRandomImages();
-        this.rounds = 25;
+        this.rounds = 2;
         this.allProducts = productsApi.get();
        
 
@@ -63,7 +63,8 @@ export default class App {
                 }
 
                 if(this.rounds === 0) {
-                  this.renderResults();
+                
+                    this.renderResults();
                     
                 }
             }

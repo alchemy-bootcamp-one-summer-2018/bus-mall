@@ -1,5 +1,7 @@
 import html from '/js/html.js';
 import ProductResults from '/js/product-results.js';
+import productsApi from '/js/products-api.js';
+import ResultsChart from '/js/resultsChart.js';
 
 
 let template = function() {
@@ -13,26 +15,34 @@ let template = function() {
 };
 
 export default class Results {
-    constructor(props) {
-        this.results = props.results;
-        this.allProducts = props.allProducts;
+    constructor() {
+        this.results = productsApi.get();
+        // this.allProducts = props.allProducts;
        
     }
 
     render() {
         let dom = template();
         let ul = dom.querySelector('ul');
-        console.log('DO YOU WORK', this.allProducts);
+        let section = dom.querySelector('section');
 
-        for(let i = 0; i < this.allProducts.length; i++) {
+        for(let i = 0; i < this.results.length; i++) {
             let productResults = new ProductResults({
-                product: this.allProducts[i]
+                product: this.results[i]
 
             });
             
             ul.appendChild(productResults.render());
 
         }
+
+        let resultsChart = new ResultsChart({
+            results: this.results
+
+        });
+
+        section.appendChild(resultsChart.render());
+
         return dom;
     }
 }
