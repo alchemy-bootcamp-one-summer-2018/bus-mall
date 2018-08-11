@@ -34,7 +34,7 @@ export default class ProductForm {
                 onSelect: this.onSelect
             });
 
-            console.log(this.products[i].name, this.products[i].viewed);
+            // console.log(this.products[i].name, this.products[i].viewed);
 
             this.div.appendChild(product.render());
             
@@ -42,8 +42,7 @@ export default class ProductForm {
     }
 
     render() {
-        let dom = template();
-        
+        let dom = template();        
            
         for(let i = 0; i < 3; i++){          
             
@@ -53,8 +52,6 @@ export default class ProductForm {
                 product: this.products[i],
                 onSelect: this.onSelect
             });
-
-            // console.log(this.products[i].name, this.products[i].viewed);
 
             this.div.appendChild(product.render());
             

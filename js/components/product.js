@@ -7,13 +7,6 @@ let template = function(product) {
             id=${product.id}>                
         </div>
    `;
-   //use a hover listener for the event name
-   //can add a mouse-down listener to depress the image to let user 
-   //know they've selected it
-
-
-   //refer to alchemy tv for event listeners
-   //
 };
 
 export default class Product {
@@ -24,16 +17,11 @@ export default class Product {
     }
 
     render() {
-        let dom = template(this.product);
-        
+        let dom = template(this.product);        
         let div = dom.querySelector('div');
         div.addEventListener('click', () => {
-            
             this.onSelect(this.product);
-            // console.log('product selected', this.product.name);
-            
-            //console.log(this.product.name, this.product.votes);
-
+            console.log(this.product.name, 'has ', this.product.votes, 'votes');
         });
         return dom;
     }

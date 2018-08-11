@@ -128,6 +128,10 @@ function randomProductIndex(max){
 }
 
 export default {
+
+    get: function() {
+        return products;
+    },
     
     getRandomThree: function() {
         let randomProductArray = [];
