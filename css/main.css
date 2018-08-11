@@ -1,0 +1,188 @@
+
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Saira|Saira+Condensed|Saira+Extra+Condensed|Saira+Semi+Condensed|Do+Hyeon|Source+Serif+Pro');
+
+/* 
+blue: rgb(0, 56, 130);
+gold: rgb(255, 184, 28)
+*/
+
+
+/* body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+} */
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    font-size: 5em;
+    font-family: "Saira", sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin: 15px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.product {
+    background: cover no-repeat;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.voting-container {
+  /* Grid Fallback */
+  display: flex;
+  flex-wrap: wrap;
+  
+  /* Supports Grid */
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 1em;
+  margin: 5% 15%;
+}
+
+.product {
+    margin: auto;
+}
+
+/* If Grid is supported, remove the margin we set for the fallback */
+@supports (display: grid) {
+  .module {
+    margin: 0;
+  }
+}
+
+
+
+html, body {
+    margin:0; 
+    padding:0;
+    height: 100%;
+}
+
+
+div#root {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15% auto 15%;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    grid-template-areas: "header header header"
+                         "main main main"
+                         "footer footer footer";
+}
+
+
+
+
+/*Header*/
+
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    border-bottom: 3px solid rgb(255, 184, 28);
+    background: rgb(0, 56, 130);
+}
+
+.logo-container {
+    text-decoration: none;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    height: 5em;
+    vertical-align: middle;
+}
+
+.logo-container h1 {
+    padding: 0;
+    display: block;
+    font-weight: bold;
+    color: rgb(255, 184, 28);
+}
+
+nav {
+    position: absolute;
+    top: 8%;
+    right: 35%;
+}
+
+header ul li {
+    display: inline-block;
+    padding: 0 1.4em 0 0;
+    font-size: 1.4em;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: rgb(255, 184, 28);
+}
+
+/* li a.active {
+    font-weight: 300;
+    color: rgba(239, 132, 105, 1);
+    border-bottom: 2px solid rgba(64, 249, 155, 1);
+}
+
+li a:hover {
+    color: #B6B6B6;
+} */
+
+.core-info a {
+    text-decoration: none;
+    color: rgb(255, 184, 28);
+    font-size: 1em;
+}
+
+.core-info {
+    
+    font-family: "Saira", sans-serif;
+    text-align: right;
+    font-size: 0.65em;
+    color: rgb(255, 184, 28);
+    position: absolute;
+    left: 90%;
+    top: 0;
+    text-decoration: none;
+}
+
+/*Footer*/
+footer {
+    grid-area: footer;
+    background: radial-gradient(rgb(0, 98, 226) 5%, rgb(0, 77, 179) 15%, rgba(0, 56, 130) 60%);
+    padding: 0.3em;
+    text-align: center;
+}
+
+footer p {
+    font-family: Roboto, sans-serif;
+    font-size: 0.7em;
+    font-weight: 300;
+    color: rgb(255, 184, 28);
+    line-height: 130%;
+}
+
+footer img {
+    padding: 0.4em 0 0.3em 0;
+}
+
+
+
+/* Main */
+
+main {
+    grid-area: main;
+}
