@@ -24,9 +24,7 @@ export default class ProductsList {
             this.renderProduct(this.products[i]);
         }
 
-
     }
-
 
     renderProduct(product) {
         let productCard = new ProductCard({
@@ -34,7 +32,6 @@ export default class ProductsList {
             onSelect: this.onSelect
         });
         this.ul.appendChild(productCard.render());
-        //this.productCard.push(productCard);
     }
     render() {  
         let products = this.products;

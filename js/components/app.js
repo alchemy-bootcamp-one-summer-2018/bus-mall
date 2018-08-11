@@ -2,11 +2,11 @@ import html from '../html.js';
 import productApi from '../services/productApi.js';
 import ProductsList from './productsList.js';
 import Results from './results.js';
+import Header from './header.js';
  
 let template = function() {
     return html`
         <header>
-            <h1> Bus Mall</h1>
         </header>
         <div></div>
             <main> 
@@ -22,6 +22,11 @@ export default class App {
     render() {
         let dom = template();
         let main = dom.querySelector('main');
+
+        this.header = dom.querySelector('header');
+        let appHeader = new Header({});       
+        console.log('what header app is', appHeader.render);
+        this.header.appendChild(appHeader.render());
 
         let products = productApi.getRandomProducts();
         let productsList = new ProductsList({
@@ -41,6 +46,7 @@ export default class App {
             }
         });
         main.appendChild(productsList.render());
+
         
         return dom;
     
