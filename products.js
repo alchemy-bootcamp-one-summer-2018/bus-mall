@@ -139,7 +139,7 @@ export default {
             randomProducts.push(product);
         }
 
-        randomProducts.forEach(product => product.views ++);
+        randomProducts.forEach(product => product.viewCount ++);
         console.log(randomProducts);
         return randomProducts;
     }

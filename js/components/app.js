@@ -30,7 +30,13 @@ export default class App {
         
         const header = new Header();
         let productList = new ProductList({
-            randomProducts: this.randomProducts
+            randomProducts: this.randomProducts,
+            onSelect: (product) => {
+
+                console.log('product', product);
+                
+
+            }
         });
 
         const footer = new Footer();

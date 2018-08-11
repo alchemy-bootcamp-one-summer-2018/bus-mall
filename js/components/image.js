@@ -14,12 +14,16 @@ let template = function(image) {
 export default class Image {
     constructor(props) {
         this.image = props.image;
+        this.onSelect = props.onSelect;
 
     }
 
     render() {
         let dom = template(this.image);
         this.div = dom.querySelector('div');
+        this.div.addEventListener('click', () => {
+            this.onSelect(this.image);
+        });
         console.log('this.images', this.image);
         return dom;
     }
