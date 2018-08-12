@@ -1,5 +1,5 @@
 import html from '../html.js';
-import imageLoading from '../data-wrangling/data.js';
+import data from '../data-wrangling/data.js';
 import ImageCard from './image-card.js';
 
 
@@ -51,7 +51,7 @@ export default class ImageForm {
     }
 
     render() {
-        let foo = imageLoading();
+        let foo = data.imageLoading();
         let dom = template(foo);
         this.row = dom.querySelector('.row');
         

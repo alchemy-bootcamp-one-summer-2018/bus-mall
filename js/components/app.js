@@ -1,7 +1,8 @@
 // the template helper
 import html from '../html.js';
 import ImageForm from '../components/image-form.js';
-import imageLoading from '../data-wrangling/data.js';
+import data from '../data-wrangling/data.js';
+import ImageReport from '../components/image-report.js';
 
 // services component needs to use
 
@@ -26,7 +27,8 @@ let template = function(imageLoading) {
 export default class App {
 
     constructor() {
-        this.images = imageLoading();
+        this.images = data.imageLoading();
+        this.results = data.results();
         this.refreshcounter = 0;
     }
 
@@ -34,6 +36,7 @@ export default class App {
         let dom = template();
         let form = dom.querySelector('form');
         let images = dom.querySelector('.images');
+        let main = dom.querySelector('main');
         let imageProps = {
             images: this.images,
 
@@ -44,13 +47,23 @@ export default class App {
                 this.refreshcounter += 1;
                 console.log(image);
                 console.log(this.refreshcounter);
+                
 
                 if(this.refreshcounter === 25){
                     console.log("Time to show results!");
                     imageForm.disableImages(this.images);
+                    let imageReport = new ImageReport({
+                        report: this.results
+                    });
+                    
+                    console.log("This should be the images array...", this.results);
+                    main.appendChild(imageReport.render());
                 }
-                this.images = imageLoading();
-                imageForm.updateImages(this.images);
+                else {
+                    this.images = data.imageLoading();
+                    imageForm.updateImages(this.images);
+                }
+                
             }
         };
         let imageForm = new ImageForm(imageProps);
