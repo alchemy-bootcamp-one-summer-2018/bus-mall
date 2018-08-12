@@ -32,9 +32,9 @@ export default class App {
         let productList = new ProductList({
             randomProducts: this.randomProducts,
             onSelect: (product) => {
-
+                let randomProduct = this.randomProducts(product => product.name === productName);
+                selectedProduct[0].votes ++;
                 console.log('product', product);
-                
 
             }
         });
@@ -46,7 +46,7 @@ export default class App {
 
         this.main.appendChild(productList.render());
         return dom;
-
-
+        
+            
     }
 }
