@@ -17,25 +17,24 @@ export default class App {
     constructor(){
         this.products = productApi.getRandomThree();
         this.allProducts = productApi.get();
-        this.rounds = 3;
+        this.rounds = 25;
     }
 
     renderResults(){
-        let dom = template();
-        let section = dom.querySelector('section');
-
+        
         let resultsHolder = new ResultsHolder({
             products: this.allProducts
         });
         console.log('look at me i\'m rendering results');
         
-        section.appendChild(resultsHolder.render());
+        this.section.appendChild(resultsHolder.render());
 
     }
     
     render() {
         let dom = template();
         let main = dom.querySelector('main');
+        this.section = dom.querySelector('section');
         
         let productForm = new ProductForm({
             products: this.products,

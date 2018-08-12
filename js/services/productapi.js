@@ -68,7 +68,7 @@ function createProducts() {
         votes: 0
     }, { 
         id: 11,
-        name: 'pet-sweep',
+        name: 'Pet-Sweep',
         image:'/img/pet-sweep.jpg',
         viewed: 0,
         votes: 0
@@ -80,7 +80,7 @@ function createProducts() {
         votes:  0
     }, {
         id: 13,
-        name: 'shark',
+        name: 'Baby Chomper',
         image: '/img/shark.jpg',
         viewed: 0,
         votes: 0
@@ -116,7 +116,7 @@ function createProducts() {
         votes:  0
     }, {
         id: 19,
-        name: 'wine-glass',
+        name: 'Wonky Goblet',
         image: 'img/wine-glass.jpg',
         viewed: 0,
         votes: 0
