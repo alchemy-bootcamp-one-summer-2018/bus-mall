@@ -6,7 +6,7 @@ import ImageReport from '../components/image-report.js';
 
 // services component needs to use
 
-let template = function(imageLoading) {
+let template = function() {
     return html`        
         <header>
             <h1>Greg's List</h1>

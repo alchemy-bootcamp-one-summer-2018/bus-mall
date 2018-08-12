@@ -1,5 +1,6 @@
 import html from '../html.js';
 import ReportData from '../components/report-data.js';
+import ReportChart from './report-chart.js';
 
 let template = function() {
     return html`
@@ -24,6 +25,11 @@ export default class ImageReport{
             });
             section.appendChild(reportData.render());
         }
+
+        let reportChart = new ReportChart({
+            report: this.results
+        });
+        section.appendChild(reportChart.render());
         
         return dom;
     }

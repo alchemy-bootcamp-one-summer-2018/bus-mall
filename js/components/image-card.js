@@ -1,5 +1,4 @@
 import html from '../html.js';
-import imageLoading from '../data-wrangling/data.js';
 
 let template = function(foo) {
     return html`        

@@ -2,7 +2,7 @@ import html from '../html.js';
 import data from '../data-wrangling/data.js';
 import ImageCard from './image-card.js';
 
-let template = function(foo) {
+let template = function() {
     return html`        
         <div class="row">
         </div>
