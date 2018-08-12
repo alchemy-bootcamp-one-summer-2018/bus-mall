@@ -1,11 +1,17 @@
 {
     "extends": "eslint:recommended",
+    "plugins": [
+        "html"
+    ],
     "parserOptions": {
       "ecmaVersion": 8,
       "ecmaFeatures": {
         "impliedStrict": true
       },
       "sourceType": "module"
+    },
+    "globals": {
+        "Chart": false
     },
     "env": {
       "browser": true,
