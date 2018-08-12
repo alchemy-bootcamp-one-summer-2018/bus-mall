@@ -2,9 +2,6 @@ import html from '../html.js';
 import data from '../data-wrangling/data.js';
 import ImageCard from './image-card.js';
 
-
-//let refreshCounter = 0;
-
 let template = function(foo) {
     return html`        
         <div class="row">

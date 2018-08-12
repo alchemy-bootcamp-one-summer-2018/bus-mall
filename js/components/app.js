@@ -41,7 +41,7 @@ export default class App {
             images: this.images,
 
             onSelect: (image) => {
-                console.log("Ding dong, doorbell");
+                console.log('Ding dong, doorbell');
                 
                 image.selected += 1;
                 this.refreshcounter += 1;
@@ -50,13 +50,13 @@ export default class App {
                 
 
                 if(this.refreshcounter === 25){
-                    console.log("Time to show results!");
+                    console.log('Time to show results!');
                     imageForm.disableImages(this.images);
                     let imageReport = new ImageReport({
                         report: this.results
                     });
                     
-                    console.log("This should be the images array...", this.results);
+                    console.log('This should be the images array...', this.results);
                     main.appendChild(imageReport.render());
                 }
                 else {
