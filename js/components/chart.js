@@ -21,12 +21,14 @@ export default class ChartContainer {
         const ctx = canvas.getContext('2d');
 
         let labels = [];
-        let data = [];
+        let votes = [];
+        let viewed = [];
 
         for(let i = 0; i < this.products.length; i++) {
             const product = this.products[i];
             labels.push(product.name);
-            data.push(product.votes);
+            votes.push(product.votes);
+            viewed.push(product.viewed);
         }
 
         new Chart(ctx, {
@@ -35,52 +37,99 @@ export default class ChartContainer {
                 labels: labels,
                 datasets: [{
                     label: '# of Votes',
-                    data: data,
+                    data: votes, 
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.75)',
-                        'rgba(54, 162, 235, 0.75)',
                         'rgba(255, 99, 132, 0.75)',
-                        'rgba(54, 162, 235, 0.75)',
                         'rgba(255, 99, 132, 0.75)',
-                        'rgba(54, 162, 235, 0.75)',
                         'rgba(255, 99, 132, 0.75)',
-                        'rgba(54, 162, 235, 0.75)',
                         'rgba(255, 99, 132, 0.75)',
-                        'rgba(54, 162, 235, 0.75)',
                         'rgba(255, 99, 132, 0.75)',
-                        'rgba(54, 162, 235, 0.75)',
                         'rgba(255, 99, 132, 0.75)',
-                        'rgba(54, 162, 235, 0.75)',
                         'rgba(255, 99, 132, 0.75)',
-                        'rgba(54, 162, 235, 0.75)',
                         'rgba(255, 99, 132, 0.75)',
-                        'rgba(54, 162, 235, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
+                        'rgba(255, 99, 132, 0.75)',
                         'rgba(255, 99, 132, 0.75)'
                         
                     ],
                     borderColor: [
                         'rgba(255, 0, 0, 1)',
-                        'rgba(0, 0, 255, 1)',
                         'rgba(255, 0, 0, 1)',
-                        'rgba(0, 0, 255, 1)',
                         'rgba(255, 0, 0, 1)',
-                        'rgba(0, 0, 255, 1)',
                         'rgba(255, 0, 0, 1)',
-                        'rgba(0, 0, 255, 1)',
                         'rgba(255, 0, 0, 1)',
-                        'rgba(0, 0, 255, 1)',
                         'rgba(255, 0, 0, 1)',
-                        'rgba(0, 0, 255, 1)',
                         'rgba(255, 0, 0, 1)',
-                        'rgba(0, 0, 255, 1)',
                         'rgba(255, 0, 0, 1)',
-                        'rgba(0, 0, 255, 1)',
                         'rgba(255, 0, 0, 1)',
-                        'rgba(0, 0, 255, 1)',
+                        'rgba(255, 0, 0, 1)',
+                        'rgba(255, 0, 0, 1)',
+                        'rgba(255, 0, 0, 1)',
+                        'rgba(255, 0, 0, 1)',
+                        'rgba(255, 0, 0, 1)',
+                        'rgba(255, 0, 0, 1)',
+                        'rgba(255, 0, 0, 1)',
+                        'rgba(255, 0, 0, 1)',
+                        'rgba(255, 0, 0, 1)',
                         'rgba(255, 0, 0, 1)'                        
                     ],
                     borderWidth: 2
-                }]
+                },
+                {
+                    label: '# of Views',
+                    data: viewed, 
+                    backgroundColor: [
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(54, 162, 235, 0.2)'                        
+                    ],
+                    borderColor: [
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',                        
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)',
+                        'rgba(0, 0, 255, 1)'                        
+                    ],
+                    borderWidth: 2
+                }],
             },
             options: {
                 scales: {
