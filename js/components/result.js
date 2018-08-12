@@ -16,7 +16,6 @@ export default class Result {
     }
 
     render() {
-        console.log(this.product, 'single result is rendering');
         let dom = template(this.product);        
         return dom;
     }

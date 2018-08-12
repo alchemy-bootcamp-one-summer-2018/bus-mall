@@ -15,7 +15,6 @@ export default class ResultsHolder {
     }
 
     render() {
-        console.log('results holder rendering');
         let dom = template();
         for(let i = 0; i < this.products.length; i++){          
             

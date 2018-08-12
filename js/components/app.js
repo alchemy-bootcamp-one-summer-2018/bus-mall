@@ -2,6 +2,7 @@ import html from '../html.js';
 import ProductForm from './product-form.js'; 
 import productApi from '../services/productApi.js';
 import ResultsHolder from './resultsHolder.js';
+import ChartContainer from './chart.js';
 
 let template = function() {
     return html `
@@ -10,6 +11,7 @@ let template = function() {
         </header>
         <main></main>
         <section></section>
+        <section id="chart"></section>
     `;
 };
 export default class App {
@@ -25,16 +27,22 @@ export default class App {
         let resultsHolder = new ResultsHolder({
             products: this.allProducts
         });
-        console.log('look at me i\'m rendering results');
         
         this.section.appendChild(resultsHolder.render());
 
+    }
+    renderChart(){
+        let chartContainer = new ChartContainer({
+            products: this.allProducts
+        });
+        this.chartSection.appendChild(chartContainer.render());
     }
     
     render() {
         let dom = template();
         let main = dom.querySelector('main');
         this.section = dom.querySelector('section');
+        this.chartSection = dom.querySelector('#chart');
         
         let productForm = new ProductForm({
             products: this.products,
@@ -49,6 +57,8 @@ export default class App {
                 if(!this.rounds) {
                     productForm.removeImages();
                     this.renderResults();
+                    this.renderChart();
+                    
                 }               
             }
         });
