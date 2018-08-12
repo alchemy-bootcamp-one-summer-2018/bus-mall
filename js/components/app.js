@@ -18,7 +18,6 @@ let template = function() {
             <form class="submit-form">
                 <section class="images">
                 </section>
-                <button>submit</button>
             </form>
         </main>
     `;
