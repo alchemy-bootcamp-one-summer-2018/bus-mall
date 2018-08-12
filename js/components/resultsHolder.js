@@ -4,7 +4,7 @@ import Result from './result.js';
 let template = function() {
     return html`
         <div>
-            <h3>Voting Results</h3>
+            <h2>Voting Results</h2>
         </div>        
    `;
 };

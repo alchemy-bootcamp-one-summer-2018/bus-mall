@@ -62,7 +62,7 @@ function createProducts() {
         votes: 0
     }, {
         id: 10,
-        name: 'U-<em>pen</em>-sils',
+        name: 'U-pen-sils',
         image: '/img/pen.jpg',
         viewed: 0,
         votes: 0
