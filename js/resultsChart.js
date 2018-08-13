@@ -1,3 +1,6 @@
+/* eslint-disable */
+/** Chart.js **/
+
 import html from '/js/html.js';
 
 let template = function() {
