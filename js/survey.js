@@ -5,8 +5,9 @@ import Product from './product.js';
 let template = function(){
 
     return html`
-
+<h2 style="text-align:center"> Pick You Product</h2>
     <div class="products-area">
+        
 
     </div>
 

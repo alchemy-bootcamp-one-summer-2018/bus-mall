@@ -6,11 +6,10 @@ let template = function(product) {
     return html`
 
 
-<div class ="product-area">
 
     <img class="products" src="${product.image}">
 
-</div>
+
     `;
 };
 

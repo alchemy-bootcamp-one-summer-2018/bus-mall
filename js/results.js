@@ -2,22 +2,26 @@ import html from '/js/html.js';
 import ProductResults from '/js/product-results.js';
 import productsApi from '/js/products-api.js';
 import ResultsChart from '/js/resultsChart.js';
+import Header from '/js/header.js';
+import Footer from '/js/footer.js';
 
 
 let template = function() {
     return html`
-        <p> Results </p>
+    <header> </header>
+        <h2> Results </h2>
 
         <ul> </ul>
 
         <section> </section>  
+        <footer></footer>
    `;
 };
 
 export default class Results {
     constructor() {
         this.results = productsApi.get();
-        // this.allProducts = props.allProducts;
+
        
     }
 
@@ -25,6 +29,8 @@ export default class Results {
         let dom = template();
         let ul = dom.querySelector('ul');
         let section = dom.querySelector('section');
+        this.header = dom.querySelector('header');
+        this.footer = dom.querySelector('footer');
 
         for(let i = 0; i < this.results.length; i++) {
             let productResults = new ProductResults({
@@ -41,7 +47,21 @@ export default class Results {
 
         });
 
+        let header = new Header({
+            header: this.header
+
+        });
+
+        let footer = new Footer({
+            footer: this.footer
+
+        });
+
+        
+        this.header.appendChild(header.render());
         section.appendChild(resultsChart.render());
+        this.footer.appendChild(footer.render());
+        
 
         return dom;
     }

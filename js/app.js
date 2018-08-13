@@ -1,6 +1,6 @@
 
 import html from './html.js';
-import ProductImages from './products.js';
+import ProductImages from './survey.js';
 import Header from './header.js';
 import Footer from './footer.js';
 import Results from './results.js';
@@ -24,7 +24,7 @@ export default class App {
 
     constructor(){
         this.products = productsApi.getRandomImages();
-        this.rounds = 2;
+        this.rounds = 25;
         this.allProducts = productsApi.get();
        
 
@@ -76,10 +76,9 @@ export default class App {
         let footer = new Footer;
 
         this.main.appendChild(header.render());
-        this.main.appendChild(productImages.render());
-        
+        this.main.appendChild(productImages.render()); 
         this.main.appendChild(footer.render());
-        // resultSection.appendChild(results.render());
+       
 
 
         return dom;
