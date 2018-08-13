@@ -32,7 +32,7 @@ export default class App {
         let productList = new ProductList({
             randomProducts: this.randomProducts,
             onSelect: (product) => {
-                let randomProducts = this.randomProducts(product => product.name === product);
+                //let randomProducts = this.randomProducts(product => product.name === product);
                 product[0].votes ++;
                 console.log('product', product);
 
