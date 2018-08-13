@@ -69,3 +69,4 @@ Plan your work, and work your plan.
 * Also based on that value, ensure that your randomizer is properly handling the specified number of images for display and repeat tracking.
 
 **This is an individual assignment today, but you are free (heck, even encouraged) to collaborate with classmates if you want. Just be sure that if you do, be sure to make note of that collaboration in your README file.**
+
