@@ -27,18 +27,18 @@ export default class App {
         this.header = dom.querySelector('header');
         this.footer = dom.querySelector('footer');
         this.main = dom.querySelector('main');
-        
+
         const header = new Header();
         let productList = new ProductList({
             randomProducts: this.randomProducts,
             onSelect: (product) => {
-                let randomProduct = this.randomProducts(product => product.name === productName);
-                selectedProduct[0].votes ++;
+                let randomProducts = this.randomProducts(product => product.name === product);
+                product[0].votes ++;
                 console.log('product', product);
 
             }
         });
-
+       
         const footer = new Footer();
 
         this.header.appendChild(header.render());
